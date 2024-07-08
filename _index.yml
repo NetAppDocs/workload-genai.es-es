@@ -1,0 +1,33 @@
+---
+indexpage:
+  title: Documentación de Workload Factory para GenAI
+  summary: Integra datos de tus sistemas de archivos FSx para ONTAP con tus plataformas
+    MLOps y modelos de base de GenAI para crear chatbots funcionales usando datos
+    de la organización.
+  keywords: AI, GenAI, ML, Chatbot, FSx, FSx for ONTAP, knowledge base
+  lead: Integra datos de tus sistemas de archivos FSx para ONTAP con tus plataformas
+    MLOps y modelos de base de GenAI para crear chatbots funcionales usando datos
+    de la organización.
+  tiles:
+  - title: Manos a la obra
+    links:
+    - title: Más información sobre Workload Factory para GenAI
+      url: ai-workloads-overview.html
+    - title: Inicio rápido
+      url: quick-start.html
+    - title: Requisitos de GenAI
+      url: requirements.html
+    - title: Ponga en marcha la infraestructura de la base de conocimientos
+      url: deploy-infrastructure.html
+  - title: Construir una base de conocimientos
+    links:
+    - title: Crear una base de conocimientos
+      url: create-knowledgebase.html
+    - title: Pruebe una base de conocimientos
+      url: test-knowledgebase.html
+    - title: Publicar una base de conocimientos
+      url: publish-knowledgebase.html
+  - title: Administrar GenAI
+    links:
+    - title: Gestionar la infraestructura de la base de conocimientos
+      url: manage-infrastructure.html

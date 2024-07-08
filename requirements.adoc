@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: requirements.html 
+keywords: ai, chatbot, prerequisites, bedrock, fsx for ontap, prerequisites, requirements 
+summary: Asegúrese de que Workload Factory y AWS están configurados correctamente antes de crear su base de conocimientos. Esto incluye tener sus credenciales de inicio de sesión de AWS, un sistema de archivos FSx para ONTAP implementado que contiene las fuentes de datos que desea integrar en su base de conocimientos, acceso al servicio de IA de Amazon Bedrock y más. 
+---
+= Requisitos de GenAI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Asegúrese de que Workload Factory y AWS están configurados correctamente antes de crear su base de conocimientos. Esto incluye tener sus credenciales de inicio de sesión de AWS, un sistema de archivos FSx para ONTAP implementado que contiene las fuentes de datos que desea integrar en su base de conocimientos, acceso al servicio de IA de Amazon Bedrock y más.
+
+Cuenta e inicio de sesión de Workload Factory:: Tendrás que iniciar sesión en Workload Factory y crear una cuenta.
++
+--
+https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Obtén más información sobre cómo iniciar sesión y crear una cuenta"^]
+
+--
+Credenciales y permisos de AWS:: Debe agregar credenciales de AWS a Workload Factory con permisos Automate, lo que significa que utilizará Workload Factory en el modo _Automate_ para GenAI.
++
+--
+Los permisos de modo _Basic_ y modo _Read_ no se admiten en este momento.
+
+Al configurar sus credenciales, al seleccionar los permisos que se muestran a continuación, tendrá acceso completo para administrar los sistemas de archivos de FSx para ONTAP y para implementar y administrar la instancia de GenAI EC2 y otros recursos de AWS necesarios para su base de conocimientos y chatbot.
+
+image:screenshot-ai-permissions.png["Una captura de pantalla que muestra la configuración de permisos para la gestión completa de los recursos de IA."]
+
+https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aprenda a añadir credenciales de AWS a Workload Factory"^]
+
+--
+Roca base de Amazon:: Amazon Bedrock le permite utilizar modelos de base y proporciona las funcionalidades necesarias para crear aplicaciones de IA generativas.
++
+--
+Antes de empezar con Workload Factory para GenAI, debe configurar Amazon Bedrock. Su implementación de GenAI debe estar en una región de AWS que tenga habilitado Amazon Bedrock.
+
+* https://docs.aws.amazon.com/bedrock/latest/userguide/setting-up.html["Documentación de AWS: Configure Amazon Bedrock"^]
+* https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Documentación de AWS: Regiones y modelos compatibles para las bases de conocimiento de Amazon Bedrock"^]
+
+
+--
+Modelo de incrustación:: Debe activar el modelo de incrustación que planea utilizar antes de crear la base de conocimientos. Se admiten los siguientes modelos de inclusión:
++
+--
+* Titan Embeddings G1 - Texto
+* Titan Embedding Text v2
+* Titán incrustaciones multimodales G1
++
+https://aws.amazon.com/bedrock/titan/["Más información sobre Amazon Titan"^]
+
+
+
+--
+Modelo de chat:: Debe activar el modelo de chat básico que planea utilizar antes de crear su base de conocimientos. Se admiten los siguientes modelos de chat de Claude:
++
+--
+* Claude 3,5 Soneto
+* Claude 3 Opus
+* Claude 3 Haiku
+* Claude 3 Soneto
+* Claude 2,1
+* Claude 2,0
++
+Dado que el soporte de modelos varía según la región de AWS, consulte https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html["Esta página de documentación de AWS"^] para verificar qué modelos puede utilizar en las regiones en las que planea implementar su base de conocimientos.
+
++
+Obtenga más información sobre los modelos disponibles para ayudarle a seleccionar: https://aws.amazon.com/bedrock/claude/["Claude de Antropic en Amazon Bedrock"^]
+
+
+
+--
+FSX para sistema de archivos ONTAP:: Necesita un mínimo de un sistema de archivos FSx para ONTAP:
++
+--
+* El motor GenAI de NetApp utilizará un sistema de archivos para almacenar la base de datos vectorial utilizada por la base de datos de conocimientos.
++
+Este sistema de archivos FSx para ONTAP debe utilizar volúmenes de FlexVol. No se admiten los volúmenes de FlexGroup.
+
+* Uno o varios sistemas de archivos contendrán las fuentes de datos que integrará en su base de conocimientos.
++
+Un sistema de archivos FSx para ONTAP se puede utilizar con ambos fines o puede utilizar varios sistemas de archivos FSx para ONTAP.
+
+* Necesitará conocer la región, la VPC y la subred de AWS donde reside el sistema de archivos AWS FSx para ONTAP. El sistema de archivos debe estar en una región de AWS que tenga habilitado Amazon Bedrock.
+* Tendrá que considerar los pares clave/valor de etiqueta que desea aplicar a los recursos de AWS que forman parte de esta implementación (opcional).
+* Necesitará conocer la información del par de claves que le permite conectarse de forma segura a la instancia del motor de NetApp AI.
+
+
+https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["Descubre cómo implementar y gestionar sistemas de archivos FSx para ONTAP"^]
+
+--
+

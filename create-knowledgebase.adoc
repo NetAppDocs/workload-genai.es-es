@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: create-knowledgebase.html 
+keywords: ai, chatbot, creating, knowledge base 
+summary: Después de haber puesto en marcha la infraestructura de IA e identificado las fuentes de datos que integrará en su base de conocimientos de los almacenes de datos de FSx para ONTAP, estará listo para construir la base de conocimientos mediante Workload Factory. Como parte de este paso, también definirá las características de la IA y creará temas para iniciar una conversación. 
+---
+= Crear una base de conocimientos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Después de haber puesto en marcha la infraestructura de IA e identificado las fuentes de datos que integrará en su base de conocimientos de los almacenes de datos de FSx para ONTAP, estará listo para construir la base de conocimientos mediante Workload Factory. Como parte de este paso, también definirá las características de la IA y creará temas para iniciar una conversación.
+
+Se puede utilizar una base de conocimientos sin integrar las fuentes de datos de su organización. En este caso, una aplicación integrada con la base de conocimientos solo proporcionará resultados de información disponible públicamente en Internet. Esto se conoce como integración _modo público_.
+
+En la mayoría de los casos, querrá integrar las fuentes de datos de su organización en la base de conocimientos. Esto se conoce como una integración _Enterprise mode_ porque proporciona conocimiento de su empresa.
+
+
+
+== Crear y configurar la base de conocimientos
+
+La base de conocimientos define características como los modelos de IA Bedrock y el formato de incrustación que desea utilizar para crear su base de conocimientos.
+
+.Pasos
+. Inicie sesión en Workload Factory.
+. En el icono AI Workloads, seleccione *Create Chatbot*.
+. En la pestaña Bases de conocimiento, selecciona *Añadir base de conocimiento*.
+. En la página Definir base de conocimientos, configure los valores de la base de conocimientos:
++
+.. *Nombre*: Introduzca el nombre que desea utilizar para la base de conocimientos.
+.. *Descripción*: Introduzca una descripción detallada de la base de conocimientos.
+.. *Modelo de incrustación*: El modelo de incrustación define cómo se convertirán sus datos en incrustaciones vectoriales para la base de conocimientos. Workload Factory admite los siguientes modelos:
++
+*** Titan Embeddings G1 - Texto
+*** Titan Embedding Text v2
+*** Titán incrustaciones multimodales G1
++
+Tenga en cuenta que ya debe haber habilitado el modelo de incrustación de Amazon Bedrock.
+
++
+https://aws.amazon.com/bedrock/titan/["Más información sobre Amazon Titan"^]
+
+
+
+.. *Modelo de chat*: Elija entre los modelos de chat Claude que están integrados en Amazon Bedrock. Tenga en cuenta que ya debe haber habilitado el modelo de chat de Amazon Bedrock.
++
+Obtenga más información sobre los modelos disponibles para ayudarle a seleccionar: https://aws.amazon.com/bedrock/claude/["Claude de Antropic en Amazon Bedrock"^]
+
+.. * Iniciadores de conversación *: Elija si desea proporcionar hasta cuatro mensajes de inicio de conversación que se muestran a los usuarios que interactúan con un chatbot que utiliza esta base de conocimientos. Le recomendamos que active esta configuración.
++
+Si activa los arrancadores de conversación, el modo automático está seleccionado de forma predeterminada. El modo manual solo se puede activar después de agregar fuentes de datos a su base de conocimientos. link:manage-knowledgebase.html["Aprenda a modificar la configuración de la base de conocimientos"].
+
+
+
+. Seleccione *Crear base de conocimiento* para agregar la base de conocimiento a GenAI.
+. En la siguiente página del asistente, tiene la opción de agregar un origen de datos a la nueva base de conocimientos o de finalizar el proceso aquí sin agregar un origen de datos. Le recomendamos que seleccione *Añadir fuente de datos* y agregue una o más fuentes de datos ahora.
+
+
+
+
+== Agregue orígenes de datos a la base de conocimientos
+
+Puede agregar uno o más orígenes de datos para rellenar la base de conocimientos con los datos de la organización.
+
+.Acerca de esta tarea
+El número máximo de orígenes de datos admitidos es 10.
+
+.Pasos
+. Después de seleccionar *Agregar fuente de datos*, se muestra la página *Seleccionar un sistema de archivos*.
+. *Seleccione un sistema de archivos*: Seleccione el sistema de archivos FSX for ONTAP donde residen sus archivos de origen de datos y seleccione *Siguiente*.
+. *Selecciona un volumen*: Selecciona el volumen en el que residen tus archivos de origen de datos y selecciona *Siguiente*.
++
+Al seleccionar los archivos almacenados mediante el protocolo SMB, deberá introducir la información de Active Directory, que incluye el dominio, la dirección IP, el nombre de usuario y la contraseña.
+
+. *Seleccione una fuente de datos*: Seleccione la ubicación de la fuente de datos en función de dónde haya guardado los archivos. Esto puede ser un volumen completo, o simplemente una carpeta o subcarpeta específica en el volumen, y seleccione *Siguiente*.
+. *Definir parámetros de IA*: En la sección *Definición de fragmentos*, defina la forma en que el servicio Bedrock de Amazon divide el contenido de la fuente de datos en fragmentos cuando se consulta la base de conocimientos a la que pertenece. En este momento, solo puede elegir oraciones.
+. En la sección *Permission Aware*, que solo está disponible cuando la fuente de datos que seleccionó está en un volumen que utiliza el protocolo SMB, puede habilitar o deshabilitar la selección:
++
+** *Activado*: Los usuarios del chatbot que accedan a esta base de conocimientos solo obtendrán respuestas a las consultas de las fuentes de datos a las que tengan acceso.
+** *Deshabilitado*: Los usuarios del chatbot recibirán respuestas usando contenido de todas las fuentes de datos integradas.
+
+
+. Seleccione *Agregar* para agregar esta fuente de datos a su base de conocimientos.
+
+
+.Resultado
+El origen de datos comienza a integrarse en su base de conocimientos. El estado cambia de “Embedding” a “Embedded” cuando el origen de datos está completamente embebido.
+
+Después de agregar una única fuente de datos a la base de conocimientos, puede probarla localmente en la ventana del simulador de Chatbot y realizar los cambios necesarios antes de que el chatbot esté disponible para sus usuarios. También puede seguir los mismos pasos para agregar orígenes de datos adicionales a la base de conocimientos.

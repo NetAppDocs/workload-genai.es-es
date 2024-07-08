@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: test-knowledgebase.html 
+keywords: ai, chatbot, creating, knowledge base 
+summary: Después de crear la base de conocimientos, podrá probarla localmente utilizando el simulador de chatbot y realizar los cambios necesarios antes de poner la base de conocimientos a disposición de los usuarios a través de una aplicación de chatbot. 
+---
+= Pruebe una base de conocimientos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Después de crear la base de conocimientos, podrá probarla localmente utilizando el simulador de chatbot y realizar los cambios necesarios antes de poner la base de conocimientos a disposición de los usuarios a través de una aplicación de chatbot.
+
+.Acerca de esta tarea
+Prueba tu base de conocimientos para asegurarte de que funciona como esperas, y puedes personalizar los temas de inicio de conversación que quieres que estén disponibles de forma predeterminada para los usuarios de chatbot de esta base de conocimientos. El simulador de chatbot se ejecuta contra todas las fuentes de datos que se han incrustado en la base de conocimientos.
+
+Puede probar una base de conocimientos chateando con sus fuentes de datos incrustadas en el simulador de chatbot. Tenga en cuenta que ninguna de las interacciones o conocimientos se captura en la base de datos de vectores de GenAI al probar la base de conocimientos localmente.
+
+Realizará la mayor parte de las pruebas en Workload Factory antes de implementar la base de conocimientos en una aplicación para los usuarios. Si necesitas hacer cambios en tu fuente de datos o en la operación de chatbot, querrás hacerlo ahora antes de publicar tu base de conocimientos.
+
+Algunas de las tareas que querrás realizar para probar tu chatbot son:
+
+* Introduzca un gran número de preguntas relevantes para su organización para asegurarse de que las respuestas sean las esperadas.
+* Personaliza los temas de inicio de conversación que quieres que estén disponibles de forma predeterminada para tus usuarios en la aplicación chatbot.
+* Asegúrese de que el contenido atribuido que se proporciona en la parte inferior de las respuestas del chatbot contiene las referencias correctas.
+
+
+.Pasos
+. En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea probar.
++
+El simulador de chatbot aparece en el panel derecho. Si se define, también se muestran los iniciadores de conversación existentes.
+
+. En el campo de entrada de chatbot, ingrese una pregunta o petición de datos y seleccione image:button-run.png["el botón run"] para ver cómo responde su chatbot con su conocimiento organizativo.
+. Si necesita actualizar alguna de sus fuentes de datos para que su base de conocimientos proporcione respuestas más centradas, realice esos cambios ahora y vuelva a probar la base de conocimientos.
+

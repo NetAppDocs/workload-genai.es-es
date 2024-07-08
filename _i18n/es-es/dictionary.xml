@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="doc"></block>
+  <block id="f289767b4d1cd541fc46c0f9efe188b7" category="list-text">*Seleccione un sistema de archivos*: Seleccione el sistema de archivos FSX for ONTAP donde residen sus archivos de origen de datos y seleccione *Siguiente*.</block>
+  <block id="e3fbe9ea657688c1ff4a86f23c1752c3" category="list-text">*Selecciona un volumen*: Selecciona el volumen en el que residen tus archivos de origen de datos y selecciona *Siguiente*.</block>
+  <block id="3bce906453410b081d8e495b9cf8c9b0" category="paragraph">Al seleccionar los archivos almacenados mediante el protocolo SMB, deberá introducir la información de Active Directory, que incluye el dominio, la dirección IP, el nombre de usuario y la contraseña.</block>
+  <block id="7028355d43ef8a71ff4d5e7bed32be2b" category="list-text">*Seleccione una fuente de datos*: Seleccione la ubicación de la fuente de datos en función de dónde haya guardado los archivos. Esto puede ser un volumen completo, o simplemente una carpeta o subcarpeta específica en el volumen, y seleccione *Siguiente*.</block>
+  <block id="8cb2845f0cbb1e8e9ed75fc969cf512b" category="list-text">*Definir parámetros de IA*: En la sección *Definición de fragmentos*, defina la forma en que el servicio Bedrock de Amazon divide el contenido de la fuente de datos en fragmentos cuando se consulta la base de conocimientos a la que pertenece. En este momento, solo puede elegir oraciones.</block>
+  <block id="12d073958c6d4922a6f27ae8b5e4b533" category="list-text">En la sección *Permission Aware*, que solo está disponible cuando la fuente de datos que seleccionó está en un volumen que utiliza el protocolo SMB, puede habilitar o deshabilitar la selección:</block>
+  <block id="751157f855d8f0597671b65bc8ea1301" category="list-text">*Activado*: Los usuarios del chatbot que accedan a esta base de conocimientos solo obtendrán respuestas a las consultas de las fuentes de datos a las que tengan acceso.</block>
+  <block id="9969ec0e7476736a130c54f32700611e" category="list-text">*Deshabilitado*: Los usuarios del chatbot recibirán respuestas usando contenido de todas las fuentes de datos integradas.</block>
+  <block id="65f706122d6156fd52b6cb2ff2214944" category="list-text">Seleccione *Agregar* para agregar esta fuente de datos a su base de conocimientos.</block>
+  <block id="f1af0b71f33a2e37e9e17b100f3c0b1e" category="summary">Active la autenticación de una base de conocimientos para que la validación de tokens y las ACL sean necesarias al integrar la base de conocimientos con una aplicación de chatbot.</block>
+  <block id="970a6e4ed60b5e3eb0f25c2ab67433fe" category="doc">Active la autenticación externa para una base de conocimientos</block>
+  <block id="f739f01e878ac777330d67ca4158aece" category="paragraph">Active la autenticación de una base de conocimientos para que se requiera la validación de tokens y ACL cuando se utilicen los puntos finales de la API para integrar una base de conocimientos con una aplicación de chatbot.</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Pasos</block>
+  <block id="958a8f384aa34f23244386f38ed3aeab" category="list-text">En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea publicar.</block>
+  <block id="2041999f6b6b70199d1267ee84f453a6" category="inline-image-macro">el botón de opción</block>
+  <block id="1f387db5a4b95771e9fc57c52beeb223" category="list-text"><block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block>Selecciona y selecciona *Administrar base de conocimientos*.</block>
+  <block id="717cb2ec03a878d541d7d67390c70a02" category="list-text">Seleccione el menú *Acciones* y seleccione *Administrar configuración de autenticación*.</block>
+  <block id="01345ed4b5ff7f7a1a05a52074ad1caf" category="list-text">Configurar la autenticación:</block>
+  <block id="d408b7a47989c152a2aa2d90a6528cd8" category="list-text">Selecciona *Activar configuración de autenticación*.</block>
+  <block id="06b97c41aa527667da7e7e745c867d3c" category="list-text">Proporcione la información necesaria:</block>
+  <block id="f67d4abfe5d3ad3bdc35adca8802160f" category="list-text">Algoritmos</block>
+  <block id="ef1e6887c579ba81dcedc3f4e3793cd2" category="list-text">Destinatarios</block>
+  <block id="51360304ea03557e79bdf5ff9cd2e234" category="list-text">Emisor</block>
+  <block id="9ebac1089717ab190990b2b9a0fd554c" category="list-text">URI DE JWKS</block>
+  <block id="9df3162c758e92127fd15a555cd18f04" category="paragraph">Debe obtener los valores de estos campos del proveedor de autenticación.</block>
+  <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">Seleccione *Guardar*.</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Resultado</block>
+  <block id="5d8cae383bd52502a39a1612796fb31f" category="paragraph">Ahora tiene una base de conocimientos publicada y el punto final único que puede utilizar para integrar la base de conocimientos con una aplicación de chatbot.</block>
+  <block id="8cf73916af9c9e607f9cebacfe1b1ac5" category="summary">Workload Factory para GenAI le permite integrar sistemas de archivos de Amazon FSx para NetApp ONTAP con los modelos de base de GenAI. Esto ofrece un almacenamiento de alto rendimiento con un amplio conjunto de funciones de protección, seguridad y optimización de costes para sus conjuntos de datos de IA.</block>
+  <block id="66b1224405cf6ac792013dbc191eba66" category="doc">Más información sobre Workload Factory para GenAI</block>
+  <block id="25762e4e39bc220e130cc0d26e2d4ca6" category="paragraph">Workload Factory para GenAI te permite usar tus fuentes de datos empresariales en Amazon FSx para NetApp ONTAP con aplicaciones de IA generativas. Mediante el marco de generación de aumento de recuperación (RAG), puede conectar rápidamente fuentes de datos con modelos Foundation disponibles a través de Amazon Bedrock para desarrollar aplicaciones impulsadas por IA generativa, como asistentes virtuales, bots conversacionales de preguntas y respuestas, resumen de documentos, creación de contenido, etc.</block>
+  <block id="32ec6ea7e1f597681bb91bb109a9ef11" category="paragraph">El uso de la IA generativa con los datos de su organización le permite aprovechar sus propios conocimientos y experiencia, en lugar de depender únicamente de la inteligencia del modelo basada en datos públicos en los que se entrenaron los modelos. El uso de RAG para personalizar los modelos garantiza respuestas precisas y relevantes a preguntas específicas de la organización, mejorando la productividad y la eficiencia para los usuarios de sus aplicaciones mediante IA generativa.</block>
+  <block id="7d5046622b6681e334f44ff69fe84455" category="paragraph">El desarrollo de una aplicación de GenAI adaptada a los datos de su organización le permite aprovechar su propio conocimiento y experiencia. Esta capacidad de personalización garantiza respuestas precisas y relevantes a preguntas específicas de la organización, mejorando la satisfacción y la productividad de todos sus usuarios.</block>
+  <block id="abcb7e2975df8496b30470d76f8b1d33" category="section-title">Beneficios de usar GenAI para crear aplicaciones de IA generativas</block>
+  <block id="a8d9b71fb9e841a43685f89746970117" category="paragraph">Workload Factory para GenAI simplifica el proceso de implementación de la infraestructura necesaria para crear aplicaciones de IA generativas mediante Retrieval Augmented Generation (RAG). Específicamente, GenAI ofrece los siguientes beneficios:</block>
+  <block id="e3fa845bdb32966ee960e79fc4cb6cf2" category="list-text">Sin necesidad de un profundo conocimiento de la infraestructura de datos, los modelos de lenguaje y bases, los administradores y desarrolladores DE TI pueden acelerar el desarrollo de aplicaciones utilizando la automatización que ofrece GenAI. Los administradores y los desarrolladores de datos pueden crear de forma rápida y sencilla bases de conocimientos empresariales que integren los datos no estructurados de su organización para que los usen las aplicaciones de IA generativas.</block>
+  <block id="ce8128205284c384b430769caeb26741" category="list-text">Mejore la seguridad al conservar los permisos de los usuarios en los archivos integrados en las bases de conocimiento para garantizar que se mantenga la seguridad y la privacidad de los datos. Una aplicación, como un chatbot, se puede desarrollar para proporcionar solo a los usuarios autenticados respuestas basadas en los datos a los que los usuarios tienen acceso.</block>
+  <block id="3bc3038379ac11eb60388be943b76d65" category="list-text">Mantenga la privacidad y seguridad de los datos de su empresa desde su cuenta de cliente de AWS, donde los datos de su organización nunca se exponen externamente.</block>
+  <block id="2858795dda2f40fc08938e45130e6015" category="list-text">Acelere el desarrollo de aplicaciones de GenAI, como un chatbot de preguntas y respuestas, mediante marcos de código abierto como LangChain, utilizando la API de GenAI para aprovisionar y gestionar bases de conocimientos, chatear con una base de conocimientos y almacenar y recuperar el historial de chat.</block>
+  <block id="d7aa8c04a5852ad32f4df4ebc355d79b" category="list-text">Mejora la protección de datos y la política de disponibilidad mediante la puesta en marcha de la infraestructura de datos de IA generativa en sistemas de archivos FSx para NetApp ONTAP y el aprovechamiento de funciones de ONTAP, como la alta disponibilidad, los snapshots para la protección y recuperación de datos locales, SnapMirror para la recuperación ante desastres y SnapVault para hacer backups de tu infraestructura de datos.</block>
+  <block id="258bfa564ea52ad2ae40702194995f18" category="list-text">Reduce los costes generales de almacenamiento para la infraestructura de datos de IA generativa aprovechando funciones de eficiencia de datos de ONTAP como deduplicación de datos, compresión y compactación, organización en niveles de los datos y thin provisioning.</block>
+  <block id="a2313dfd4d2d5baef4999beaa742689c" category="section-title">Cómo funciona GenAI</block>
+  <block id="69fc349b2f7bd62d0e7765c8cc066234" category="paragraph">GenAI utiliza los datos privados de su organización para complementar la inteligencia del modelo (basada en los datos en los que se entrenó) con el fin de proporcionar respuestas personalizadas a las preguntas formuladas por los usuarios de su organización. Primero, pon en marcha la infraestructura necesaria para un marco de RAG y, a continuación, creas una base de conocimientos con las fuentes de datos y los modelos de base de tu organización disponibles a través de Amazon Bedrock para, a continuación, conectar una aplicación (por ejemplo, el bot de chat de preguntas y respuestas) a la base de conocimientos.</block>
+  <block id="d70bac99beb52d5e093b391d08e80174" category="inline-image-macro">Un diagrama que muestra los componentes clave de GenAI, su función y cómo funciona.</block>
+  <block id="ce3b45a4624ee79213529a063f3abb8c" category="paragraph"><block ref="ce3b45a4624ee79213529a063f3abb8c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e564ccbddd9f191b216a23125a5efb1f" category="section-title">Cómo Workload Factory para GenAI ayuda a crear aplicaciones de IA generativas</block>
+  <block id="ade2c068f72325046c5312c72ad3b430" category="paragraph">GenAI ayuda a construir aplicaciones de IA generativas usando RAG de las siguientes maneras:</block>
+  <block id="fda814900dea98d0023eb0ecf6f36448" category="list-text">Pone en marcha la infraestructura necesaria para el marco de recuperación de generación aumentada (RAG) para trabajar con fuentes de datos en los sistemas de archivos FSx para ONTAP y Amazon Bedrock. La infraestructura incluye la instancia del motor GenAI de NetApp para gestionar los datos, una base de datos vectorial incorporada (LanceDB) y almacenamiento en el sistema de archivos FSx para ONTAP para la base de datos vectorial.</block>
+  <block id="cc56ccbbe7a4a4f1d99e1d08267a272b" category="list-text">Ayuda a conectar las fuentes de datos con incrustaciones y modelos de lenguaje disponibles a través de Amazon Bedrock para incrustar fuentes de datos y recuperar las respuestas para las consultas de los usuarios. Las fuentes de datos, junto con los modelos y su configuración, se presentan como bases de conocimiento de FSx para ONTAP.</block>
+  <block id="2ff04f7767fbbbb717b2d50acb89245d" category="list-text">Procesa datos de origen en la base de conocimientos para incrustar archivos de origen en recursos compartidos SMB y exportaciones NFS en FSx para sistemas de archivos ONTAP, además de almacenar permisos de archivos para archivos dentro de recursos compartidos SMB.</block>
+  <block id="80a4d47d289b6794b7af32bf0403d817" category="list-text">Crea automáticamente preguntas para iniciar conversaciones basadas en el contenido de las bases de conocimientos.</block>
+  <block id="d115eba24b3d1be73af7f0952b82dc13" category="list-text">Proporciona un simulador de chat para que los administradores de datos prueben el chat con las bases de conocimientos.</block>
+  <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">Coste</block>
+  <block id="848d5941560ff7e3f492b8bc6ca745d1" category="paragraph">Durante el período de vista previa, no hay costo por usar la capacidad de GenAI de Workload Factory.</block>
+  <block id="ca4fec9e2b2e873ba73dde822ed0fd02" category="paragraph">Sin embargo, tendrá que pagar por los recursos de AWS que ponga en marcha para dar soporte a la infraestructura de IA generativa. Por ejemplo, pagará a AWS por el servicio de IA de Amazon Bedrock, el sistema de archivos y la capacidad de almacenamiento de FSx para ONTAP y la instancia EC2 del motor de GenAI.</block>
+  <block id="0b9c6eef4e3d3a222eb04e910d252339" category="section-title">Licencia</block>
+  <block id="0ea77fd2fdca0ee14d426a023ea715ad" category="paragraph">NetApp no necesita licencias especiales para usar las capacidades de IA de Workload Factory.</block>
+  <block id="1bb31e213d9a78b11c5c2c214bcffc0d" category="summary">Después de haber puesto en marcha la infraestructura de IA e identificado las fuentes de datos que integrará en su base de conocimientos de los almacenes de datos de FSx para ONTAP, estará listo para construir la base de conocimientos mediante Workload Factory. Como parte de este paso, también definirá las características de la IA y creará temas para iniciar una conversación.</block>
+  <block id="0da805b7cc0727848a84e995ab36cd76" category="doc">Crear una base de conocimientos</block>
+  <block id="f5319b0c82a4988a803605055631adad" category="paragraph">Después de haber puesto en marcha la infraestructura de IA e identificado las fuentes de datos que integrará en su base de conocimientos de los almacenes de datos de FSx para ONTAP, estará listo para construir la base de conocimientos mediante Workload Factory. Como parte de este paso, también definirá las características de la IA y creará temas para iniciar una conversación.</block>
+  <block id="ede259c54718066f429204cb187335ac" category="paragraph">Se puede utilizar una base de conocimientos sin integrar las fuentes de datos de su organización. En este caso, una aplicación integrada con la base de conocimientos solo proporcionará resultados de información disponible públicamente en Internet. Esto se conoce como integración _modo público_.</block>
+  <block id="9c5cf370721bfae38201d8aeb52e4022" category="paragraph">En la mayoría de los casos, querrá integrar las fuentes de datos de su organización en la base de conocimientos. Esto se conoce como una integración _Enterprise mode_ porque proporciona conocimiento de su empresa.</block>
+  <block id="3bd4cddbc7a98f5c9632a455eca8c27e" category="section-title">Crear y configurar la base de conocimientos</block>
+  <block id="646df03c5fddafc8e9c4ed5aa7036edf" category="paragraph">La base de conocimientos define características como los modelos de IA Bedrock y el formato de incrustación que desea utilizar para crear su base de conocimientos.</block>
+  <block id="d34fab7936dd110b003945d679bb4133" category="list-text">Inicie sesión en Workload Factory.</block>
+  <block id="2775f5aa84cae461b809b629e27e2305" category="list-text">En el icono AI Workloads, seleccione *Create Chatbot*.</block>
+  <block id="5b20d7e96740200c428376cbb5e7fdb4" category="list-text">En la pestaña Bases de conocimiento, selecciona *Añadir base de conocimiento*.</block>
+  <block id="a3efc362347ba241480bf992b9fa4899" category="list-text">En la página Definir base de conocimientos, configure los valores de la base de conocimientos:</block>
+  <block id="53bdd4ba55043d3b20fafbaeddced95e" category="list-text">*Nombre*: Introduzca el nombre que desea utilizar para la base de conocimientos.</block>
+  <block id="867a64928002194654eea40509536879" category="list-text">*Descripción*: Introduzca una descripción detallada de la base de conocimientos.</block>
+  <block id="c37e3f948924097538b621ebbdc79afa" category="list-text">*Modelo de incrustación*: El modelo de incrustación define cómo se convertirán sus datos en incrustaciones vectoriales para la base de conocimientos. Workload Factory admite los siguientes modelos:</block>
+  <block id="0edab7909500c21f42341384982d7dab" category="list-text">Titan Embeddings G1 - Texto</block>
+  <block id="b1cf79f6f67a2d7230894fc720b494b6" category="list-text">Titan Embedding Text v2</block>
+  <block id="eca4d29f6a2ef2328233a8dd5b28dd89" category="list-text">Titán incrustaciones multimodales G1</block>
+  <block id="b6306206c9c2b9f0903b5bfc5872066e" category="paragraph">Tenga en cuenta que ya debe haber habilitado el modelo de incrustación de Amazon Bedrock.</block>
+  <block id="6034693f6588a087cd6872b5c42ea4d6" category="inline-link">Más información sobre Amazon Titan</block>
+  <block id="558b7a3f6f7e506377040f9194ff098b" category="paragraph"><block ref="558b7a3f6f7e506377040f9194ff098b" category="inline-link-rx"></block></block>
+  <block id="eedd3619a786f9c1261bba5f49d4f821" category="list-text">*Modelo de chat*: Elija entre los modelos de chat Claude que están integrados en Amazon Bedrock. Tenga en cuenta que ya debe haber habilitado el modelo de chat de Amazon Bedrock.</block>
+  <block id="d6444760a98aae63c256572c582cbe80" category="inline-link">Claude de Antropic en Amazon Bedrock</block>
+  <block id="c6a0e7101f0906d1498552ff723709e5" category="paragraph">Obtenga más información sobre los modelos disponibles para ayudarle a seleccionar:<block ref="56cf03ef03ec9048e7282cdb73fcf2fd" category="inline-link-rx"></block></block>
+  <block id="bb75c182eff66bee3c76899d41fc8e8f" category="list-text">* Iniciadores de conversación *: Elija si desea proporcionar hasta cuatro mensajes de inicio de conversación que se muestran a los usuarios que interactúan con un chatbot que utiliza esta base de conocimientos. Le recomendamos que active esta configuración.</block>
+  <block id="fd6f710773f79577a44d128bb3df27cc" category="inline-link-macro">Aprenda a modificar la configuración de la base de conocimientos</block>
+  <block id="1010b4e428fbb8fb24725a17eb384f8e" category="paragraph">Si activa los arrancadores de conversación, el modo automático está seleccionado de forma predeterminada. El modo manual solo se puede activar después de agregar fuentes de datos a su base de conocimientos. <block ref="787b3d64d417e723feebaf5fa5dbfeee" category="inline-link-macro-rx"></block>.</block>
+  <block id="7311e81ffb665c2ec2a4c996ce693887" category="list-text">Seleccione *Crear base de conocimiento* para agregar la base de conocimiento a GenAI.</block>
+  <block id="89f815e342683a86616ce06926e87088" category="list-text">En la siguiente página del asistente, tiene la opción de agregar un origen de datos a la nueva base de conocimientos o de finalizar el proceso aquí sin agregar un origen de datos. Le recomendamos que seleccione *Añadir fuente de datos* y agregue una o más fuentes de datos ahora.</block>
+  <block id="9bd079cbc91b32393983ae28a378c00c" category="section-title">Agregue orígenes de datos a la base de conocimientos</block>
+  <block id="831e8ddab4c3e70bcfe67a3e58aaf8cc" category="paragraph">Puede agregar uno o más orígenes de datos para rellenar la base de conocimientos con los datos de la organización.</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">Acerca de esta tarea</block>
+  <block id="443fa995d0ec899357a7e519e2055b98" category="paragraph">El número máximo de orígenes de datos admitidos es 10.</block>
+  <block id="10031d73287aadb6c5f8b3dae7b23860" category="list-text">Después de seleccionar *Agregar fuente de datos*, se muestra la página *Seleccionar un sistema de archivos*.</block>
+  <block id="8817d70d4163473468fa1b2b6e498321" category="paragraph">El origen de datos comienza a integrarse en su base de conocimientos. El estado cambia de “Embedding” a “Embedded” cuando el origen de datos está completamente embebido.</block>
+  <block id="8dfce7f4d224734508ee16a1aff7ad72" category="paragraph">Después de agregar una única fuente de datos a la base de conocimientos, puede probarla localmente en la ventana del simulador de Chatbot y realizar los cambios necesarios antes de que el chatbot esté disponible para sus usuarios. También puede seguir los mismos pasos para agregar orígenes de datos adicionales a la base de conocimientos.</block>
+  <block id="b9605cf748e4b8e1c97d786258a0be40" category="summary">Es necesario poner en marcha la infraestructura para el marco RAG en su entorno antes de desarrollar bases de conocimientos y aplicaciones de FSx para ONTAP para su organización. Los principales componentes de la infraestructura son el servicio de IA de Amazon Bedrock, una instancia de máquina virtual para el motor GenAI de NetApp y un sistema de archivos FSx para ONTAP.</block>
+  <block id="e379b913896cf9bdd4e2d6717212215a" category="doc">Ponga en marcha la infraestructura de GenAI</block>
+  <block id="0cd805094b5dffd702d8e0faa10c927c" category="paragraph">Es necesario implementar la infraestructura de GenAI para el marco RAG en su entorno antes de desarrollar las bases de conocimientos y aplicaciones de FSx para ONTAP para su organización. Los principales componentes de la infraestructura son el servicio Bedrock de Amazon, una instancia de máquina virtual para el motor GenAI de NetApp y un sistema de archivos FSx para ONTAP.</block>
+  <block id="acc7a3fda0820287411e8fb0e8b801f2" category="paragraph">La infraestructura implementada puede admitir múltiples bases de conocimientos y bots de chat, por lo que normalmente solo tendrá que realizar esta tarea una vez.</block>
+  <block id="352b67da62e25a1a8f45636930053f08" category="section-title">Detalles de la infraestructura</block>
+  <block id="8428644910b49210b6312a1abb433a99" category="inline-link">Vea la lista de regiones admitidas</block>
+  <block id="e295768e822c8bd83198042fbb470661" category="paragraph">Su implementación de GenAI debe estar en una región de AWS que tenga habilitado Amazon Bedrock.<block ref="25581c78bc5f676a9b9f4743abf4f06f" category="inline-link-rx"></block></block>
+  <block id="0d5fdb6bfaa1c5a89c4128c1a8bb5b6c" category="paragraph">La implementación consta de los siguientes componentes.</block>
+  <block id="12c3d12e41194b32453a96f3a7e15e48" category="list-text">Servicio de Amazon Bedrock</block>
+  <block id="c79d103149669e7aa24ba1b487cccd34" category="list-text">Amazon Bedrock es un servicio totalmente gestionado que te permite usar modelos de base (FMS) de las principales empresas de IA a través de una única API. También proporciona las funcionalidades que necesita para crear aplicaciones de IA generativas seguras.</block>
+  <block id="8013da98e1db7396729f9e939983f21d" category="inline-link">Más información sobre Amazon Bedrock</block>
+  <block id="23a3c6042868163a40868292d67c9df6" category="paragraph"><block ref="23a3c6042868163a40868292d67c9df6" category="inline-link-rx"></block></block>
+  <block id="ce3e282dcacc561a869106aa125f002f" category="list-text">Máquina virtual para el motor NetApp GenAI</block>
+  <block id="c4074985e4f14e58c8d205be2ba39921" category="list-text">El motor NetApp GenAI se pone en marcha durante este proceso. Proporciona la potencia de procesamiento para ingerir los datos de sus orígenes de datos y luego escribir esos datos en la base de datos vectorial.</block>
+  <block id="e48bc5875c01dd007b7b2a370e879cde" category="list-text">FSX para sistema de archivos ONTAP</block>
+  <block id="c25a8195c5a51347051e9d38756d78ac" category="list-text">El sistema de archivos FSx para ONTAP proporciona el almacenamiento para su sistema GenAI.</block>
+  <block id="f8bff4ff8c444e664c2c78db42ddd93c" category="paragraph">Se implementa un único volumen que contendrá la base de datos vectorial que almacena los datos que ha generado el modelo base basado en sus orígenes de datos.</block>
+  <block id="cd4ca8fe4f8028f11146f93e0f114879" category="paragraph">Las fuentes de datos que integrarás en tu base de conocimientos pueden residir en el mismo sistema de archivos FSx for ONTAP o en un sistema diferente.</block>
+  <block id="e9f04a38bc1df3695df7675463dfe7d2" category="paragraph">El motor GenAI de NetApp supervisa e interactúa con ambos volúmenes.</block>
+  <block id="cc573650532041ff5d41735ee141eab8" category="paragraph">La siguiente imagen muestra la infraestructura de GenAI. Durante este procedimiento, se implementan los componentes numerados 1, 2 y 3. Los demás elementos deben estar en su lugar antes de iniciar la puesta en marcha.</block>
+  <block id="ce783b25723548b58b44d3dde715476f" category="inline-image-macro">Un diagrama de los componentes de AI chatbot.</block>
+  <block id="b7cef2c498d21a11e9176de11360774c" category="paragraph"><block ref="b7cef2c498d21a11e9176de11360774c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b2e0047ff352d3aae4c45b40d2f7cc05" category="paragraph">Tendrá que introducir sus credenciales de AWS y seleccionar el sistema de archivos FSx para ONTAP para implementar la infraestructura RAG (Retrieval Augmentation Generation).</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Antes de empezar</block>
+  <block id="567dcfd6302e5511c1b546a4df21a679" category="inline-link-macro">los requisitos</block>
+  <block id="48b1a64ea0f002f28680bb1b8a8c87b2" category="paragraph">Asegúrese de que su entorno cumple <block ref="b537f86d93b89f494a26572d1a60f4ef" category="inline-link-macro-rx"></block> antes de iniciar este procedimiento.</block>
+  <block id="4d7ea1af041cca43906c5e490c0c1820" category="list-text">En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.</block>
+  <block id="6bb39c2a8e12d8e43ba94f5c10b515e3" category="list-text">Revise el diagrama de infraestructura y seleccione *Siguiente*.</block>
+  <block id="ea04a0c1437f4ebc45564d8545775b59" category="list-text">Complete los elementos en la sección *AWS settings*:</block>
+  <block id="d75b2624fb3d687436ab9e7b1df2356f" category="list-text">*Credenciales de AWS*: Seleccione o agregue las credenciales de AWS que proporcionan permisos para implementar los recursos de AWS.</block>
+  <block id="e36b38f91227e22bbae32a9f84bef25b" category="list-text">*Ubicación*: Seleccione una región, VPC y subred de AWS.</block>
+  <block id="6f2c1c768f2edab4eb318bdb1580f9f7" category="paragraph">La implementación de GenAI debe estar en una región de AWS que tenga habilitado Amazon Bedrock.<block ref="25581c78bc5f676a9b9f4743abf4f06f" category="inline-link-rx"></block></block>
+  <block id="49d6fbbfca02733209ee2833d2481e4e" category="list-text">Complete los elementos en la sección *Configuración de infraestructura*:</block>
+  <block id="54e710456ced46833adf947bc5f6d4d8" category="list-text">*FSX para el sistema de archivos ONTAP*: Seleccione el sistema de archivos FSX para ONTAP y la VM de almacenamiento donde se implementarán los volúmenes de la base de datos de la instancia de GenAI y, a continuación, especifique el nombre que desea usar para el volumen.</block>
+  <block id="2d63bd7626a5c75abc0b0ce09d186bf9" category="paragraph">Dependiendo de si la fábrica de carga de trabajo tiene o no las credenciales para el sistema de archivos FSx para ONTAP, es posible que deba introducir el nombre de usuario y la contraseña.</block>
+  <block id="3869544f6aa6ccd1570caed7671ca0d6" category="list-text">*Etiquetas*: Introduzca cualquier par de clave/valor de etiqueta que desee aplicar a todos los recursos de AWS que forman parte de esta implementación.</block>
+  <block id="f445edd51fe9e6a1af8ffd9c30e87f40" category="list-text">*Par claves*: Seleccione un par de claves que le permita conectarse de forma segura a la instancia del motor NetApp GenAI.</block>
+  <block id="6449a99be42d938ed27187e040028634" category="list-text">Seleccione *Desplegar* para comenzar la implementación.</block>
+  <block id="601674fba29f7ecc4a5620e6933241f6" category="paragraph">Workload Factory comienza a implementar la infraestructura de chatbot. Este proceso puede tardar hasta 10 minutos.</block>
+  <block id="64dea11099d626528fa052576a740de2" category="paragraph">Durante el proceso de despliegue, se configuran los siguientes elementos:</block>
+  <block id="8f3d503d34aa6fe6a66b841b0bdd2996" category="list-text">La red se configura junto con los extremos privados.</block>
+  <block id="fc4ab898b1959c931605be5dfe62a71d" category="list-text">Se crean el rol de IAM, el perfil de instancia y el grupo de seguridad.</block>
+  <block id="eac776dd224d1ed33599e26586f981b6" category="list-text">El volumen para la base de datos del motor de GenAI (LanceDB) se crea en el sistema de archivos FSx para ONTAP.</block>
+  <block id="216a480d552bd412d15e51cde6cbbf7a" category="list-text">Se despliega la instancia de máquina virtual para el motor GenAI.</block>
+  <block id="6b39fa3582a5336c28b4c324f016a9a8" category="summary">Al implementar la infraestructura de GenAI, Workload Factory crea una instancia EC2 para el motor de GenAI. También crea un rol de IAM, un grupo de seguridad y puntos finales privados para esta instancia. Es posible que desee obtener más información sobre estos componentes que Workload Factory crea en su entorno de AWS.</block>
+  <block id="44f33186e2b6baa4a697e5604c0a3863" category="doc">Componentes del motor NetApp GenAI</block>
+  <block id="b7afd5ecab3ac597cbe300dd5827c445" category="list-text">Tipo de instancia de EC2</block>
+  <block id="b592e89ca5722aab8bf77ae181e9fc0d" category="list-text">m5.large</block>
+  <block id="759d9f0fdbf1b3fe124b8de48be0485b" category="list-text">Rol IAM</block>
+  <block id="b5bd9bcc55dd04b48583f4ab9dd580f3" category="list-text">La instancia del motor de GenAI necesita permisos para enviar fragmentos de datos al modelo de integración en Amazon Bedrock y para comunicarse con el backend del servicio de IA de NetApp. El rol de IAM incluye los siguientes permisos:</block>
+  <block id="338578acf7e0dc54ebcd8c3592f0b022" category="list-text">Grupo de seguridad</block>
+  <block id="36d8c0d0c9711e8ac7a5bbcbe9b96008" category="list-text">Las reglas salientes están abiertas a todo el tráfico, mientras que las reglas entrantes están completamente cerradas.</block>
+  <block id="1f171bab0b26254e4c58e536973c5c09" category="list-text">Puntos finales privados</block>
+  <block id="a91a3edb7605f2bbdd24de35ed37881d" category="list-text">Si la VPC de destino aún no los tiene, Workload Factory crea puntos finales privados para la instancia de GenAI ENGINE EC2 para que pueda comunicarse con los siguientes servicios de AWS:</block>
+  <block id="34048930da0f8b448828d6774b139b17" category="list-text">Roca base de Amazon</block>
+  <block id="c421d122321bec48d6b30858f4e7b515" category="list-text">Amazon EC2</block>
+  <block id="719ffca696aa714ef090fce0aca97bd2" category="list-text">Registro de contenedores elásticos de Amazon (ECR)</block>
+  <block id="270fcb785810d0206945029bb05f4e97" category="list-text">Amazon S3</block>
+  <block id="0072b242011f459b57b0768dceac82f8" category="list-text">Administrador de sistemas AWS (SSM)</block>
+  <block id="243f4102d24e538f61072e19e53b373f" category="summary">NetApp ofrece compatibilidad con Workload Factory de varias formas. Hay disponibles amplias opciones de auto soporte gratuito las 24 horas del día, los 7 días de la semana, como artículos de la base de conocimiento (KB) y un foro de la comunidad. Su registro de soporte incluye soporte técnico remoto a través de tickets web.</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Obtenga ayuda</block>
+  <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="paragraph">NetApp ofrece compatibilidad con Workload Factory y sus servicios de cloud de diversas maneras. Hay disponibles amplias opciones de auto soporte gratuito las 24 horas del día, los 7 días de la semana, como artículos de la base de conocimiento (KB) y un foro de la comunidad. Su registro de soporte incluye soporte técnico remoto a través de tickets web.</block>
+  <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">Obtenga soporte para FSx for ONTAP</block>
+  <block id="4435b263dd1a35bcd8dfda050db92b3b" category="paragraph">Para obtener soporte técnico relacionado con FSx para ONTAP, su infraestructura o cualquier solución que utilice el servicio, consulte la sección «Obtener ayuda» en la documentación de Workload Factory para ese producto.</block>
+  <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSX para ONTAP</block>
+  <block id="9d06990508d25d367d9158c6558eb9c8" category="paragraph"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
+  <block id="35f9849ffdd809bda11d0fc56e1e3583" category="paragraph">Para recibir soporte técnico específico para Workload Factory y sus soluciones y servicios de almacenamiento, utilice las opciones de soporte descritas a continuación.</block>
+  <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">Utilice opciones de soporte automático</block>
+  <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">Estas opciones están disponibles de forma gratuita, las 24 horas del día, los 7 días de la semana:</block>
+  <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">Documentación</block>
+  <block id="d935525f4850c4638cbf48ae53fb4686" category="paragraph">La documentación de Workload Factory que está viendo en ese momento.</block>
+  <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">Base de conocimientos</block>
+  <block id="436f63b446dba5a418c698d49bd39718" category="list-text"><block ref="436f63b446dba5a418c698d49bd39718" category="inline-link-rx"></block></block>
+  <block id="ba6274b9c9d1f81bb3a648fa289986b8" category="paragraph">Busque en la base de conocimientos de Workload Factory para encontrar artículos útiles para solucionar problemas.</block>
+  <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">Comunidades</block>
+  <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
+  <block id="7faef90df03399696ba9d4815b37171a" category="paragraph">Únase a la comunidad de Workload Factory para seguir las discusiones en curso o crear otras nuevas.</block>
+  <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">Cree un caso con el soporte de NetApp</block>
+  <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">Además de las opciones de autosoporte anteriores, puede trabajar con un especialista de soporte de NetApp para resolver cualquier problema después de activar el soporte de.</block>
+  <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">Antes de empezar</block>
+  <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">Aprenda a registrarse para obtener soporte</block>
+  <block id="a12ea39ddf1c98adfd7f751299705efa" category="paragraph">Para utilizar la capacidad de *Crear un caso*, primero debe registrarse para recibir soporte. Asocie sus credenciales del sitio de soporte de NetApp a su inicio de sesión de fábrica de cargas de trabajo. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
+  <block id="356c88ac4b0ec3f7689cc91f54701fef" category="list-text">En la parte superior derecha de la consola Workload Factory, selecciona *Ayuda &gt; Soporte*.</block>
+  <block id="aadd86a3fadf19221852692c6e4adc2f" category="paragraph">Al seleccionar esta opción, se abre la consola de BlueXP una nueva pestaña del navegador y se carga la consola de soporte.</block>
+  <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">En la página *Recursos*, elija una de las opciones disponibles en Soporte técnico:</block>
+  <block id="6a1b74969231967ed071d465206b15c7" category="list-text">Selecciona *Llámanos* si quieres hablar con alguien por teléfono. Se le dirigirá a una página de netapp.com que enumera los números de teléfono a los que puede llamar.</block>
+  <block id="d65a2a6fc9caad1867728d4382eeb989" category="list-text">Selecciona *Crear un caso* para abrir un ticket con un especialista en Soporte NetApp:</block>
+  <block id="d7d0da18fbb8f8f85c1364883fbdf4c7" category="list-text">*Servicio*: Selecciona *Fábrica de carga de trabajo*.</block>
+  <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">*Prioridad de caso*: Elija la prioridad para el caso, que puede ser Baja, Media, Alta o crítica.</block>
+  <block id="835eb4008e97c2a7f69bbb2725285e34" category="paragraph">Para obtener más información sobre estas prioridades, pase el ratón sobre el icono de información situado junto al nombre del campo.</block>
+  <block id="0f7d9319c95a8be1492e74601c4b3259" category="list-text">*Descripción del problema*: Proporcione una descripción detallada del problema, incluidos los mensajes de error aplicables o los pasos de solución de problemas que haya realizado.</block>
+  <block id="002c6f26fb01affb37b8cf3cef7a1fb0" category="list-text">*Direcciones de correo electrónico adicionales*: Introduzca direcciones de correo electrónico adicionales si desea que alguien más conozca este problema.</block>
+  <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">*Accesorio (opcional)*: Cargue hasta cinco archivos adjuntos, uno a la vez.</block>
+  <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">Los archivos adjuntos están limitados a 25 MB por archivo. Se admiten las siguientes extensiones de archivo: Txt, log, pdf, jpg/jpeg, rtf, doc/docx, xls/xlsx y csv.</block>
+  <block id="baaf0e61add7d12cf8d12e023d5aef18" category="inline-image-macro">Captura de pantalla del formulario Crear un caso que le permite crear un caso con el soporte de NetApp.</block>
+  <block id="b0c6c3ee60a29925d3f09cd609b79483" category="paragraph"><block ref="b0c6c3ee60a29925d3f09cd609b79483" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">Después de terminar</block>
+  <block id="18f487556417bb6d9721a7005ae097c9" category="paragraph">Aparecerá una ventana emergente con el número de caso de soporte. Un especialista de soporte de NetApp revisará su caso y le pondrá en contacto con usted próximamente.</block>
+  <block id="0ff9b4b8684b9e03c9c1e1320935eae3" category="paragraph">Para obtener un historial de sus casos de soporte, puede seleccionar *Ajustes &gt; Línea de tiempo* y buscar acciones denominadas “Crear caso de soporte”. Un botón situado en el extremo derecho le permite ampliar la acción para ver los detalles.</block>
+  <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">Es posible que se encuentre el siguiente mensaje de error al intentar crear un caso:</block>
+  <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">"No está autorizado a crear un caso en el servicio seleccionado"</block>
+  <block id="c7b7a5ae9f37fd7d24e4d641b9186fe9" category="paragraph">Este error podría significar que la cuenta NSS y la compañía de registro con la que está asociada no es la misma compañía de registro para el número de serie de la cuenta de BlueXP (es decir, 960xxxx) o el número de serie del entorno de trabajo. Puede solicitar ayuda utilizando una de las siguientes opciones:</block>
+  <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">Usar el chat en el producto</block>
+  <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">Envíe un caso no técnico a<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
+  <block id="898e35e1a4bf4b025c3edec879439b08" category="section-title">Gestione sus casos de soporte (vista previa)</block>
+  <block id="8b74b053fbeeff5c3b6f4991cb1d028d" category="paragraph">Puede ver y gestionar los casos de soporte activos y resueltos directamente desde BlueXP. Es posible gestionar los casos asociados con su cuenta de NSS y con su empresa.</block>
+  <block id="394ef093ad3259b9ff0fe7406f015b83" category="paragraph">La gestión de casos está disponible como vista previa. Tenemos pensado perfeccionar esta experiencia y añadir mejoras en próximos lanzamientos. Envíenos sus comentarios mediante el chat en el producto.</block>
+  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">Tenga en cuenta lo siguiente:</block>
+  <block id="5e4e7672ec2ba2b8a763da7f6714e212" category="list-text">La consola de gestión de casos en la parte superior de la página ofrece dos vistas:</block>
+  <block id="01c3ffea552d74a5ae390b10e71a1f26" category="list-text">La vista de la izquierda muestra el total de casos abiertos en los últimos 3 meses por la cuenta de usuario NSS que ha proporcionado.</block>
+  <block id="e3b6c09a5686233f72ce1ea60a1eb088" category="list-text">La vista de la derecha muestra el total de casos abiertos en los últimos 3 meses a nivel de su compañía en función de su cuenta NSS de usuario.</block>
+  <block id="b19b168cc8a2b8c984465e140256b3a2" category="paragraph">Los resultados de la tabla reflejan los casos relacionados con la vista seleccionada.</block>
+  <block id="56dcadeee6b0e5c47a52673f9b5a0bb3" category="list-text">Puede agregar o quitar columnas de interés y filtrar el contenido de columnas como prioridad y estado. Otras columnas proporcionan funciones de clasificación.</block>
+  <block id="6f936762e1223311f031685422fcd3a4" category="paragraph">Consulte los pasos a continuación para obtener más información.</block>
+  <block id="b14929795a61440e9b4ec9f8a4885ae3" category="list-text">En el nivel por caso, ofrecemos la posibilidad de actualizar las notas de un caso o cerrar un caso que no esté ya en estado cerrado o pendiente de cierre.</block>
+  <block id="0a4050ac39772e9281a9aba225254bf8" category="list-text">Selecciona *Gestión de casos* y, si se te solicita, agrega tu cuenta de NSS a BlueXP.</block>
+  <block id="d8ce1865cf1fe3cffd60300b4b86ad63" category="paragraph">La página *Administración de casos* muestra casos abiertos relacionados con la cuenta NSS asociada con su cuenta de usuario de BlueXP. Esta es la misma cuenta NSS que aparece en la parte superior de la página *NSS Management*.</block>
+  <block id="2ae5ae78bdb2d222f15fd8e89248709c" category="list-text">Si lo desea, puede modificar la información que se muestra en la tabla:</block>
+  <block id="1d39d3ab518e1e3f16cbafb2a56e1fd9" category="list-text">En *Casos de la organización*, selecciona *Ver* para ver todos los casos asociados a tu empresa.</block>
+  <block id="059e856250b59be3069246887b74a23c" category="list-text">Modifique el rango de fechas eligiendo un rango de fechas exacto o eligiendo un marco de tiempo diferente.</block>
+  <block id="dfb3764bce2548df4e06357403f9c7d0" category="inline-image-macro">Captura de pantalla de la opción situada encima de la tabla en la página de gestión de casos que permite elegir un intervalo de fechas exacto o los últimos 7 días, 30 días o 3 meses.</block>
+  <block id="4f7062c5c309a833cf46e4a1a5a5d366" category="paragraph"><block ref="4f7062c5c309a833cf46e4a1a5a5d366" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a1bb576be9e5a356290f231efb51b3f5" category="list-text">Filtre el contenido de las columnas.</block>
+  <block id="3753f10a59e21f58b30e3e67d416453e" category="inline-image-macro">Captura de pantalla de la opción de filtro de la columna Estado que permite filtrar casos que coinciden con un estado específico, como activo o cerrado.</block>
+  <block id="8f624dee500d9670a27c4404084a7a62" category="paragraph"><block ref="8f624dee500d9670a27c4404084a7a62" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1c6ea5ef583389e18e7d7bda70beaa71" category="inline-image-macro">El icono más que se muestra en la tabla</block>
+  <block id="002f1c0a8cf4a68b888010ddef3a7f7e" category="list-text">Para cambiar las columnas que aparecen en la tabla, seleccione <block ref="e55ec8dc42ae68d9326c51261c8a5f4f" category="inline-image-macro-rx" type="image"></block> y, a continuación, elija las columnas que desea mostrar.</block>
+  <block id="370b44009f1b82d0b6b178bb80cc62fa" category="inline-image-macro">Captura de pantalla que muestra las columnas que puede mostrar en la tabla.</block>
+  <block id="72c5c65442a2c44e7f2546b8b4c957df" category="paragraph"><block ref="72c5c65442a2c44e7f2546b8b4c957df" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ad0ae9ea1f2e8d973a9a0f6bb169f494" category="inline-image-macro">Icono con tres puntos que aparece en la última columna de la tabla</block>
+  <block id="000a1376035909240f559b8ab724030c" category="list-text">Para gestionar un caso existente, <block ref="54181d1b918b28e5f92545f8b3b4a30c" category="inline-image-macro-rx" type="image"></block> seleccione y seleccione una de las opciones disponibles:</block>
+  <block id="6d9dd74e7709ef802d299966f7898f6b" category="list-text">*Ver caso*: Ver todos los detalles sobre un caso específico.</block>
+  <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">*Actualizar notas de caso*: Proporcione detalles adicionales sobre su problema o seleccione *cargar archivos* para adjuntar hasta un máximo de cinco archivos.</block>
+  <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">*Cerrar caso*: Proporciona detalles sobre por qué estás cerrando el caso y selecciona *Cerrar caso*.</block>
+  <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">Captura de pantalla que muestra las acciones que puede realizar después de seleccionar el menú de la última columna de la tabla.</block>
+  <block id="6f7cf78e14aa346236a87d9541221fb2" category="paragraph"><block ref="6f7cf78e14aa346236a87d9541221fb2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="81f25ad7a34a66e01021554d998e3b0c" category="summary">Identifica o crea los documentos (fuentes de datos) que residen en tu sistema de archivos FSx para ONTAP que integrarás en tu base de conocimientos. Estas fuentes de datos permiten a la base de conocimientos proporcionar respuestas precisas y personalizadas a las consultas de los usuarios basadas en datos relevantes para su organización.</block>
+  <block id="7d7b61e2696184ef2f1a673b4b505c10" category="doc">Identifique las fuentes de datos que desea integrar en su base de conocimientos</block>
+  <block id="887cf13beb27381e3305ca34c5115c2d" category="section-title">Número máximo de orígenes de datos</block>
+  <block id="4b8e341857a3eb86f0ae58a01da824ed" category="section-title">Ubicación de los orígenes de datos</block>
+  <block id="517b9fa88a903df70d1614de4a032562" category="paragraph">Los orígenes de datos pueden almacenarse en un único volumen o en una carpeta dentro de un volumen, en un recurso compartido de SMB o exportación NFS en un sistema de archivos Amazon FSx para NetApp ONTAP. No puede seleccionar documentos individuales dentro de un volumen o carpeta, por lo tanto, debe asegurarse de que cada volumen o carpeta que contenga orígenes de datos no contenga documentos extraños que no deberían integrarse con su base de conocimientos.</block>
+  <block id="a07dd9fe7465f7ec7d15135a3cfab3a4" category="paragraph">Puede añadir varias fuentes de datos a cada base de conocimientos, pero todos ellos tienen que residir en sistemas de archivos FSx para ONTAP a los que puede acceder desde su cuenta de AWS.</block>
+  <block id="ffbef7cfe7a8524b59851c8a1389ebcc" category="paragraph">El tamaño máximo de archivo para cada origen de datos es de 50 MB.</block>
+  <block id="c84d4278eb32c7a089aea86ebf95ad39" category="section-title">Protocolos compatibles</block>
+  <block id="430170fe80b2fc2e8745819f3bf64b55" category="paragraph">La base de conocimientos admite datos de volúmenes que usan protocolos NFS o SMB/CIFS. Al seleccionar archivos almacenados con el protocolo SMB, debe introducir la información de Active Directory para que la base de conocimientos pueda acceder a los archivos de esos volúmenes. Esto incluye el dominio de Active Directory, la dirección IP, el nombre de usuario y la contraseña.</block>
+  <block id="0c303dcbadd43e7fb595ff47ae13d713" category="paragraph">Al almacenar su fuente de datos en un recurso compartido (archivo o directorio) al que se accede a través de SMB, los usuarios o grupos de chatbot solo pueden acceder a los datos. Cuando se habilita esta “capacidad de detección de permisos”, el sistema AI comparará el correo electrónico del usuario en auth0 con los usuarios autorizados para ver o usar los archivos en el recurso compartido SMB. El chatbot proporcionará respuestas basadas en los permisos de usuario para los archivos incrustados.</block>
+  <block id="ccb61f3b531c53a6536d4968042eea99" category="paragraph">Por ejemplo, si ha integrado 10 archivos (fuentes de datos) en su base de conocimientos, y 2 de los archivos son archivos de recursos humanos que contienen información restringida, solo los usuarios de chatbot que están autenticados para acceder a esos archivos 2 recibirán respuestas del chatbot que incluyen datos de esos archivos.</block>
+  <block id="939bf2b00dbe77d4a65f4d265a755136" category="section-title">Formatos de archivo de origen de datos compatibles</block>
+  <block id="4a2c59aee6db61ec236539acdbc3b3e8" category="paragraph">Actualmente se admiten los siguientes formatos de archivo de origen de datos.</block>
+  <block id="1bd7f72decec9fb5b51a58447b152d38" category="cell">Formato de archivo</block>
+  <block id="63e4e92bb7d207ca577b11c07f827279" category="cell">Extensión</block>
+  <block id="f39a0720a929097afa9db4505cdf9669" category="cell">Texto sin formato</block>
+  <block id="be4117b0c842c4be8f9960294bdc2cd1" category="cell">.txt</block>
+  <block id="7fe3b93cf991d61aa2597033a8f37d76" category="cell">Documento portátil</block>
+  <block id="abdf095626d4a4ab2bcd4167b128c1f1" category="cell">.pdf</block>
+  <block id="d241ed446445a725f6362568f61cc6c3" category="cell">Microsoft Word</block>
+  <block id="8c7a7a618a6d4acfe85b4b4b1048846d" category="cell">.docx</block>
+  <block id="68dfdbe39ab30356a21fe4db773d9589" category="cell">Archivo de valores separados por comas</block>
+  <block id="01b1b6ebeb388697cca6712b58439069" category="cell">.csv</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Avisos legales</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">Los avisos legales proporcionan acceso a las declaraciones de copyright, marcas comerciales, patentes y mucho más.</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Copyright</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marcas comerciales</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NETAPP, el logotipo de NETAPP y las marcas enumeradas en la página de marcas comerciales de NetApp son marcas comerciales de NetApp, Inc. Los demás nombres de empresas y productos son marcas comerciales de sus respectivos propietarios.</block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Estadounidenses</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Puede encontrar una lista actual de las patentes propiedad de NetApp en:</block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Política de privacidad</block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Código abierto</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Los archivos de notificación proporcionan información sobre los derechos de autor y las licencias de terceros que se utilizan en software de NetApp.</block>
+  <block id="22e5a7336ebe77138f0282cedcb069ab" category="inline-link">Fábrica de carga de trabajo</block>
+  <block id="7ffcbeca3b450b8d05f9cf0eedb617f8" category="list-text"><block ref="7ffcbeca3b450b8d05f9cf0eedb617f8" category="inline-link-rx"></block></block>
+  <block id="887f800d53dc2cd5a7894464a6f60a6b" category="inline-link">Workloads Factory para bases de datos</block>
+  <block id="7e505d4c691d86e5bd415f9ccb849966" category="list-text"><block ref="7e505d4c691d86e5bd415f9ccb849966" category="inline-link-rx"></block></block>
+  <block id="9591e2d54c998ae1c9d48fd5be7762e9" category="inline-link">Workload Factory para GenAI</block>
+  <block id="f38c7416013fc239c3dd3288d40a40c0" category="list-text"><block ref="f38c7416013fc239c3dd3288d40a40c0" category="inline-link-rx"></block></block>
+  <block id="404a5efb62a3a3f22b02593091042608" category="inline-link">Workload Factory para VMware</block>
+  <block id="9a211183d3fa82368d76fdbab5abdeda" category="list-text"><block ref="9a211183d3fa82368d76fdbab5abdeda" category="inline-link-rx"></block></block>
+  <block id="a76746a54be32982bbd6b113b4d88d95" category="summary">Después de crear una base de conocimientos utilizando orígenes de datos en su sistema de archivos FSx para ONTAP, puede ver los detalles de la fuente de datos, actualizar o cambiar el contenido de la fuente de datos, editar la configuración de la fuente de datos o eliminar la fuente de datos.</block>
+  <block id="a184e20ed5e6a5b8da09e0b40c163e0c" category="doc">Gestionar orígenes de datos</block>
+  <block id="185887c3ad19744e76bc5a84165858d0" category="section-title">Ver información sobre un origen de datos</block>
+  <block id="f6060e0bb20c0eff7193a80ac27e3036" category="paragraph">Puede ver información sobre el contenido de un origen de datos y puede ver su estado de incrustación con la base de conocimientos. Dado que una fuente de datos forma parte de una base de conocimientos, primero deberá abrir la base de conocimientos para poder ver los detalles de la fuente de datos.</block>
+  <block id="ecabe73468b675c56c4b048aef061655" category="list-text">En el menú de navegación, selecciona *AI*.</block>
+  <block id="2fb136b28c086b6b7bfc783f6e18f23b" category="list-text">Seleccione la base de conocimientos donde reside el origen de datos y, a continuación, <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> seleccione * Administrar base de conocimientos *.</block>
+  <block id="b5d487e1e7e0dc1f35f129a112481d93" category="paragraph">La parte inferior de la página muestra los orígenes de datos que forman parte de esta base de conocimientos.</block>
+  <block id="8a68fc9773461f136961ee1d6821c3c8" category="inline-image-macro">el botón de flecha abajo</block>
+  <block id="24908e355d451004c7525900e1599a1f" category="list-text">Expanda cada fila seleccionando la <block ref="0722c4ff5aff83b42b3212ce6356e926" category="inline-image-macro-rx" type="image"></block> para ver información detallada sobre cada origen de datos, como el sistema de archivos FSx para ONTAP, el volumen y la ruta donde reside el origen de datos.</block>
+  <block id="e251df112fcfd5ceb227487e3e407e23" category="paragraph">También muestra la información de incrustación y si ese origen de datos está incrustado actualmente en la base de conocimientos.</block>
+  <block id="437e83696ee10276f1829979bc2001ee" category="section-title">Editar la configuración del origen de datos</block>
+  <block id="20b4ccd92a21762105664927fab1bf0b" category="paragraph">Puede editar información sobre un origen de datos que haya integrado en una base de conocimientos. La mayor parte de la información se corrige después de agregar un origen de datos a una base de conocimientos, pero puede realizar cambios en la definición de fragmentación y en la detección de permisos (cuando se utiliza el protocolo SMB en el volumen de origen de datos).</block>
+  <block id="d2e5a465dda010b6df10e906f7ceebf7" category="list-text">En la página de inventario de bases de conocimiento, seleccione la base de conocimientos donde reside el origen de datos y, a continuación, <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> seleccione y seleccione *Gestionar base de conocimientos*.</block>
+  <block id="16a3994ccc4796acb1b8e40635717ec3" category="list-text">En la fila de la fuente de datos que desea editar, <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> seleccione y seleccione *Editar fuente de datos*.</block>
+  <block id="d4e6a12cce33b083e0522879b175e10f" category="list-text">En la página Editar origen de datos, seleccione <block ref="0722c4ff5aff83b42b3212ce6356e926" category="inline-image-macro-rx" type="image"></block> para ampliar la fila para la definición de fragmento.</block>
+  <block id="2be67c88816bb68c39e2b6cb0139de03" category="list-text">Actualice la configuración de la estrategia Chunking y el tamaño del fragmento, y la conciencia de permisos (para volúmenes SMB) y seleccione *Guardar*.</block>
+  <block id="fcada3664d85dba347df890b564f014e" category="paragraph">La configuración del origen de datos se actualiza y el sistema AI sincroniza el origen de datos para que se vuelva a indexar en la base de conocimientos.</block>
+  <block id="f0c862596fc0a1dd30faa6b630a0d09b" category="section-title">Actualizar el contenido de un origen de datos existente</block>
+  <block id="d811eb8aad6aebc071695232fb58c5a5" category="paragraph">Puede cambiar el contenido de un origen de datos en cualquier momento para agregar o actualizar los datos de su organización. Si este origen de datos se está utilizando activamente en una base de conocimientos, debe sincronizar el origen de datos para que se vuelva a indexar en la base de conocimientos. La sincronización es incremental, por lo que Amazon Bedrock solo procesa los objetos del volumen FSx para ONTAP que se han agregado, modificado o eliminado desde la última sincronización.</block>
+  <block id="24f189799b33f2d3f465d0658dcc69e1" category="inline-link-macro">realice una sincronización bajo demanda</block>
+  <block id="424609f726117c0fe50e1034bb197bf7" category="paragraph">Las fuentes de datos se sincronizan automáticamente con la base de conocimientos una vez al día para que cualquier cambio en la fuente de datos se refleje en el chatbot. Si realiza cambios en un origen de datos y desea sincronizar los datos inmediatamente, puede <block ref="67b891ffaab1342f4fb267d7cc798f81" category="inline-link-macro-rx"></block>.</block>
+  <block id="35198182831e3f9922e23822e3f2e2eb" category="section-title">Suprimir un origen de datos</block>
+  <block id="19045c987301cc2ddb28f24761554946" category="paragraph">Si ya no necesita un origen de datos para formar parte de su base de conocimientos, puede eliminarlo.</block>
+  <block id="7c25f02bbc30d711041ddd1cc4235dc3" category="list-text">En la página de inventario de la base de conocimientos, seleccione la base de conocimientos donde reside el origen de datos y, a continuación, <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> seleccione y seleccione *Gestionar base de conocimientos*.</block>
+  <block id="236bd965d03b1a40bbf90a34907cef42" category="list-text">En la fila de la fuente de datos que desea eliminar, <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> seleccione y seleccione *Eliminar fuente de datos*.</block>
+  <block id="107adb8bfc017487e5ba5e1e0ded4bc4" category="list-text">En el cuadro de diálogo Eliminar origen de datos, confirme que desea eliminarlo y seleccione *Confirmar*.</block>
+  <block id="d9cbca03034ee6f956339839b4f6f8a4" category="paragraph">El origen de datos se elimina de la base de conocimientos y el sistema AI elimina la información indexada sobre este origen de datos de la base de conocimientos. Cualquier información de esa fuente de datos ya no estará disponible para los chatbots que estén utilizando la base de conocimientos.</block>
+  <block id="542367feb3a76c6a1b839e65c3a7a30e" category="summary">Puede ver los detalles sobre su infraestructura RAG de GenAI implementada o eliminar la infraestructura de chatbot si ya no la necesita.</block>
+  <block id="508f3532a01bc6eac0fb489a7e397e06" category="doc">Gestione la infraestructura de GenAI</block>
+  <block id="7c351869b3b2a6468e0d357c2d121293" category="section-title">Permite ver información sobre la infraestructura</block>
+  <block id="515a807c0436b8ab5c5bd03392131fbe" category="paragraph">Puede ver información sobre la infraestructura de chatbot.</block>
+  <block id="3263e773b336a912867ed1aeefc4176b" category="list-text">Seleccione la pestaña *Infraestructura*.</block>
+  <block id="441f8ae1adcfebb474bcc1b899e82a24" category="list-text">Vea información sobre la infraestructura, que incluye detalles sobre los siguientes componentes:</block>
+  <block id="fcf0479502455d0702db3f277c9df646" category="list-text">Configuración de AWS</block>
+  <block id="561e65b11988eaba0ecae49d7b764de1" category="list-text">El sistema de archivos FSx para ONTAP</block>
+  <block id="ae83c68afab83f983d4cf40bb5e9197e" category="list-text">El motor de la IA</block>
+  <block id="6d8dc0b510e717cbe34e53d7fc1097e5" category="list-text">La base de datos de vectores</block>
+  <block id="2a118f240daca7e8bd0c3e4bc54a8d77" category="section-title">Elimine la infraestructura</block>
+  <block id="a7bf703b71095ade4e9a5a2efbfb0833" category="paragraph">Si ya no necesita la infraestructura de chatbot que implementó para uno o más chatbots, puede eliminarla de Workload Factory.</block>
+  <block id="6e78a0ad87ae28b7e51a08104ee52c34" category="admonition">Todos los chatbots que se han implementado en esta infraestructura se deshabilitarán y se eliminará todo el historial de chat.</block>
+  <block id="ce3d14602fb1bff239cdf7ed290f87fa" category="paragraph">Esta operación solo elimina los vínculos a la infraestructura AI de Workload Factory - no elimina todos los componentes de AWS. Deberá eliminar manualmente los siguientes componentes de la infraestructura de AWS:</block>
+  <block id="6e6644acd18eb2b3e0fc07c09241130d" category="list-text">La instancia de VM</block>
+  <block id="32c7279612357f171a31f3fd0988e591" category="list-text">El volumen del sistema de archivos FSx para ONTAP que contiene las bases de datos de IA</block>
+  <block id="eebf0e8baab6b2923da827cd56e070ef" category="list-text">El rol de IAM</block>
+  <block id="8a1a8abb9ac94c1d2fd62a902e95aa06" category="list-text">La política</block>
+  <block id="4e591f9db53b0a865ccc72ad006f4f61" category="list-text">El grupo de seguridad</block>
+  <block id="3765f8c52656be300af4ab9e0aff8ffd" category="list-text"><block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block>Seleccione y seleccione *Eliminar infraestructura de chatbot*.</block>
+  <block id="3df7e2c5a6249307f8e5f6af05d6ed2f" category="list-text">Confirme que desea eliminar la infraestructura y seleccione *Eliminar*.</block>
+  <block id="f8633718706ae1721e0497e512234ee9" category="paragraph">Los componentes de la infraestructura de chatbot se eliminan de Workload Factory.</block>
+  <block id="ed85cf4792c18c3cdb4179c827cbd42e" category="summary">Después de crear una base de conocimientos, puede ver los detalles de la base de conocimientos, modificar la base de conocimientos, integrar orígenes de datos adicionales o suprimir la base de conocimientos.</block>
+  <block id="67f0dcee920749eead316e2518099abb" category="doc">Gestionar bases de conocimientos</block>
+  <block id="26de2eeb556bbb31af9129a3b43b690f" category="section-title">Ver información sobre una base de conocimientos</block>
+  <block id="013f1ff7ab3949235da9d5491af2c3c0" category="paragraph">Puede ver información sobre la configuración de una base de conocimientos y el origen de datos que están integrados.</block>
+  <block id="156adcff6a674de8a5393deaefd8ef3d" category="list-text">Seleccione la base de conocimientos que desea ver.</block>
+  <block id="7a7796022aac6a971c98c2a0868a46f3" category="paragraph">Si se define, los inicios de conversación que se están utilizando se muestran en el panel derecho.</block>
+  <block id="1f9bf6f4df1d4d1f8385f00614312349" category="list-text">Para ver los detalles de la base de conocimientos, <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> seleccione y seleccione *Administrar base de conocimientos*.</block>
+  <block id="bdbb306049e4ca249dcf977dd25edd93" category="paragraph">Esta página muestra el estado Publicado, el estado de incrustación de los orígenes de datos, el modo de incrustación, la lista de todos los orígenes de datos incrustados, etc.</block>
+  <block id="001ee9aff5bb5ea15cf776130cb9914f" category="paragraph">El menú *Acciones* le permite administrar la base de conocimientos si desea realizar cambios.</block>
+  <block id="b76894737af4d48121780050fc9fbdcf" category="section-title">Editar una base de conocimientos</block>
+  <block id="c9d3f784627739cf8bb183ed3d6d94be" category="paragraph">Puede actualizar una base de conocimientos cambiando algunas configuraciones o puede agregar o eliminar orígenes de datos.</block>
+  <block id="6c81c0a68409ceeffca1a2438dbb831c" category="paragraph">Cada vez que agregue, modifique o elimine orígenes de datos de la base de conocimientos, debe sincronizar el origen de datos para que se vuelva a indexar en la base de conocimientos. La sincronización es incremental, por lo que Amazon Bedrock solo procesa los objetos del volumen FSx para ONTAP que se han agregado, modificado o eliminado desde la última sincronización.</block>
+  <block id="d21368803fa621b044a871188810b1ac" category="list-text">En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea actualizar.</block>
+  <block id="6461d5a78cc7b9cc40e5443635d9112e" category="list-text">Selecciona el menú *Acciones* y selecciona *Editar base de conocimientos*.</block>
+  <block id="0008bdb5b5e3b453e69696b34d9d5d1c" category="list-text">En la página Editar base de conocimientos, puede cambiar el nombre de la base de conocimientos, la descripción, el modelo de incrustación, el modelo de chat y si los iniciadores de conversación se crean de forma automática o manual.</block>
+  <block id="e57d913eed051be6b0b9406295913487" category="paragraph">Si utiliza el modo Manual para iniciar una conversación, también puede cambiar los temas de inicio de la conversación aquí.</block>
+  <block id="1302ca167379db1ebc02d198eb7518a3" category="list-text">Seleccione *Guardar* después de haber realizado los cambios.</block>
+  <block id="214d48f43c3d0248419d70ccacea9a73" category="section-title">Agregue orígenes de datos adicionales a una base de conocimientos</block>
+  <block id="95d597d59b4d10cdbd1be05c4248e039" category="paragraph">Puede incrustar orígenes de datos adicionales en su base de conocimientos para rellenarlos con datos adicionales de la organización.</block>
+  <block id="365770c3700b9872888879ce60ec18e9" category="list-text">En la página de inventario de bases de conocimiento, seleccione la base de conocimientos donde desea agregar el origen de datos.</block>
+  <block id="5e1a4fe723264018579dfc3330f9b160" category="list-text"><block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block>Selecciona y selecciona *Añadir fuente de datos*.</block>
+  <block id="07d9f547e6bcd64a574782add9797b63" category="paragraph">La fuente de datos está integrada en su base de conocimientos.</block>
+  <block id="5b1f48da21d15acc675f4720c57d0f26" category="section-title">Sincronice sus orígenes de datos con la base de conocimientos</block>
+  <block id="9547b575fe1c28cc98e35108cacd9918" category="paragraph">Las fuentes de datos se sincronizan automáticamente con la base de conocimientos una vez al día para que cualquier cambio en la fuente de datos se refleje en el chatbot. Si realiza cambios en cualquiera de sus orígenes de datos y desea sincronizar los datos de inmediato, puede realizar una sincronización a petición.</block>
+  <block id="9cbd78c1bcf6132d43822acf74d520f1" category="paragraph">La sincronización es incremental, por lo que Amazon Bedrock solo procesa los objetos de los orígenes de datos que se han agregado, modificado o eliminado desde la última sincronización.</block>
+  <block id="5fe210e3b4435e2188200d1f9b96db74" category="list-text">En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea sincronizar.</block>
+  <block id="fbf8fa86db3bb16616d2fb45b7250a0d" category="list-text">Seleccione el menú *Acciones* y seleccione *Escanear ahora*.</block>
+  <block id="95b9c0d21b306ac819f89f1621a9aeb6" category="paragraph">Verá un mensaje que indica que se están escaneando las fuentes de datos y un mensaje final cuando se complete el análisis.</block>
+  <block id="75e9a9151f60a78dc3c8dcbfdc67d4d6" category="paragraph">La base de conocimientos se sincroniza con las fuentes de datos adjuntas y cualquier chatbot activo comenzará a utilizar la información más reciente de sus fuentes de datos.</block>
+  <block id="fc9a4cda27969092d9069ba3637c6474" category="section-title">Evalúe los modelos de chat antes de crear una base de conocimientos</block>
+  <block id="0bc9c39bb5d69c38b1d3bf8c3c2b4316" category="inline-link">Esta página de documentación de AWS</block>
+  <block id="6608d04dc5c74621659760c0a73880f2" category="paragraph">Puede evaluar los modelos de chat básicos disponibles antes de crear una base de conocimientos para poder ver qué modelo funciona mejor para su implementación. Dado que el soporte de modelos varía según la región de AWS, consulte<block ref="eddadb17a88dd68548e655a82b495d2f" category="inline-link-rx"></block> para verificar qué modelos puede utilizar en las regiones en las que planea implementar su base de conocimientos.</block>
+  <block id="130816622c1d9cd14009f897657c440c" category="admonition">Esta funcionalidad sólo está disponible cuando no se han creado bases de conocimiento, cuando no existen bases de conocimiento en la página de inventario de bases de conocimiento.</block>
+  <block id="027158789a7c175e0ca63d562c57e510" category="list-text">En la página de inventario de Bases de Conocimientos, verás la opción de seleccionar el modelo de chat en el lado derecho de la página para el Chatbot.</block>
+  <block id="b81a76eb0f02acf27b441c84aa69e917" category="list-text">Seleccione el modelo de chat de la lista e introduzca un conjunto de preguntas en el área de mensajes para ver cómo responde el chatbot.</block>
+  <block id="3abbf095c9505d54364aaaad6de65425" category="list-text">Pruebe varios modelos para ver qué modelo es el mejor para su implementación.</block>
+  <block id="e5501980da9946f8bab3d759bed634f4" category="paragraph">Utilice ese modelo de chat cuando cree su base de conocimientos.</block>
+  <block id="3fefedebc4093b4a6da5c3170b91a5bf" category="section-title">Anule la publicación de su base de conocimientos</block>
+  <block id="74f1fc30f68e82e2fe786b9b321624c1" category="paragraph">Una vez que hayas publicado tu base de conocimientos para que pueda integrarse con una aplicación de chatbot, puedes anular la publicación si quieres que la aplicación de chatbot no acceda a la base de conocimientos.</block>
+  <block id="b552a9aa1fe09145aa3c96b6443f0f66" category="paragraph">La anulación de la publicación de la base de conocimientos impide que las aplicaciones de chat funcionen. El punto final de API único en el que se puede acceder a la base de conocimientos está desactivado.</block>
+  <block id="53d7f86775e18e0f6933f81e2c14aaac" category="list-text">En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea anular la publicación.</block>
+  <block id="d479146c71766563c9896677d119a596" category="paragraph">Esta página muestra el estado Publicado, el estado de incrustación de los orígenes de datos, el modo de incrustación y la lista de todos los orígenes de datos incrustados.</block>
+  <block id="bd5de107e9031f0c3a6ac09d2366a7be" category="list-text">Selecciona el menú *Acciones* y selecciona *Anular publicación*.</block>
+  <block id="10b42a1e79dbd5f79dd793c2655522b8" category="paragraph">La base de conocimientos está desactivada y ya no es accesible por una aplicación de chatbot.</block>
+  <block id="cc0a404c41a82c6be9de0d64f06fcd89" category="section-title">Suprimir una base de conocimientos</block>
+  <block id="76420e895d8bcbca33f0cf3202997ba2" category="paragraph">Si ya no necesita una base de conocimientos, puede eliminarla. Al eliminar la base de conocimientos, se eliminará de Workload Factory y las aplicaciones o chatbots que estén utilizando la base de conocimientos dejarán de funcionar. Esta acción no es reversible.</block>
+  <block id="bd1e7a638d401a590a6dfd0683fcab0c" category="paragraph">Al suprimir una base de conocimientos, también debe llevar a cabo las siguientes acciones para suprimir por completo todos los recursos asociados a la base de conocimientos:</block>
+  <block id="d6a62e94706e27186ebc0fbca1c802d4" category="list-text">Disociar la base de conocimiento de cualquier agente con el que esté asociado.</block>
+  <block id="0581045f098dd9833078169a3178147a" category="list-text">Los datos subyacentes que se indizaron de su base de conocimientos permanecen en el almacén de vectores que configuró y aún se pueden recuperar. Para eliminar los datos, también debe eliminar el índice de vectores que contiene las incrustaciones de datos.</block>
+  <block id="26d469c182333c4c1e4800ddcd6d2a61" category="list-text">En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea suprimir.</block>
+  <block id="0e0f1b27ca798d3b3b8154b411215d9a" category="list-text">Selecciona el menú *Acciones* y selecciona *Eliminar base de conocimientos*.</block>
+  <block id="74091f3303c946e291c1c1702ba6d39a" category="list-text">En el cuadro de diálogo Eliminar base de conocimientos, confirme que desea eliminarla y seleccione *Eliminar*.</block>
+  <block id="63d56e434f490d0e8d99ce407df90bf6" category="paragraph">La base de conocimientos se elimina de la fábrica de carga de trabajo.</block>
+  <block id="8bbd4e338e42c1350d453ca5c82eb3b3" category="summary">Después de crear y probar su base de conocimientos localmente, puede publicar la base de conocimientos para que pueda integrarse con la aplicación chatbot que permitirá a sus usuarios consultar la base de conocimientos.</block>
+  <block id="70de8e73e84df845f91376c6c0d1188e" category="doc">Publique una base de conocimientos y vea el punto final único</block>
+  <block id="12676fc9338d312de3a6cbb584fa3284" category="paragraph">Después de crear y probar su base de conocimientos localmente, puede publicar la base de conocimientos para que pueda integrarse con una aplicación de chatbot que permita a sus usuarios consultar la base de conocimientos.</block>
+  <block id="63c0b4117f24258cf088fd810fcdbd9f" category="paragraph">La publicación de la base de conocimientos le permite utilizarla en aplicaciones de chat. La acción PUBLICATE activa la API Workload Factory para generar y publicar puntos finales únicos. Después de la publicación, la base de conocimientos se vuelve accesible para las aplicaciones de chat y los puntos finales de la API están listos para la integración.</block>
+  <block id="079d0a527f117f9fde217668d7359a20" category="paragraph">Cada base de conocimientos que publique tiene puntos finales únicos.</block>
+  <block id="850b9475ef66eeb78335c085f71bae31" category="list-text">Selecciona el menú *Acciones* y selecciona *Publicar*.</block>
+  <block id="19761722f9e779bd2a70fef96c24a1bc" category="paragraph">Workload Factory publica la base de conocimientos. En la página de detalles de la base de conocimientos, el estado cambia de *No publicado* a *Publicado*</block>
+  <block id="5e92f6a356303934a45930f0e541c6b1" category="paragraph">Ahora puede obtener detalles sobre el extremo único de la base de conocimientos.</block>
+  <block id="004faa273ca0b2383f0f12b8850c493b" category="list-text">Junto al estado publicado, selecciona *Ver*.</block>
+  <block id="d1f4efe2fd3a800f4b008e172439fe85" category="paragraph">Detalles sobre cómo acceder a la base de conocimientos mediante las pantallas de la API de Workload Factory.</block>
+  <block id="9de2775e528dfff9dd9666885c222272" category="list-text">En el cuadro de diálogo *Ver información publicada*, copie los puntos finales de la API que puede utilizar para integrar la base de conocimientos con una aplicación.</block>
+  <block id="7495d9f71402d3b1d20f08bd19ac6562" category="inline-link">Documentación de API</block>
+  <block id="2cb94eb0648b9f93f300ea0aff833f95" category="paragraph">Para obtener más información sobre los puntos finales de la API, vaya a<block ref="c0a9aa55ed57e2e15b2d20baa6a6e023" category="inline-link-rx"></block> y seleccione *AI &gt; Externo*.</block>
+  <block id="404b6a1003edac169b0788bb3fe37d9f" category="paragraph">Antes de poder utilizar estos puntos finales, debe obtener un token de usuario de su proveedor de autenticación.</block>
+  <block id="a0acd37c2eea374fd571fd7e5710e3ab" category="summary">Empieza a crear una base de conocimientos con los datos de tu organización que existen en los sistemas de archivos de Amazon FSx para NetApp ONTAP. Una aplicación como un chatbot accederá a esta base de conocimientos para proporcionar respuestas centradas en la organización a los usuarios finales.</block>
+  <block id="35f6f80cfc19636641dd85bbae19edee" category="doc">Inicio rápido para GenAI</block>
+  <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Una</block>
+  <block id="e16edd708081c06a9c8bdef1486a94b4" category="inline-link-macro">Configure su entorno para cumplir los requisitos de GenAI</block>
+  <block id="0b0e916064e065ab12e1db6735832ef0" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="d4a51aa0811f51e3206f49b62f46f1ef" category="inline-link-macro-rx"></block></block>
+  <block id="926f216b1b078ff9ce47e61e22932514" category="paragraph">Necesitará las credenciales de AWS para implementar la infraestructura de AWS, un sistema de archivos puesto en marcha y descubierto de FSx para ONTAP, la lista de fuentes de datos que desea integrar en su base de conocimientos, acceso al servicio de IA de Amazon Bedrock y mucho más.</block>
+  <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Dos</block>
+  <block id="36ec882c51ea2d7689f78bed44b7fdaa" category="inline-link-macro">Identifique el sistema de archivos FSx para ONTAP que contiene los orígenes de datos</block>
+  <block id="cc9cd1c7d0a54d3fe49ca467804963fb" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> <block ref="7206191241f03719b7415c03564b4c6e" category="inline-link-macro-rx"></block></block>
+  <block id="10986db05c15b94a4d13e32858a6e26e" category="paragraph">Las fuentes de datos que integrarás en tu base de conocimientos pueden ubicarse en un único sistema de archivos FSx para ONTAP o en varios sistemas de archivos FSx para ONTAP. Estos sistemas pueden estar en diferentes VPC, pero deben ser accesibles dentro de la misma red.</block>
+  <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Tres</block>
+  <block id="ad6f5ec13ed51e48bce763e25a9c69ce" category="inline-link-macro">Ponga en marcha la infraestructura de la base de conocimientos</block>
+  <block id="0f5790ffea3f79b1400e1156cea75fc9" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> <block ref="28cdbd6802c54419558c857e614a9714" category="inline-link-macro-rx"></block></block>
+  <block id="41c27d3fbdf0cdc6aab23df489fe4c94" category="paragraph">Inicie el asistente de puesta en marcha de infraestructuras para poner en marcha la infraestructura de base de conocimientos en el entorno AWS. Este proceso pone en marcha una instancia EC2 para el motor NetApp GenAI y un volumen en un sistema de archivos FSx para ONTAP para contener las bases de datos del motor de IA de NetApp. El volumen se utiliza para almacenar la base de datos vectorial utilizada por la base de conocimientos.</block>
+  <block id="01e12de62fa77fda2815719aed8ff892" category="paragraph-title">El futuro</block>
+  <block id="8d126cd06a65751189e95006c972e173" category="paragraph">Ahora puede crear una base de conocimientos para proporcionar respuestas centradas en la organización a los usuarios finales.</block>
+  <block id="edeb3214a40db0eb77e92c619eab6024" category="summary">Asegúrese de que Workload Factory y AWS están configurados correctamente antes de crear su base de conocimientos. Esto incluye tener sus credenciales de inicio de sesión de AWS, un sistema de archivos FSx para ONTAP implementado que contiene las fuentes de datos que desea integrar en su base de conocimientos, acceso al servicio de IA de Amazon Bedrock y más.</block>
+  <block id="43b842fd441ce1ce92d22fb0ca25a507" category="doc">Requisitos de GenAI</block>
+  <block id="55df1ea48b09b075b4b7dd39f32b38ee" category="list-text">Cuenta e inicio de sesión de Workload Factory</block>
+  <block id="47530f4f079f33bd59ebd8d6ce22e965" category="list-text">Tendrás que iniciar sesión en Workload Factory y crear una cuenta.</block>
+  <block id="a50b567095c55be6c1dc401e0ba4bace" category="inline-link">Obtén más información sobre cómo iniciar sesión y crear una cuenta</block>
+  <block id="d22e0c982de7a0a1a4146a3cac481010" category="paragraph"><block ref="d22e0c982de7a0a1a4146a3cac481010" category="inline-link-rx"></block></block>
+  <block id="97911b3c54a4e826b34c1f79026316c5" category="list-text">Credenciales y permisos de AWS</block>
+  <block id="f734c92825c03ba8094b0c90b14ef227" category="list-text">Debe agregar credenciales de AWS a Workload Factory con permisos Automate, lo que significa que utilizará Workload Factory en el modo _Automate_ para GenAI.</block>
+  <block id="b9696d94476cf594b0d0a85c749985c8" category="paragraph">Los permisos de modo _Basic_ y modo _Read_ no se admiten en este momento.</block>
+  <block id="6acb98cae81ff4c3d668ee23eaf475ea" category="paragraph">Al configurar sus credenciales, al seleccionar los permisos que se muestran a continuación, tendrá acceso completo para administrar los sistemas de archivos de FSx para ONTAP y para implementar y administrar la instancia de GenAI EC2 y otros recursos de AWS necesarios para su base de conocimientos y chatbot.</block>
+  <block id="90971299f3c483d8dff23334303ec501" category="inline-image-macro">Una captura de pantalla que muestra la configuración de permisos para la gestión completa de los recursos de IA.</block>
+  <block id="b0508f9b3b98a787c9ffda5b7aec828c" category="paragraph"><block ref="b0508f9b3b98a787c9ffda5b7aec828c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b6358992bb0152c2af9f3e2e315ef468" category="inline-link">Aprenda a añadir credenciales de AWS a Workload Factory</block>
+  <block id="83106366073f0e7e6a64705516568b5d" category="paragraph"><block ref="83106366073f0e7e6a64705516568b5d" category="inline-link-rx"></block></block>
+  <block id="75925d950c87a7dc75f300f3d330e728" category="list-text">Amazon Bedrock le permite utilizar modelos de base y proporciona las funcionalidades necesarias para crear aplicaciones de IA generativas.</block>
+  <block id="4e49292dbc43678ea9590aff823f5b35" category="paragraph">Antes de empezar con Workload Factory para GenAI, debe configurar Amazon Bedrock. Su implementación de GenAI debe estar en una región de AWS que tenga habilitado Amazon Bedrock.</block>
+  <block id="42100945533643a01574ce6867f93337" category="inline-link">Documentación de AWS: Configure Amazon Bedrock</block>
+  <block id="c28dc65deb038c89921c82f97349e6b0" category="list-text"><block ref="c28dc65deb038c89921c82f97349e6b0" category="inline-link-rx"></block></block>
+  <block id="997f616bd916b52cb9a1afa3d8f39ef7" category="inline-link">Documentación de AWS: Regiones y modelos compatibles para las bases de conocimiento de Amazon Bedrock</block>
+  <block id="3edc6942e625c13a9a58c5fbffe87b12" category="list-text"><block ref="3edc6942e625c13a9a58c5fbffe87b12" category="inline-link-rx"></block></block>
+  <block id="e9d7e3888c0ecac6d332909618bf2a62" category="list-text">Modelo de incrustación</block>
+  <block id="52e64b029bc109efaa2d9ddf8bf95697" category="list-text">Debe activar el modelo de incrustación que planea utilizar antes de crear la base de conocimientos. Se admiten los siguientes modelos de inclusión:</block>
+  <block id="cffe100a2fafd4ed6df5c517d3a0c436" category="list-text">Modelo de chat</block>
+  <block id="f4b120821069537b900189401cff6123" category="list-text">Debe activar el modelo de chat básico que planea utilizar antes de crear su base de conocimientos. Se admiten los siguientes modelos de chat de Claude:</block>
+  <block id="91862a732427fcc9b0f3f7c7e8fd3ef1" category="list-text">Claude 3,5 Soneto</block>
+  <block id="1ae4bf76ece2339f94382079fec8ea1b" category="list-text">Claude 3 Opus</block>
+  <block id="5cb902fc92ae2100fc949c459b29f2e0" category="list-text">Claude 3 Haiku</block>
+  <block id="dfd281025f82519d079a3bf3bfbabad2" category="list-text">Claude 3 Soneto</block>
+  <block id="48a6d42b28f10b9387da7c0c33136030" category="list-text">Claude 2,1</block>
+  <block id="5e1e83b3913f32ce101decea051b2e89" category="list-text">Claude 2,0</block>
+  <block id="a9c39caddabc1e9e831e8874624eeb0b" category="paragraph">Dado que el soporte de modelos varía según la región de AWS, consulte<block ref="eddadb17a88dd68548e655a82b495d2f" category="inline-link-rx"></block> para verificar qué modelos puede utilizar en las regiones en las que planea implementar su base de conocimientos.</block>
+  <block id="c16810aa96ec44a060863610996db3f6" category="list-text">Necesita un mínimo de un sistema de archivos FSx para ONTAP:</block>
+  <block id="ae0e1b2daa525e1e1109bf5c13627d7d" category="list-text">El motor GenAI de NetApp utilizará un sistema de archivos para almacenar la base de datos vectorial utilizada por la base de datos de conocimientos.</block>
+  <block id="c076421513a5b28b674cdd0d818b4476" category="paragraph">Este sistema de archivos FSx para ONTAP debe utilizar volúmenes de FlexVol. No se admiten los volúmenes de FlexGroup.</block>
+  <block id="1f0befb829af39db4a0cbb499215915f" category="list-text">Uno o varios sistemas de archivos contendrán las fuentes de datos que integrará en su base de conocimientos.</block>
+  <block id="b56c72064b6e564dd0f3f703eff43db3" category="paragraph">Un sistema de archivos FSx para ONTAP se puede utilizar con ambos fines o puede utilizar varios sistemas de archivos FSx para ONTAP.</block>
+  <block id="4daf8dc81f63d08a4e7cfc0ad7137cd6" category="list-text">Necesitará conocer la región, la VPC y la subred de AWS donde reside el sistema de archivos AWS FSx para ONTAP. El sistema de archivos debe estar en una región de AWS que tenga habilitado Amazon Bedrock.</block>
+  <block id="1f44141a0f383810dac8c932e0d76754" category="list-text">Tendrá que considerar los pares clave/valor de etiqueta que desea aplicar a los recursos de AWS que forman parte de esta implementación (opcional).</block>
+  <block id="9125326205d647d39ee0ac50c18a9a14" category="list-text">Necesitará conocer la información del par de claves que le permite conectarse de forma segura a la instancia del motor de NetApp AI.</block>
+  <block id="d5858b81edfda50f75f7994c971764f0" category="inline-link">Descubre cómo implementar y gestionar sistemas de archivos FSx para ONTAP</block>
+  <block id="7d57ea8255b8142e76fbb442ea9a782f" category="paragraph"><block ref="7d57ea8255b8142e76fbb442ea9a782f" category="inline-link-rx"></block></block>
+  <block id="b334128403ed60ff931947907046e1f0" category="summary">Para poder abrir un caso de soporte con el soporte técnico de NetApp, debe añadir una cuenta del sitio de soporte de NetApp a Workload Factory y, a continuación, registrarse para recibir soporte.</block>
+  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">Regístrese para recibir soporte</block>
+  <block id="996ad73a480311d4f86d6946935389d2" category="paragraph">Se requiere el registro de soporte para recibir soporte técnico específico para Workload Factory y sus soluciones y servicios de almacenamiento. Tienes que registrarte para recibir soporte de la consola BlueXP, que es una consola web independiente de Workload Factory.</block>
+  <block id="c552970fd4dc8118ba1806da596acad9" category="paragraph">Al registrarse para recibir soporte, no se habilita el soporte de NetApp para un servicio de archivos de proveedor de cloud. Para obtener soporte técnico relacionado con un servicio de archivos de un proveedor de cloud, su infraestructura o cualquier solución que utilice el servicio, consulte «Obtener ayuda» en la documentación de Workload Factory para ese producto.</block>
+  <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">Información general del registro de soporte</block>
+  <block id="d7e4bb081bf4ec4814d83edcfbdb8b96" category="paragraph">Registrar la suscripción de soporte de tu ID de cuenta (tu número de serie 960xxxxxxxxx de 20 dígitos, ubicado en la página de recursos de soporte de BlueXP) sirve como tu ID de suscripción de soporte único. Debe registrarse cada suscripción de asistencia técnica a nivel de cuenta de BlueXP.</block>
+  <block id="f9e05c2b383e3f11e3b4bebbe8952225" category="paragraph">El registro permite funcionalidades como la apertura de tickets de soporte y la generación automática de casos. Para completar el registro, añade cuentas del sitio de soporte de NetApp (NSS) a BlueXP, como se describe a continuación.</block>
+  <block id="856edc4caec68fece6859c4be9360f3c" category="section-title">Registre su cuenta de soporte de NetApp</block>
+  <block id="2d6573b6ae4c51dc24e58109473f2490" category="paragraph">Para registrarte para obtener soporte y activar el soporte, un usuario en tu cuenta debe asociar una cuenta en el sitio de soporte de NetApp a su inicio de sesión en BlueXP. La forma de registrarse para recibir soporte de NetApp depende de si ya tiene una cuenta del sitio de soporte de NetApp (NSS).</block>
+  <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">Cliente existente con una cuenta de NSS</block>
+  <block id="7e177185e7eddff33dd8f3aeb7551132" category="paragraph">Si es cliente de NetApp con una cuenta de NSS, solo tiene que registrarse para recibir soporte a través de BlueXP.</block>
+  <block id="0307a12e5749f8dd930472ee78f69d2c" category="list-text">En la parte superior derecha de la consola de BlueXP, seleccione el icono Configuración y seleccione *credenciales*.</block>
+  <block id="f19ab635e6d5f884a22ee4ce067fdbfd" category="list-text">Seleccione *Credenciales de usuario*.</block>
+  <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">Seleccione *Agregar credenciales NSS* y siga el aviso de autenticación del sitio de soporte de NetApp (NSS).</block>
+  <block id="cfc5506589d5a4d055e721267d5f0732" category="list-text">Para confirmar que el proceso de registro se ha realizado correctamente, seleccione el icono Ayuda y seleccione *Soporte*.</block>
+  <block id="8add4eb0d3f6ce61d374f3df3ee4eadf" category="paragraph">La página *Recursos* debe mostrar que su cuenta está registrada para soporte.</block>
+  <block id="10c56875db7a47f791d653e5d5bff0e9" category="inline-image-macro">Una captura de pantalla que muestra un número de serie de cuenta y una casilla de verificación verde y el texto registrado para soporte.</block>
+  <block id="fa7897454f637026faa3e00ccbfec239" category="paragraph"><block ref="fa7897454f637026faa3e00ccbfec239" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d9a01bdcfab6f0a10fc126999b4d5988" category="paragraph">Tenga en cuenta que los otros usuarios de BlueXP no verán este mismo estado de registro de soporte si no han asociado una cuenta del sitio de soporte de NetApp con su inicio de sesión de BlueXP. Sin embargo, eso no significa que tu cuenta de BlueXP no esté registrada para el soporte técnico. Siempre y cuando un usuario de la cuenta haya seguido estos pasos, su cuenta se ha registrado.</block>
+  <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">Cliente existente pero no cuenta NSS</block>
+  <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">Si eres un cliente existente de NetApp con licencias y números de serie existentes, pero _no_ NSS, deberás crear una cuenta NSS y asociarla al inicio de sesión de BlueXP.</block>
+  <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">Formulario de registro de usuarios del sitio de soporte de NetApp</block>
+  <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">Cree una cuenta del sitio de soporte de NetApp completando el<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
+  <block id="d61c9f72493817776f392db42ac446a2" category="list-text">Asegúrese de seleccionar el nivel de usuario adecuado, que normalmente es *Cliente/Usuario final de NetApp*.</block>
+  <block id="5226d4ec1f4f81b740cbbd27635b441f" category="list-text">Asegúrese de copiar el número de serie de la cuenta BlueXP (960xxxx) utilizado anteriormente para el campo de número de serie. Esto agilizará el procesamiento de la cuenta.</block>
+  <block id="0499bba105f8a891a2c671f1ba99dd34" category="list-text">Asocia tu nueva cuenta de NSS con tu inicio de sesión de BlueXP completando los pasos que se indican en <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="e9b1f53d6cabb3394833a4e102eb6a69" category="section-title">Totalmente nuevo en NetApp</block>
+  <block id="c20c107d0d4eef6351660f3590324232" category="paragraph">Si es totalmente nuevo en NetApp y no tiene una cuenta de NSS, siga cada paso que se indica a continuación.</block>
+  <block id="f5d7029ed18f998c0a9d780b2554e538" category="list-text">Busque el número de serie de su ID de cuenta en la página Recursos de soporte.</block>
+  <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">Una captura de pantalla del menú Ayuda en el que Soporte es la primera opción de la lista</block>
+  <block id="55adf589d087b17fca134b34f65498ed" category="paragraph"><block ref="55adf589d087b17fca134b34f65498ed" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">Sitio de registro de soporte de NetApp</block>
+  <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">Navegue<block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block> y seleccione *No soy un Cliente de NetApp Registrado*.</block>
+  <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">Rellene los campos obligatorios (aquellos con asteriscos rojos).</block>
+  <block id="1128fc8d5ec64880f4d49337ed798d31" category="list-text">En el campo *línea de productos*, seleccione *Cloud Manager* y, a continuación, seleccione el proveedor de facturación correspondiente.</block>
+  <block id="50a1dc01b7312307c34a888071586955" category="list-text">Copie el número de serie de su cuenta desde el paso 2 anterior, complete la comprobación de seguridad y confirme que ha leído la Política de privacidad de datos global de NetApp.</block>
+  <block id="3a24c87c9971d2011b4df223718f84b4" category="paragraph">Se envía inmediatamente un correo electrónico al buzón de correo para finalizar esta transacción segura. Asegúrese de comprobar sus carpetas de spam si el correo electrónico de validación no llega en pocos minutos.</block>
+  <block id="03413baeca1ff7222737d8ce299bd4e8" category="list-text">Confirme la acción desde el correo electrónico.</block>
+  <block id="201080500e946070a2e4873042507c77" category="paragraph">Confirmar envía su solicitud a NetApp y recomienda que cree una cuenta en la página de soporte de NetApp.</block>
+  <block id="cc8b0535948da368f832027c19b7f853" category="list-text">Asegúrese de copiar el número de serie de la cuenta (960xxxx) utilizado anteriormente para el campo de número de serie. Esto agilizará el procesamiento de la cuenta.</block>
+  <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">NetApp debería ponerse en contacto con usted durante este proceso. Este es un ejercicio de incorporación puntual para nuevos usuarios.</block>
+  <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">Una vez que tengas tu cuenta en el sitio de soporte de NetApp, asocia la cuenta con el inicio de sesión de BlueXP completando los pasos que se muestran en <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="d6c0fba55227980986b6e274e44b6e4e" category="summary">Después de crear la base de conocimientos, podrá probarla localmente utilizando el simulador de chatbot y realizar los cambios necesarios antes de poner la base de conocimientos a disposición de los usuarios a través de una aplicación de chatbot.</block>
+  <block id="a83574dd6db90afd60d3d6c11674872b" category="doc">Pruebe una base de conocimientos</block>
+  <block id="7690c373e8d8bb7bb7781f53763e1ddd" category="paragraph">Prueba tu base de conocimientos para asegurarte de que funciona como esperas, y puedes personalizar los temas de inicio de conversación que quieres que estén disponibles de forma predeterminada para los usuarios de chatbot de esta base de conocimientos. El simulador de chatbot se ejecuta contra todas las fuentes de datos que se han incrustado en la base de conocimientos.</block>
+  <block id="ef065131e9d1b1c76fc889fc9eb98a3f" category="paragraph">Puede probar una base de conocimientos chateando con sus fuentes de datos incrustadas en el simulador de chatbot. Tenga en cuenta que ninguna de las interacciones o conocimientos se captura en la base de datos de vectores de GenAI al probar la base de conocimientos localmente.</block>
+  <block id="6ea2edc8e481e05029a9c17c0d118a4c" category="paragraph">Realizará la mayor parte de las pruebas en Workload Factory antes de implementar la base de conocimientos en una aplicación para los usuarios. Si necesitas hacer cambios en tu fuente de datos o en la operación de chatbot, querrás hacerlo ahora antes de publicar tu base de conocimientos.</block>
+  <block id="3af56fb9119d8dcdfe73d41be9e9c264" category="paragraph">Algunas de las tareas que querrás realizar para probar tu chatbot son:</block>
+  <block id="087dddee34d7ec6ae45e7a1eceb74f0e" category="list-text">Introduzca un gran número de preguntas relevantes para su organización para asegurarse de que las respuestas sean las esperadas.</block>
+  <block id="dbc108f6f2e9d63d6e85d41c9d797122" category="list-text">Personaliza los temas de inicio de conversación que quieres que estén disponibles de forma predeterminada para tus usuarios en la aplicación chatbot.</block>
+  <block id="c6e30d922038f60cd6f0e0c72ddab156" category="list-text">Asegúrese de que el contenido atribuido que se proporciona en la parte inferior de las respuestas del chatbot contiene las referencias correctas.</block>
+  <block id="9b9ae4d8101985ff14674fde1a41dbf6" category="list-text">En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea probar.</block>
+  <block id="f3142c20010e60862dddade6c526c30c" category="paragraph">El simulador de chatbot aparece en el panel derecho. Si se define, también se muestran los iniciadores de conversación existentes.</block>
+  <block id="c61f79c1724a3bab0885dbbd3b2e87ea" category="inline-image-macro">el botón run</block>
+  <block id="ccd43d06a7b1187d2ac93471de4a9b64" category="list-text">En el campo de entrada de chatbot, ingrese una pregunta o petición de datos y seleccione <block ref="4673f7ece64f88d1999f6ef93db80a3b" category="inline-image-macro-rx" type="image"></block> para ver cómo responde su chatbot con su conocimiento organizativo.</block>
+  <block id="2625a68b73d2dae552cbcc7be08396fc" category="list-text">Si necesita actualizar alguna de sus fuentes de datos para que su base de conocimientos proporcione respuestas más centradas, realice esos cambios ahora y vuelva a probar la base de conocimientos.</block>
+  <block id="11408eb169fbb608ff150e7669c76840" category="summary">Descubra las novedades de la funcionalidad de cargas de trabajo de IA de Workload Factory.</block>
+  <block id="490414e0366b091220802d406e52c076" category="doc">Lo nuevo</block>
+  <block id="798b17d8de1952262296a846e0def34f" category="paragraph">Descubra las novedades de la funcionalidad de cargas de trabajo de IA generativas de Workload Factory.</block>
+  <block id="1d949c7c5600289e10795f178278edd1" category="section-title">7 de julio de 2024</block>
+  <block id="9ba97d99706e208a6fec2439db710d74" category="section-title">Lanzamiento inicial de Workload Factory para GenAI</block>
+  <block id="3d2b63396c87b28180a4d9d0ba951b0d" category="paragraph">La versión inicial incluye la capacidad de desarrollar una base de conocimientos personalizada mediante la incorporación de los datos de la organización. La base de conocimientos puede ser accedida por una aplicación de chatbot para sus usuarios. Esta capacidad garantiza respuestas precisas y relevantes a preguntas específicas de la organización, mejorando la satisfacción y la productividad de todos sus usuarios.</block>
+  <block id="a9273ae35bbdb787574410a5cd552892" category="summary">Ahora que ha creado una base de conocimientos que utiliza sus datos empresariales y los ha puesto en marcha para sus usuarios, puede gestionar la base de conocimientos, las fuentes de datos y la infraestructura RAG, incluidos los sistemas de archivos FSx para ONTAP.</block>
+  <block id="d0a7edff5cd82c23f3d1c18e0779ccbc" category="doc">Lo que puede hacer a continuación</block>
+  <block id="7373882bd50a7c3d67783ca6387687f7" category="paragraph">Algunas de las tareas que puede realizar para administrar los componentes de la base de conocimientos son:</block>
+  <block id="114d6a78b3582811ee5b1424398b429c" category="list-text">Actualice el contenido de sus fuentes de datos, o agregue nuevas fuentes de datos, y sincronice esos cambios con su base de conocimientos y chatbot.</block>
+  <block id="e33539c77cd7f8c72be577a444075cc8" category="list-text">Gestione la configuración del origen de datos, incluida la estrategia de fragmentación y el reconocimiento de permisos (para el acceso a archivos SMB).</block>
+  <block id="73dd64805069b754a14fd7cd8049faf8" category="list-text">Gestione la configuración de su base de conocimientos, incluidos el modelo de chat y los temas de inicio de conversación.</block>
+  <block id="54f4a017dfd5170587a554f471d25fb9" category="list-text">Anule la publicación de una base de conocimientos o vuelva a publicarla después de realizar cambios.</block>
+  <block id="ff39f3beaa5058a5d7eadc6c71e847e4" category="list-text">Realice backups y proteja los datos importantes en su sistema de archivos FSx para ONTAP para asegurarse de que sus datos de base de conocimientos y otros componentes de la infraestructura estén siempre disponibles.</block>
+  <block id="e7581e4ae4d96b238a63b95760365ab6" category="inline-link">Workload Factory para documentación de Amazon FSx para NetApp ONTAP</block>
+  <block id="739e9505cf489ae6de839a15d67ad290" category="paragraph">Para obtener información sobre la gestión de su sistema de archivos FSx para ONTAP, vaya a<block ref="80490e4643319ea0ed1c5bef7c007699" category="inline-link-rx"></block> para ver las funcionalidades de backup y protección que puede utilizar.</block>
+  <block id="1995377d356d639f1a2e87a282280beb" category="sidebar">Integra datos de tus sistemas de archivos FSx para ONTAP con tus plataformas MLOps y modelos de base de GenAI para crear chatbots funcionales usando datos de la organización.</block>
+  <block id="b476e068fefaba1a08ae0f2a7f965d59" category="sidebar">Documentación de Workload Factory para GenAI</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Manos a la obra</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">Inicio rápido</block>
+  <block id="3c26a99b89e3c7e6133ab9da9015f277" category="sidebar">Construir una base de conocimientos</block>
+  <block id="d6fd7e92747512219eb7bcf3b47fcaf9" category="sidebar">Publicar una base de conocimientos</block>
+  <block id="f2f80ac70883a1ae6f423f6eda663371" category="sidebar">Administrar GenAI</block>
+  <block id="1e2d1b975cb59eff959e606ba60cffac" category="sidebar">Gestionar la infraestructura de la base de conocimientos</block>
+  <block id="c90fe540972fc3cdcef54526cc8386e2" category="sidebar">Documentos de GenAI</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Notas de la versión</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">Novedades</block>
+  <block id="acbf2b120f060c765cc5fbfef7779840" category="sidebar">Identifique las fuentes de datos para su base de conocimientos</block>
+  <block id="2e800147de9688c09f27dae52c542680" category="sidebar">Utilice GenAI para crear bases de conocimiento</block>
+  <block id="b032727d9e00be7e59aefec94a0972c2" category="sidebar">Active la autenticación</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conocimiento y apoyo</block>
+</blocks>

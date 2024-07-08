@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: identify-data-sources.html 
+keywords: data sources, chatbot, documents, knowledge base 
+summary: 'Identifica o crea los documentos (fuentes de datos) que residen en tu sistema de archivos FSx para ONTAP que integrarás en tu base de conocimientos. Estas fuentes de datos permiten a la base de conocimientos proporcionar respuestas precisas y personalizadas a las consultas de los usuarios basadas en datos relevantes para su organización.' 
+---
+= Identifique las fuentes de datos que desea integrar en su base de conocimientos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Identifica o crea los documentos (fuentes de datos) que residen en tu sistema de archivos FSx para ONTAP que integrarás en tu base de conocimientos. Estas fuentes de datos permiten a la base de conocimientos proporcionar respuestas precisas y personalizadas a las consultas de los usuarios basadas en datos relevantes para su organización.
+
+
+
+== Número máximo de orígenes de datos
+
+El número máximo de orígenes de datos admitidos es 10.
+
+
+
+== Ubicación de los orígenes de datos
+
+Los orígenes de datos pueden almacenarse en un único volumen o en una carpeta dentro de un volumen, en un recurso compartido de SMB o exportación NFS en un sistema de archivos Amazon FSx para NetApp ONTAP. No puede seleccionar documentos individuales dentro de un volumen o carpeta, por lo tanto, debe asegurarse de que cada volumen o carpeta que contenga orígenes de datos no contenga documentos extraños que no deberían integrarse con su base de conocimientos.
+
+Puede añadir varias fuentes de datos a cada base de conocimientos, pero todos ellos tienen que residir en sistemas de archivos FSx para ONTAP a los que puede acceder desde su cuenta de AWS.
+
+El tamaño máximo de archivo para cada origen de datos es de 50 MB.
+
+
+
+== Protocolos compatibles
+
+La base de conocimientos admite datos de volúmenes que usan protocolos NFS o SMB/CIFS. Al seleccionar archivos almacenados con el protocolo SMB, debe introducir la información de Active Directory para que la base de conocimientos pueda acceder a los archivos de esos volúmenes. Esto incluye el dominio de Active Directory, la dirección IP, el nombre de usuario y la contraseña.
+
+Al almacenar su fuente de datos en un recurso compartido (archivo o directorio) al que se accede a través de SMB, los usuarios o grupos de chatbot solo pueden acceder a los datos. Cuando se habilita esta “capacidad de detección de permisos”, el sistema AI comparará el correo electrónico del usuario en auth0 con los usuarios autorizados para ver o usar los archivos en el recurso compartido SMB. El chatbot proporcionará respuestas basadas en los permisos de usuario para los archivos incrustados.
+
+Por ejemplo, si ha integrado 10 archivos (fuentes de datos) en su base de conocimientos, y 2 de los archivos son archivos de recursos humanos que contienen información restringida, solo los usuarios de chatbot que están autenticados para acceder a esos archivos 2 recibirán respuestas del chatbot que incluyen datos de esos archivos.
+
+
+
+== Formatos de archivo de origen de datos compatibles
+
+Actualmente se admiten los siguientes formatos de archivo de origen de datos.
+
+[cols="2*"]
+|===
+| Formato de archivo | Extensión 
+
+
+| Texto sin formato | .txt 
+
+
+| Documento portátil | .pdf 
+
+
+| Microsoft Word | .docx 
+
+
+| Archivo de valores separados por comas | .csv 
+|===

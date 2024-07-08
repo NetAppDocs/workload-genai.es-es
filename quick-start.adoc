@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: quick-start.html 
+keywords: quick start, knowledge base, chatbot 
+summary: Empieza a crear una base de conocimientos con los datos de tu organización que existen en los sistemas de archivos de Amazon FSx para NetApp ONTAP. Una aplicación como un chatbot accederá a esta base de conocimientos para proporcionar respuestas centradas en la organización a los usuarios finales. 
+---
+= Inicio rápido para GenAI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Empieza a crear una base de conocimientos con los datos de tu organización que existen en los sistemas de archivos de Amazon FSx para NetApp ONTAP. Una aplicación como un chatbot accederá a esta base de conocimientos para proporcionar respuestas centradas en la organización a los usuarios finales.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Una"] link:requirements.html["Configure su entorno para cumplir los requisitos de GenAI"]
+[role="quick-margin-para"]
+Necesitará las credenciales de AWS para implementar la infraestructura de AWS, un sistema de archivos puesto en marcha y descubierto de FSx para ONTAP, la lista de fuentes de datos que desea integrar en su base de conocimientos, acceso al servicio de IA de Amazon Bedrock y mucho más.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"] link:identify-data-sources.html["Identifique el sistema de archivos FSx para ONTAP que contiene los orígenes de datos"]
+[role="quick-margin-para"]
+Las fuentes de datos que integrarás en tu base de conocimientos pueden ubicarse en un único sistema de archivos FSx para ONTAP o en varios sistemas de archivos FSx para ONTAP. Estos sistemas pueden estar en diferentes VPC, pero deben ser accesibles dentro de la misma red.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"] link:deploy-infrastructure.html["Ponga en marcha la infraestructura de la base de conocimientos"]
+[role="quick-margin-para"]
+Inicie el asistente de puesta en marcha de infraestructuras para poner en marcha la infraestructura de base de conocimientos en el entorno AWS. Este proceso pone en marcha una instancia EC2 para el motor NetApp GenAI y un volumen en un sistema de archivos FSx para ONTAP para contener las bases de datos del motor de IA de NetApp. El volumen se utiliza para almacenar la base de datos vectorial utilizada por la base de conocimientos.
+
+.El futuro
+Ahora puede crear una base de conocimientos para proporcionar respuestas centradas en la organización a los usuarios finales.

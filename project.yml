@@ -1,0 +1,66 @@
+---
+settings:
+  name: GenAI
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: es-es,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,fr-fr,it-it
+sidebar:
+  entries:
+  - title: Documentos de GenAI
+    url: "/index.html"
+  - title: Notas de la versión
+    entries:
+    - title: Novedades
+      url: "/whats-new.html"
+  - title: Manos a la obra
+    entries:
+    - title: Más información sobre Workload Factory para GenAI
+      url: "/ai-workloads-overview.html"
+    - title: Inicio rápido
+      url: "/quick-start.html"
+    - title: Requisitos de GenAI
+      url: "/requirements.html"
+    - title: Identifique las fuentes de datos para su base de conocimientos
+      url: "/identify-data-sources.html"
+    - title: Ponga en marcha la infraestructura de la base de conocimientos
+      url: "/deploy-infrastructure.html"
+  - title: Utilice GenAI para crear bases de conocimiento
+    entries:
+    - title: Construir una base de conocimientos
+      entries:
+      - title: Crear una base de conocimientos
+        url: "/create-knowledgebase.html"
+      - title: Pruebe una base de conocimientos
+        url: "/test-knowledgebase.html"
+      - title: Active la autenticación
+        url: "/activate-authentication.html"
+      - title: Publicar una base de conocimientos
+        url: "/publish-knowledgebase.html"
+      - title: Lo que puede hacer a continuación
+        url: "/whats-next.html"
+    - title: Gestionar orígenes de datos
+      url: "/manage-data-source.html"
+    - title: Gestionar bases de conocimientos
+      url: "/manage-knowledgebase.html"
+  - title: Administrar GenAI
+    entries:
+    - title: Gestione la infraestructura de GenAI
+      url: "/manage-infrastructure.html"
+    - title: Componentes del motor NetApp GenAI
+      url: "/genai-engine-instance.html"
+  - title: Conocimiento y apoyo
+    entries:
+    - title: Regístrese para recibir soporte
+      url: "/support-registration.html"
+    - title: Obtenga ayuda
+      url: "/get-help.html"
+  - title: Avisos legales
+    url: "/legal-notices.html"
+product-family:
+  name: BlueXP Workload Factory for AWS
+  repo: workload-family

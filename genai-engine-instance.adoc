@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: genai-engine-instance.html 
+keywords: genai engine, instance, ec2, role, iam role, permissions, security group, inbound, outbound, private endpoints 
+summary: Al implementar la infraestructura de GenAI, Workload Factory crea una instancia EC2 para el motor de GenAI. También crea un rol de IAM, un grupo de seguridad y puntos finales privados para esta instancia. Es posible que desee obtener más información sobre estos componentes que Workload Factory crea en su entorno de AWS. 
+---
+= Componentes del motor NetApp GenAI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Al implementar la infraestructura de GenAI, Workload Factory crea una instancia EC2 para el motor de GenAI. También crea un rol de IAM, un grupo de seguridad y puntos finales privados para esta instancia. Es posible que desee obtener más información sobre estos componentes que Workload Factory crea en su entorno de AWS.
+
+Tipo de instancia de EC2:: m5.large
+Rol IAM:: La instancia del motor de GenAI necesita permisos para enviar fragmentos de datos al modelo de integración en Amazon Bedrock y para comunicarse con el backend del servicio de IA de NetApp. El rol de IAM incluye los siguientes permisos:
++
+--
+[source, json]
+----
+"ssm:Describe*",
+"ssm:Get*",
+"ssm:List*",
+"ssm:PutInventory",
+"ssm:PutComplianceItems",
+"ssm:PutConfigurePackageResult",
+"ssm:SendCommand",
+"ssm:UpdateAssociationStatus",
+"ssm:UpdateInstanceAssociationStatus",
+"ssm:UpdateInstanceInformation",
+"ssmmessages:*",
+"ec2messages:GetMessages"
+----
+--
+Grupo de seguridad:: Las reglas salientes están abiertas a todo el tráfico, mientras que las reglas entrantes están completamente cerradas.
+Puntos finales privados:: Si la VPC de destino aún no los tiene, Workload Factory crea puntos finales privados para la instancia de GenAI ENGINE EC2 para que pueda comunicarse con los siguientes servicios de AWS:
++
+--
+* Roca base de Amazon
+* Amazon EC2
+* Registro de contenedores elásticos de Amazon (ECR)
+* Amazon S3
+* Administrador de sistemas AWS (SSM)
+
+
+--
+

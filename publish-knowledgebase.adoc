@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: publish-knowledgebase.html 
+keywords: ai, chatbot, publishing, knowledge base 
+summary: Después de crear y probar su base de conocimientos localmente, puede publicar la base de conocimientos para que pueda integrarse con la aplicación chatbot que permitirá a sus usuarios consultar la base de conocimientos. 
+---
+= Publique una base de conocimientos y vea el punto final único
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Después de crear y probar su base de conocimientos localmente, puede publicar la base de conocimientos para que pueda integrarse con una aplicación de chatbot que permita a sus usuarios consultar la base de conocimientos.
+
+.Acerca de esta tarea
+La publicación de la base de conocimientos le permite utilizarla en aplicaciones de chat. La acción PUBLICATE activa la API Workload Factory para generar y publicar puntos finales únicos. Después de la publicación, la base de conocimientos se vuelve accesible para las aplicaciones de chat y los puntos finales de la API están listos para la integración.
+
+Cada base de conocimientos que publique tiene puntos finales únicos.
+
+.Pasos
+. En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea publicar.
+. image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
++
+Esta página muestra el estado Publicado, el estado de incrustación de los orígenes de datos, el modo de incrustación y la lista de todos los orígenes de datos incrustados.
+
+. Selecciona el menú *Acciones* y selecciona *Publicar*.
++
+Workload Factory publica la base de conocimientos. En la página de detalles de la base de conocimientos, el estado cambia de *No publicado* a *Publicado*
+
++
+Ahora puede obtener detalles sobre el extremo único de la base de conocimientos.
+
+. Junto al estado publicado, selecciona *Ver*.
++
+Detalles sobre cómo acceder a la base de conocimientos mediante las pantallas de la API de Workload Factory.
+
+. En el cuadro de diálogo *Ver información publicada*, copie los puntos finales de la API que puede utilizar para integrar la base de conocimientos con una aplicación.
++
+Para obtener más información sobre los puntos finales de la API, vaya a https://console.workloads.netapp.com/api-doc["Documentación de API"^] y seleccione *AI > Externo*.
+
++
+Antes de poder utilizar estos puntos finales, debe obtener un token de usuario de su proveedor de autenticación.
+
+
+
+.Resultado
+Ahora tiene una base de conocimientos publicada y el punto final único que puede utilizar para integrar la base de conocimientos con una aplicación de chatbot.

@@ -1,0 +1,165 @@
+---
+sidebar: sidebar 
+permalink: manage-knowledgebase.html 
+keywords: ai, chatbot, managing, knowledge base 
+summary: Después de crear una base de conocimientos, puede ver los detalles de la base de conocimientos, modificar la base de conocimientos, integrar orígenes de datos adicionales o suprimir la base de conocimientos. 
+---
+= Gestionar bases de conocimientos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Después de crear una base de conocimientos, puede ver los detalles de la base de conocimientos, modificar la base de conocimientos, integrar orígenes de datos adicionales o suprimir la base de conocimientos.
+
+
+
+== Ver información sobre una base de conocimientos
+
+Puede ver información sobre la configuración de una base de conocimientos y el origen de datos que están integrados.
+
+.Pasos
+. En el menú de navegación, selecciona *AI*.
+. Seleccione la base de conocimientos que desea ver.
++
+Si se define, los inicios de conversación que se están utilizando se muestran en el panel derecho.
+
+. Para ver los detalles de la base de conocimientos, image:icon-action.png["el botón de opción"] seleccione y seleccione *Administrar base de conocimientos*.
++
+Esta página muestra el estado Publicado, el estado de incrustación de los orígenes de datos, el modo de incrustación, la lista de todos los orígenes de datos incrustados, etc.
+
++
+El menú *Acciones* le permite administrar la base de conocimientos si desea realizar cambios.
+
+
+
+
+
+== Editar una base de conocimientos
+
+Puede actualizar una base de conocimientos cambiando algunas configuraciones o puede agregar o eliminar orígenes de datos.
+
+Cada vez que agregue, modifique o elimine orígenes de datos de la base de conocimientos, debe sincronizar el origen de datos para que se vuelva a indexar en la base de conocimientos. La sincronización es incremental, por lo que Amazon Bedrock solo procesa los objetos del volumen FSx para ONTAP que se han agregado, modificado o eliminado desde la última sincronización.
+
+.Pasos
+. En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea actualizar.
+. image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
++
+Esta página muestra el estado Publicado, el estado de incrustación de los orígenes de datos, el modo de incrustación, la lista de todos los orígenes de datos incrustados, etc.
+
+. Selecciona el menú *Acciones* y selecciona *Editar base de conocimientos*.
+. En la página Editar base de conocimientos, puede cambiar el nombre de la base de conocimientos, la descripción, el modelo de incrustación, el modelo de chat y si los iniciadores de conversación se crean de forma automática o manual.
++
+Si utiliza el modo Manual para iniciar una conversación, también puede cambiar los temas de inicio de la conversación aquí.
+
+. Seleccione *Guardar* después de haber realizado los cambios.
+
+
+
+
+== Agregue orígenes de datos adicionales a una base de conocimientos
+
+Puede incrustar orígenes de datos adicionales en su base de conocimientos para rellenarlos con datos adicionales de la organización.
+
+.Pasos
+. En la página de inventario de bases de conocimiento, seleccione la base de conocimientos donde desea agregar el origen de datos.
+. image:icon-action.png["el botón de opción"]Selecciona y selecciona *Añadir fuente de datos*.
+. *Seleccione un sistema de archivos*: Seleccione el sistema de archivos FSX for ONTAP donde residen sus archivos de origen de datos y seleccione *Siguiente*.
+. *Selecciona un volumen*: Selecciona el volumen en el que residen tus archivos de origen de datos y selecciona *Siguiente*.
++
+Al seleccionar los archivos almacenados mediante el protocolo SMB, deberá introducir la información de Active Directory, que incluye el dominio, la dirección IP, el nombre de usuario y la contraseña.
+
+. *Seleccione una fuente de datos*: Seleccione la ubicación de la fuente de datos en función de dónde haya guardado los archivos. Esto puede ser un volumen completo, o simplemente una carpeta o subcarpeta específica en el volumen, y seleccione *Siguiente*.
+. *Definir parámetros de IA*: En la sección *Definición de fragmentos*, defina la forma en que el servicio Bedrock de Amazon divide el contenido de la fuente de datos en fragmentos cuando se consulta la base de conocimientos a la que pertenece. En este momento, solo puede elegir oraciones.
+. En la sección *Permission Aware*, que solo está disponible cuando la fuente de datos que seleccionó está en un volumen que utiliza el protocolo SMB, puede habilitar o deshabilitar la selección:
++
+** *Activado*: Los usuarios del chatbot que accedan a esta base de conocimientos solo obtendrán respuestas a las consultas de las fuentes de datos a las que tengan acceso.
+** *Deshabilitado*: Los usuarios del chatbot recibirán respuestas usando contenido de todas las fuentes de datos integradas.
+
+
+. Seleccione *Agregar* para agregar esta fuente de datos a su base de conocimientos.
+
+
+.Resultado
+La fuente de datos está integrada en su base de conocimientos.
+
+
+
+== Sincronice sus orígenes de datos con la base de conocimientos
+
+Las fuentes de datos se sincronizan automáticamente con la base de conocimientos una vez al día para que cualquier cambio en la fuente de datos se refleje en el chatbot. Si realiza cambios en cualquiera de sus orígenes de datos y desea sincronizar los datos de inmediato, puede realizar una sincronización a petición.
+
+La sincronización es incremental, por lo que Amazon Bedrock solo procesa los objetos de los orígenes de datos que se han agregado, modificado o eliminado desde la última sincronización.
+
+.Pasos
+. En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea sincronizar.
+. image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
+. Seleccione el menú *Acciones* y seleccione *Escanear ahora*.
++
+Verá un mensaje que indica que se están escaneando las fuentes de datos y un mensaje final cuando se complete el análisis.
+
+
+
+.Resultado
+La base de conocimientos se sincroniza con las fuentes de datos adjuntas y cualquier chatbot activo comenzará a utilizar la información más reciente de sus fuentes de datos.
+
+
+
+== Evalúe los modelos de chat antes de crear una base de conocimientos
+
+Puede evaluar los modelos de chat básicos disponibles antes de crear una base de conocimientos para poder ver qué modelo funciona mejor para su implementación. Dado que el soporte de modelos varía según la región de AWS, consulte https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html["Esta página de documentación de AWS"^] para verificar qué modelos puede utilizar en las regiones en las que planea implementar su base de conocimientos.
+
+
+NOTE: Esta funcionalidad sólo está disponible cuando no se han creado bases de conocimiento, cuando no existen bases de conocimiento en la página de inventario de bases de conocimiento.
+
+.Pasos
+. En la página de inventario de Bases de Conocimientos, verás la opción de seleccionar el modelo de chat en el lado derecho de la página para el Chatbot.
+. Seleccione el modelo de chat de la lista e introduzca un conjunto de preguntas en el área de mensajes para ver cómo responde el chatbot.
+. Pruebe varios modelos para ver qué modelo es el mejor para su implementación.
+
+
+.Resultado
+Utilice ese modelo de chat cuando cree su base de conocimientos.
+
+
+
+== Anule la publicación de su base de conocimientos
+
+Una vez que hayas publicado tu base de conocimientos para que pueda integrarse con una aplicación de chatbot, puedes anular la publicación si quieres que la aplicación de chatbot no acceda a la base de conocimientos.
+
+La anulación de la publicación de la base de conocimientos impide que las aplicaciones de chat funcionen. El punto final de API único en el que se puede acceder a la base de conocimientos está desactivado.
+
+.Pasos
+. En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea anular la publicación.
+. image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
++
+Esta página muestra el estado Publicado, el estado de incrustación de los orígenes de datos, el modo de incrustación y la lista de todos los orígenes de datos incrustados.
+
+. Selecciona el menú *Acciones* y selecciona *Anular publicación*.
+
+
+.Resultado
+La base de conocimientos está desactivada y ya no es accesible por una aplicación de chatbot.
+
+
+
+== Suprimir una base de conocimientos
+
+Si ya no necesita una base de conocimientos, puede eliminarla. Al eliminar la base de conocimientos, se eliminará de Workload Factory y las aplicaciones o chatbots que estén utilizando la base de conocimientos dejarán de funcionar. Esta acción no es reversible.
+
+Al suprimir una base de conocimientos, también debe llevar a cabo las siguientes acciones para suprimir por completo todos los recursos asociados a la base de conocimientos:
+
+* Disociar la base de conocimiento de cualquier agente con el que esté asociado.
+* Los datos subyacentes que se indizaron de su base de conocimientos permanecen en el almacén de vectores que configuró y aún se pueden recuperar. Para eliminar los datos, también debe eliminar el índice de vectores que contiene las incrustaciones de datos.
+
+
+.Pasos
+. En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea suprimir.
+. image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
+. Selecciona el menú *Acciones* y selecciona *Eliminar base de conocimientos*.
+. En el cuadro de diálogo Eliminar base de conocimientos, confirme que desea eliminarla y seleccione *Eliminar*.
+
+
+.Resultado
+La base de conocimientos se elimina de la fábrica de carga de trabajo.

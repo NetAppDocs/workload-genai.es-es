@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: whats-next.html 
+keywords: what you can do, knowledge base 
+summary: Ahora que ha creado una base de conocimientos que utiliza sus datos empresariales y los ha puesto en marcha para sus usuarios, puede gestionar la base de conocimientos, las fuentes de datos y la infraestructura RAG, incluidos los sistemas de archivos FSx para ONTAP. 
+---
+= Lo que puede hacer a continuación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ahora que ha creado una base de conocimientos que utiliza sus datos empresariales y los ha puesto en marcha para sus usuarios, puede gestionar la base de conocimientos, las fuentes de datos y la infraestructura RAG, incluidos los sistemas de archivos FSx para ONTAP.
+
+Algunas de las tareas que puede realizar para administrar los componentes de la base de conocimientos son:
+
+* Actualice el contenido de sus fuentes de datos, o agregue nuevas fuentes de datos, y sincronice esos cambios con su base de conocimientos y chatbot.
+* Gestione la configuración del origen de datos, incluida la estrategia de fragmentación y el reconocimiento de permisos (para el acceso a archivos SMB).
+* Gestione la configuración de su base de conocimientos, incluidos el modelo de chat y los temas de inicio de conversación.
+* Anule la publicación de una base de conocimientos o vuelva a publicarla después de realizar cambios.
+* Realice backups y proteja los datos importantes en su sistema de archivos FSx para ONTAP para asegurarse de que sus datos de base de conocimientos y otros componentes de la infraestructura estén siempre disponibles.
+
+
+Para obtener información sobre la gestión de su sistema de archivos FSx para ONTAP, vaya a https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Workload Factory para documentación de Amazon FSx para NetApp ONTAP"^] para ver las funcionalidades de backup y protección que puede utilizar.
