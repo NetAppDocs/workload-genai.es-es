@@ -58,7 +58,7 @@ GenAI ayuda a construir aplicaciones de IA generativas usando RAG de las siguien
 
 == Coste
 
-Durante el período de vista previa, no hay costo por usar la capacidad de GenAI de Workload Factory.
+No hay coste por usar la capacidad GenAI de Workload Factory.
 
 Sin embargo, tendrá que pagar por los recursos de AWS que ponga en marcha para dar soporte a la infraestructura de IA generativa. Por ejemplo, pagará a AWS por el servicio de IA de Amazon Bedrock, el sistema de archivos y la capacidad de almacenamiento de FSx para ONTAP y la instancia EC2 del motor de GenAI.
 

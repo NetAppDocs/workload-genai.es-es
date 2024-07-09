@@ -54,7 +54,6 @@
   <block id="80a4d47d289b6794b7af32bf0403d817" category="list-text">Crea automáticamente preguntas para iniciar conversaciones basadas en el contenido de las bases de conocimientos.</block>
   <block id="d115eba24b3d1be73af7f0952b82dc13" category="list-text">Proporciona un simulador de chat para que los administradores de datos prueben el chat con las bases de conocimientos.</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">Coste</block>
-  <block id="848d5941560ff7e3f492b8bc6ca745d1" category="paragraph">Durante el período de vista previa, no hay costo por usar la capacidad de GenAI de Workload Factory.</block>
   <block id="ca4fec9e2b2e873ba73dde822ed0fd02" category="paragraph">Sin embargo, tendrá que pagar por los recursos de AWS que ponga en marcha para dar soporte a la infraestructura de IA generativa. Por ejemplo, pagará a AWS por el servicio de IA de Amazon Bedrock, el sistema de archivos y la capacidad de almacenamiento de FSx para ONTAP y la instancia EC2 del motor de GenAI.</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="section-title">Licencia</block>
   <block id="0ea77fd2fdca0ee14d426a023ea715ad" category="paragraph">NetApp no necesita licencias especiales para usar las capacidades de IA de Workload Factory.</block>
@@ -538,4 +537,5 @@
   <block id="2e800147de9688c09f27dae52c542680" category="sidebar">Utilice GenAI para crear bases de conocimiento</block>
   <block id="b032727d9e00be7e59aefec94a0972c2" category="sidebar">Active la autenticación</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conocimiento y apoyo</block>
+  <block id="3163a16fc98aa29c5fea8b61c62bb459" category="paragraph">No hay coste por usar la capacidad GenAI de Workload Factory.</block>
 </blocks>
