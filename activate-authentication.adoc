@@ -14,7 +14,7 @@ summary: Active la autenticación de una base de conocimientos para que la valid
 Active la autenticación de una base de conocimientos para que se requiera la validación de tokens y ACL cuando se utilicen los puntos finales de la API para integrar una base de conocimientos con una aplicación de chatbot.
 
 .Pasos
-. En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea publicar.
+. En la página de inventario de bases de conocimientos, seleccione la base de conocimientos para la que desea activar la autenticación.
 . image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
 . Seleccione el menú *Acciones* y seleccione *Administrar configuración de autenticación*.
 . Configurar la autenticación:
@@ -37,4 +37,4 @@ Debe obtener los valores de estos campos del proveedor de autenticación.
 
 
 .Resultado
-Ahora tiene una base de conocimientos publicada y el punto final único que puede utilizar para integrar la base de conocimientos con una aplicación de chatbot.
+La autenticación de la base de conocimientos ahora está activa, y puede utilizar puntos finales de API para interactuar con la base de conocimientos e integrar la base de conocimientos con una aplicación de chatbot.

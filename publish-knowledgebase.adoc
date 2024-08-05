@@ -33,7 +33,7 @@ Ahora puede obtener detalles sobre el extremo único de la base de conocimientos
 
 . Junto al estado publicado, selecciona *Ver*.
 +
-Detalles sobre cómo acceder a la base de conocimientos mediante las pantallas de la API de Workload Factory.
+Se muestran los detalles sobre cómo acceder a la base de conocimientos mediante la API de Workload Factory.
 
 . En el cuadro de diálogo *Ver información publicada*, copie los puntos finales de la API que puede utilizar para integrar la base de conocimientos con una aplicación.
 +

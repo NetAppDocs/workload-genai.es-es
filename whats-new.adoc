@@ -15,6 +15,16 @@ Descubra las novedades de la funcionalidad de cargas de trabajo de IA generativa
 
 
 
+== 4 de agosto de 2024
+
+
+
+=== Integración de Amazon CloudWatch Logs
+
+Las cargas de trabajo de IA generativas ahora están integradas con Amazon CloudWatch Logs, lo que le permite supervisar los archivos de registro de las cargas de trabajo de IA generativas.
+
+
+
 == 7 de julio de 2024
 
 
