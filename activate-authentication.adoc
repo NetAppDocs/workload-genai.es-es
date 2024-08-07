@@ -11,7 +11,7 @@ summary: Active la autenticación de una base de conocimientos para que la valid
 
 
 [role="lead"]
-Active la autenticación de una base de conocimientos para que se requiera la validación de tokens y ACL cuando se utilicen los puntos finales de la API para integrar una base de conocimientos con una aplicación de chatbot.
+Active la autenticación de una base de conocimientos para que se requiera la validación de tokens y ACL cuando se utilicen los puntos finales de la API para integrar una base de conocimientos con una aplicación de chatbot. Cuando activa la autenticación, genera un token web JSON que se utiliza para las solicitudes de API a una base de conocimientos de clientes de chatbot.
 
 .Pasos
 . En la página de inventario de bases de conocimientos, seleccione la base de conocimientos para la que desea activar la autenticación.
@@ -20,18 +20,47 @@ Active la autenticación de una base de conocimientos para que se requiera la va
 . Configurar la autenticación:
 +
 .. Selecciona *Activar configuración de autenticación*.
-.. Proporcione la información necesaria:
+.. Proporcione la información obligatoria. Se proporcionan ejemplos, pero debe obtener los valores de estos campos del proveedor de autenticación:
 +
-*** Algoritmos
-*** Destinatarios
-*** Emisor
-*** URI DE JWKS
-
-
-
+*** *Algoritmos*: El algoritmo de firma que utiliza su proveedor de autenticación.
+*** *Audiencia* (Opcional): Una cadena que contiene el destinatario previsto del token de autenticación (a veces una URL).
+*** *Emisor*: Una cadena que identifica al proveedor que emitió el token.
++
+Por ejemplo, Amazon Cognito utiliza cadenas de emisores con el siguiente formato:
 
 +
-Debe obtener los valores de estos campos del proveedor de autenticación.
+[listing]
+----
+https://cognito-idp-<region>.amazonaws.com/<UserPoolID>
+----
++
+Donde `<region>` es la región de AWS que contiene el grupo de usuarios, y `<UserPoolID>` es su ID de grupo de usuarios. Puede recuperar su ID de grupo de usuarios con el siguiente comando:
+
++
+[listing]
+----
+aws cognito-idp list-user-pools --max-results=60 --output=table
+----
+*** *JWKS URI*: La cadena URI que proporciona claves públicas necesarias para verificar las firmas de este token.
++
+Por ejemplo, Amazon Cognito utiliza cadenas URI JWKS con el siguiente formato:
+
++
+[listing]
+----
+https://cognito-idp.<region>.amazonaws.com/<userPoolId>/.well-known/jwks.json
+----
++
+Donde `<region>` es la región de AWS que contiene el grupo de usuarios, y `<UserPoolID>` es su ID de grupo de usuarios. Puede recuperar su ID de grupo de usuarios con el siguiente comando:
+
++
+[listing]
+----
+aws cognito-idp list-user-pools --max-results=60 --output=table
+----
+
+
+
 
 . Seleccione *Guardar*.
 

@@ -12,7 +12,6 @@
   <block id="65f706122d6156fd52b6cb2ff2214944" category="list-text">Seleccione *Agregar* para agregar esta fuente de datos a su base de conocimientos.</block>
   <block id="f1af0b71f33a2e37e9e17b100f3c0b1e" category="summary">Active la autenticación de una base de conocimientos para que la validación de tokens y las ACL sean necesarias al integrar la base de conocimientos con una aplicación de chatbot.</block>
   <block id="970a6e4ed60b5e3eb0f25c2ab67433fe" category="doc">Active la autenticación externa para una base de conocimientos</block>
-  <block id="f739f01e878ac777330d67ca4158aece" category="paragraph">Active la autenticación de una base de conocimientos para que se requiera la validación de tokens y ACL cuando se utilicen los puntos finales de la API para integrar una base de conocimientos con una aplicación de chatbot.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Pasos</block>
   <block id="958a8f384aa34f23244386f38ed3aeab" category="list-text">En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea publicar.</block>
   <block id="2041999f6b6b70199d1267ee84f453a6" category="inline-image-macro">el botón de opción</block>
@@ -20,12 +19,6 @@
   <block id="717cb2ec03a878d541d7d67390c70a02" category="list-text">Seleccione el menú *Acciones* y seleccione *Administrar configuración de autenticación*.</block>
   <block id="01345ed4b5ff7f7a1a05a52074ad1caf" category="list-text">Configurar la autenticación:</block>
   <block id="d408b7a47989c152a2aa2d90a6528cd8" category="list-text">Selecciona *Activar configuración de autenticación*.</block>
-  <block id="06b97c41aa527667da7e7e745c867d3c" category="list-text">Proporcione la información necesaria:</block>
-  <block id="f67d4abfe5d3ad3bdc35adca8802160f" category="list-text">Algoritmos</block>
-  <block id="ef1e6887c579ba81dcedc3f4e3793cd2" category="list-text">Destinatarios</block>
-  <block id="51360304ea03557e79bdf5ff9cd2e234" category="list-text">Emisor</block>
-  <block id="9ebac1089717ab190990b2b9a0fd554c" category="list-text">URI DE JWKS</block>
-  <block id="9df3162c758e92127fd15a555cd18f04" category="paragraph">Debe obtener los valores de estos campos del proveedor de autenticación.</block>
   <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">Seleccione *Guardar*.</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Resultado</block>
   <block id="5d8cae383bd52502a39a1612796fb31f" category="paragraph">Ahora tiene una base de conocimientos publicada y el punto final único que puede utilizar para integrar la base de conocimientos con una aplicación de chatbot.</block>
@@ -550,4 +543,13 @@
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">4 de agosto de 2024</block>
   <block id="ec7827c2237ae7b863c9ba93b519cbc1" category="section-title">Integración de Amazon CloudWatch Logs</block>
   <block id="64c1dd8cb5f86710c3293cc9807760fb" category="paragraph">Las cargas de trabajo de IA generativas ahora están integradas con Amazon CloudWatch Logs, lo que le permite supervisar los archivos de registro de las cargas de trabajo de IA generativas.</block>
+  <block id="c34bf4f0a7173f53dc110e7f41c2e0d0" category="paragraph">Active la autenticación de una base de conocimientos para que se requiera la validación de tokens y ACL cuando se utilicen los puntos finales de la API para integrar una base de conocimientos con una aplicación de chatbot. Cuando activa la autenticación, genera un token web JSON que se utiliza para las solicitudes de API a una base de conocimientos de clientes de chatbot.</block>
+  <block id="d4cc00616339f0819c8ca53d7850ca2c" category="list-text">Proporcione la información obligatoria. Se proporcionan ejemplos, pero debe obtener los valores de estos campos del proveedor de autenticación:</block>
+  <block id="8fbebd38c35cb217ad6437410297b5e7" category="list-text">*Algoritmos*: El algoritmo de firma que utiliza su proveedor de autenticación.</block>
+  <block id="59575929b41aa989abd4d539bc31b47a" category="list-text">*Audiencia* (Opcional): Una cadena que contiene el destinatario previsto del token de autenticación (a veces una URL).</block>
+  <block id="8815fb464bfa6c8533fc5ae4e04b9c5a" category="list-text">*Emisor*: Una cadena que identifica al proveedor que emitió el token.</block>
+  <block id="9f921e08c2635ce0ca6d5507cf90b6d2" category="paragraph">Por ejemplo, Amazon Cognito utiliza cadenas de emisores con el siguiente formato:</block>
+  <block id="69a143a2f8c7c42f85ef0de9978c131d" category="paragraph">Donde<block ref="d1dc4390a2dfb7cdc1a097e10b04acdf" prefix=" " category="inline-code"></block> es la región de AWS que contiene el grupo de usuarios, y<block ref="d47ea98789cbedeffd13a02b7b550538" prefix=" " category="inline-code"></block> es su ID de grupo de usuarios. Puede recuperar su ID de grupo de usuarios con el siguiente comando:</block>
+  <block id="563ae45eabbbd334a2af58d93ded707c" category="list-text">*JWKS URI*: La cadena URI que proporciona claves públicas necesarias para verificar las firmas de este token.</block>
+  <block id="2caafa02c784bfe569590254865dd928" category="paragraph">Por ejemplo, Amazon Cognito utiliza cadenas URI JWKS con el siguiente formato:</block>
 </blocks>
