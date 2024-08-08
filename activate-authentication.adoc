@@ -11,7 +11,7 @@ summary: Active la autenticación de una base de conocimientos para que la valid
 
 
 [role="lead"]
-Active la autenticación de una base de conocimientos para que se requiera la validación de tokens y ACL cuando se utilicen los puntos finales de la API para integrar una base de conocimientos con una aplicación de chatbot. Cuando activa la autenticación, genera un token web JSON que se utiliza para las solicitudes de API a una base de conocimientos de clientes de chatbot.
+Active la autenticación de una base de conocimientos para que se requiera la validación de tokens y ACL cuando se utilicen los puntos finales de la API para integrar una base de conocimientos con una aplicación de chatbot. Cuando activa la autenticación, configura la configuración de un token web JSON que se utilizará para las solicitudes de API a una base de conocimientos de clientes de chatbot.
 
 .Pasos
 . En la página de inventario de bases de conocimientos, seleccione la base de conocimientos para la que desea activar la autenticación.
@@ -23,7 +23,7 @@ Active la autenticación de una base de conocimientos para que se requiera la va
 .. Proporcione la información obligatoria. Se proporcionan ejemplos, pero debe obtener los valores de estos campos del proveedor de autenticación:
 +
 *** *Algoritmos*: El algoritmo de firma que utiliza su proveedor de autenticación.
-*** *Audiencia* (Opcional): Una cadena que contiene el destinatario previsto del token de autenticación (a veces una URL).
+*** *Audiencia* (Opcional): Una cadena que contiene el destinatario previsto del token (a veces una URL).
 *** *Emisor*: Una cadena que identifica al proveedor que emitió el token.
 +
 Por ejemplo, Amazon Cognito utiliza cadenas de emisores con el siguiente formato:
