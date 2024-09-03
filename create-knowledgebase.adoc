@@ -25,7 +25,7 @@ La base de conocimientos define características como los modelos de IA Bedrock 
 
 .Pasos
 . Inicie sesión en Workload Factory.
-. En el icono AI Workloads, seleccione *Create Chatbot*.
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la pestaña Bases de conocimiento, selecciona *Añadir base de conocimiento*.
 . En la página Definir base de conocimientos, configure los valores de la base de conocimientos:
 +
@@ -50,12 +50,19 @@ Obtenga más información sobre los modelos disponibles para ayudarle a seleccio
 
 .. * Iniciadores de conversación *: Elija si desea proporcionar hasta cuatro mensajes de inicio de conversación que se muestran a los usuarios que interactúan con un chatbot que utiliza esta base de conocimientos. Le recomendamos que active esta configuración.
 +
-Si activa los arrancadores de conversación, el modo automático está seleccionado de forma predeterminada. El modo manual solo se puede activar después de agregar fuentes de datos a su base de conocimientos. link:manage-knowledgebase.html["Aprenda a modificar la configuración de la base de conocimientos"].
+Si activa los arrancadores de conversación, se selecciona el modo automático de forma predeterminada. El modo manual solo se puede activar después de agregar fuentes de datos a su base de conocimientos. link:manage-knowledgebase.html["Aprenda a modificar la configuración de la base de conocimientos"].
+
+.. *FSX para el sistema de archivos ONTAP*: Cuando definas una nueva base de conocimientos, Workload Factory crea un nuevo volumen de Amazon FSx para NetApp ONTAP para almacenarlo. Seleccione un nombre del sistema de archivos y SVM (también llamado máquina virtual de almacenamiento) donde se creará el volumen nuevo.
+.. *Política de instantáneas*: Elija una política de instantáneas de la lista de políticas existentes definidas en el inventario de almacenamiento de Workload Factory.
++
+Si la política de Snapshot que necesita no existe, puede https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["crear una política de snapshot"] hacerlo en la máquina virtual de almacenamiento que contiene el volumen.
 
 
 
 . Seleccione *Crear base de conocimiento* para agregar la base de conocimiento a GenAI.
-. En la siguiente página del asistente, tiene la opción de agregar un origen de datos a la nueva base de conocimientos o de finalizar el proceso aquí sin agregar un origen de datos. Le recomendamos que seleccione *Añadir fuente de datos* y agregue una o más fuentes de datos ahora.
++
+En la siguiente página del asistente, tiene la opción de agregar un origen de datos a la nueva base de conocimientos o de finalizar el proceso aquí sin agregar un origen de datos. Le recomendamos que seleccione *Añadir fuente de datos* y agregue una o más fuentes de datos ahora.
+
 
 
 
@@ -75,7 +82,16 @@ El número máximo de orígenes de datos admitidos es 10.
 Al seleccionar los archivos almacenados mediante el protocolo SMB, deberá introducir la información de Active Directory, que incluye el dominio, la dirección IP, el nombre de usuario y la contraseña.
 
 . *Seleccione una fuente de datos*: Seleccione la ubicación de la fuente de datos en función de dónde haya guardado los archivos. Esto puede ser un volumen completo, o simplemente una carpeta o subcarpeta específica en el volumen, y seleccione *Siguiente*.
-. *Definir parámetros de IA*: En la sección *Definición de fragmentos*, defina la forma en que el servicio Bedrock de Amazon divide el contenido de la fuente de datos en fragmentos cuando se consulta la base de conocimientos a la que pertenece. En este momento, solo puede elegir oraciones.
+. *Definir parámetros de IA*: En la sección *Estrategia de Chunking*, defina cómo el motor GenAI divide el contenido de la fuente de datos en fragmentos cuando la fuente de datos se integra con una base de conocimientos. Puede elegir una de las siguientes estrategias:
++
+** * Fragmentación de varias frases*: Organiza la información de su fuente de datos en fragmentos definidos por frases. Puedes elegir cuántas oraciones componen cada fragmento (hasta 100).
+** * Fragmento basado en superposición *: Organiza la información de su fuente de datos en fragmentos definidos por caracteres que pueden superponerse a fragmentos vecinos. Puedes elegir el tamaño de cada fragmento en caracteres, y cuánto se superpone cada fragmento con fragmentos adyacentes. Puede configurar un tamaño de fragmento de entre 50 y 3000 caracteres, y un porcentaje de superposición de entre 1 y 99%.
++
+
+NOTE: La elección de un alto porcentaje de superposición puede aumentar en gran medida los requisitos de almacenamiento con solo pequeñas mejoras en la precisión de la recuperación.
+
+
+
 . En la sección *Permission Aware*, que solo está disponible cuando la fuente de datos que seleccionó está en un volumen que utiliza el protocolo SMB, puede habilitar o deshabilitar la selección:
 +
 ** *Activado*: Los usuarios del chatbot que accedan a esta base de conocimientos solo obtendrán respuestas a las consultas de las fuentes de datos a las que tengan acceso.

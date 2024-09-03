@@ -8,7 +8,16 @@
 Al seleccionar los archivos almacenados mediante el protocolo SMB, deberá introducir la información de Active Directory, que incluye el dominio, la dirección IP, el nombre de usuario y la contraseña.
 
 . *Seleccione una fuente de datos*: Seleccione la ubicación de la fuente de datos en función de dónde haya guardado los archivos. Esto puede ser un volumen completo, o simplemente una carpeta o subcarpeta específica en el volumen, y seleccione *Siguiente*.
-. *Definir parámetros de IA*: En la sección *Definición de fragmentos*, defina la forma en que el servicio Bedrock de Amazon divide el contenido de la fuente de datos en fragmentos cuando se consulta la base de conocimientos a la que pertenece. En este momento, solo puede elegir oraciones.
+. *Definir parámetros de IA*: En la sección *Estrategia de Chunking*, defina cómo el motor GenAI divide el contenido de la fuente de datos en fragmentos cuando la fuente de datos se integra con una base de conocimientos. Puede elegir una de las siguientes estrategias:
++
+** * Fragmentación de varias frases*: Organiza la información de su fuente de datos en fragmentos definidos por frases. Puedes elegir cuántas oraciones componen cada fragmento (hasta 100).
+** * Fragmento basado en superposición *: Organiza la información de su fuente de datos en fragmentos definidos por caracteres que pueden superponerse a fragmentos vecinos. Puedes elegir el tamaño de cada fragmento en caracteres, y cuánto se superpone cada fragmento con fragmentos adyacentes. Puede configurar un tamaño de fragmento de entre 50 y 3000 caracteres, y un porcentaje de superposición de entre 1 y 99%.
++
+
+NOTE: La elección de un alto porcentaje de superposición puede aumentar en gran medida los requisitos de almacenamiento con solo pequeñas mejoras en la precisión de la recuperación.
+
+
+
 . En la sección *Permission Aware*, que solo está disponible cuando la fuente de datos que seleccionó está en un volumen que utiliza el protocolo SMB, puede habilitar o deshabilitar la selección:
 +
 ** *Activado*: Los usuarios del chatbot que accedan a esta base de conocimientos solo obtendrán respuestas a las consultas de las fuentes de datos a las que tengan acceso.

@@ -35,7 +35,7 @@ También muestra la información de incrustación y si ese origen de datos está
 
 == Editar la configuración del origen de datos
 
-Puede editar información sobre un origen de datos que haya integrado en una base de conocimientos. La mayor parte de la información se corrige después de agregar un origen de datos a una base de conocimientos, pero puede realizar cambios en la definición de fragmentación y en la detección de permisos (cuando se utiliza el protocolo SMB en el volumen de origen de datos).
+Puede editar información sobre un origen de datos que haya integrado en una base de conocimientos. La mayor parte de la información se corrige después de agregar un origen de datos a una base de conocimientos, pero puede realizar cambios en la definición y configuración de fragmentos y en la detección de permisos (cuando se utiliza el protocolo SMB en el volumen de origen de datos).
 
 .Pasos
 . En la página de inventario de bases de conocimiento, seleccione la base de conocimientos donde reside el origen de datos y, a continuación, image:icon-action.png["el botón de opción"] seleccione y seleccione *Gestionar base de conocimientos*.
@@ -43,8 +43,8 @@ Puede editar información sobre un origen de datos que haya integrado en una bas
 La parte inferior de la página muestra los orígenes de datos que forman parte de esta base de conocimientos.
 
 . En la fila de la fuente de datos que desea editar, image:icon-action.png["el botón de opción"] seleccione y seleccione *Editar fuente de datos*.
-. En la página Editar origen de datos, seleccione image:button-down-caret.png["el botón de flecha abajo"] para ampliar la fila para la definición de fragmento.
-. Actualice la configuración de la estrategia Chunking y el tamaño del fragmento, y la conciencia de permisos (para volúmenes SMB) y seleccione *Guardar*.
+. En la página Editar origen de datos, seleccione image:button-down-caret.png["el botón de flecha abajo"] para ampliar la fila para la definición de fragmentos.
+. Actualice la configuración y la estrategia de fragmentación, así como el reconocimiento de permisos (para volúmenes SMB) y seleccione *Guardar*.
 
 
 .Resultado

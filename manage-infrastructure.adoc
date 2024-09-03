@@ -25,7 +25,7 @@ Puede ver información sobre la infraestructura de chatbot.
 . Vea información sobre la infraestructura, que incluye detalles sobre los siguientes componentes:
 +
 ** Configuración de AWS
-** El sistema de archivos FSx para ONTAP
+** Configuración de infraestructura
 ** El motor de la IA
 ** La base de datos de vectores
 
