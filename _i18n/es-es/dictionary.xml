@@ -579,4 +579,32 @@
   <block id="fd33fe22719aed031c8ea822ba866360" category="paragraph">Al suprimir una base de conocimientos, también debe desasociar la base de conocimientos de los agentes a los que está asociada para suprimir por completo todos los recursos asociados a la base de conocimientos.</block>
   <block id="fa20235938197ed878f7da8159917a1d" category="paragraph">La base de conocimientos se elimina de Workload Factory y el volumen asociado se elimina.</block>
   <block id="b5cef683aab00353096b98823a237e69" category="section-title">1 de septiembre de 2024</block>
+  <block id="231cf4c70d866b616c21baddaeed0696" category="doc">Resolución de problemas</block>
+  <block id="36e2bd9e7950f46d3ea6d2bca4c50ba1" category="paragraph">Aprenda a solucionar algunos problemas comunes que puede encontrar.</block>
+  <block id="95716fc01ccba6df751b9d2ae002be52" category="section-title">Problemas y soluciones comunes</block>
+  <block id="cdfb5c11885ea650ef88224d86291d32" category="paragraph">Si tiene uno de estos problemas, puede seguir los pasos de la columna Solución alternativa para intentar resolverlo.</block>
+  <block id="deec4ff19974f12ed781cb9a59064214" category="cell">Zona</block>
+  <block id="642facf67e0ad311eee88b3ab8381590" category="cell">Problema</block>
+  <block id="50fc9b91746bb8d34fa385d9324741ed" category="cell">Causa</block>
+  <block id="7aebfa1e2291377e040de92d7f7f335f" category="cell">Solución alternativa</block>
+  <block id="ea355214fd4bc7c57f471bd92918879b" category="cell">Puesta en marcha</block>
+  <block id="c7ffd0cab67a601554ae934436d644d8" category="cell">La implementación falla porque el volumen ya existe.</block>
+  <block id="5c985f7bd2795d6a69cd256e7fd02755" category="cell">Workload Factory para GenAI necesita crear un nuevo volumen durante el proceso de implementación, pero ya existe un volumen con el nombre que especificó.</block>
+  <block id="c116d59189f49ad24327d9067ef9806e" category="cell">Especifique un nombre único que se utilizará para el nuevo volumen e intente implementar de nuevo.</block>
+  <block id="429a792784eb6767e4ecfd3b82f1ae2d" category="cell">Se produce un error en la implementación porque Workload Factory para GenAI no puede montar el volumen.</block>
+  <block id="8f3392d21c1e23f002f42fd0394d7c80" category="cell">Uno o más de los puertos de entrada necesarios para FSx para NetApp ONTAP están cerrados o filtrados.</block>
+  <block id="e87d6ed459b274ad7c388e0797013c9f" category="inline-link">Reglas de grupo de seguridad para FSX para ONTAP</block>
+  <block id="5503cb2b17f74a27a0085d8499cd3f60" category="paragraph">Abra los puertos enumerados en<block ref="127df24588c6526408fa1a708579050d" category="inline-link-rx"></block>.</block>
+  <block id="10d0de28911c5f66463b9c8783f8148a" category="cell">Mantenimiento</block>
+  <block id="dbb45a1dccce77b67592b5925f4e79c4" category="cell">No se pudo iniciar la instancia de Docker de backend utilizada por Workload Factory para GenAI.</block>
+  <block id="f1e0872518e98f8295b8550491f79850" category="cell">Se ha suprimido el volumen y se ha reiniciado la instancia de EC2.</block>
+  <block id="35df13c892646e1e41e065276ead0cee" category="paragraph">Utilice los siguientes pasos de recuperación:</block>
+  <block id="33aefd97376313139230d90d11725c7c" category="list-text">Crea un nuevo volumen en FSx para NetApp ONTAP. Por ejemplo, el nombre del volumen puede ser<block ref="74cd6292d49a50a17339880eaf71909f" prefix=" " category="inline-code"></block> y la ruta de volumen puede ser<block ref="e7251dd12f14500e110af37fd268f48d" prefix=" " category="inline-code"></block>.</block>
+  <block id="eeac5419fd92421807eedad222f7a6aa" category="list-text">SSH a la instancia de Amazon EC2.</block>
+  <block id="d8fdf1bf6fa8b2e85005a0e982def19e" category="list-text">Enumere los volúmenes:</block>
+  <block id="dd99e83d7c285a324a28a5c92543c4f8" category="list-text">Elimine el volumen antiguo:</block>
+  <block id="fa7f64581f6d6c87a2a52e6df453b29b" category="list-text">Abra el<block ref="4e5e90c6228fd48698d074241c2ba760" prefix=" " category="inline-code"></block> archivo con un editor de texto.</block>
+  <block id="9cbd2c5c5175ed32f13a8e1e7a8198dd" category="list-text">En<block ref="078831e29f354e83fac6da3db6ed6b7b" prefix=" " category="inline-code"></block> la sección, cambie la ruta del dispositivo a la nueva ruta del volumen. Por ejemplo:</block>
+  <block id="e9813bd2289d9835204f02be0a5d2df6" category="cell">Se eliminó el volumen raíz.</block>
+  <block id="358ede72c2c3d3e77baf3ed35b4039f6" category="cell">Cree un volumen con un nombre y una ruta y, a continuación, reinicie la instancia de Docker back-end desde Amazon EC2.</block>
 </blocks>
