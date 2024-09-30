@@ -58,6 +58,64 @@ Si utiliza el modo Manual para iniciar una conversación, también puede cambiar
 
 
 
+== Proteger una base de conocimientos con instantáneas
+
+Puede proteger los datos de la base de conocimientos realizando y restaurando instantáneas de sus volúmenes de base de conocimientos. Puede restaurar desde una instantánea para revertir a la versión anterior de la base de conocimientos en cualquier momento.
+
+Las copias Snapshot pueden ser más rápidas y eficientes en cuanto al almacenamiento que los backups, y permiten proteger cada base de conocimientos mediante una política de protección diferente. Algunos de los escenarios en los que las instantáneas pueden ser útiles son:
+
+* Pérdida o daños de datos accidentales
+* Recuperación de datos incorrectos que se están ingiriendo en la base de conocimientos
+* Probar diferentes fuentes de datos o estrategias de fragmentación, y revertir rápidamente una vez finalizada la prueba
+
+
+
+
+=== Tomar una copia Snapshot de un volumen de base de conocimientos
+
+Puede guardar el estado de una base de conocimientos mediante una instantánea manual del volumen de la base de conocimientos.
+
+.Pasos
+. En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea proteger.
+. image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
++
+Esta página muestra el estado Publicado, el estado de incrustación de los orígenes de datos, el modo de incrustación, la lista de todos los orígenes de datos incrustados, etc.
+
+. Selecciona el menú *Acciones* y selecciona *Instantánea > Crear nueva instantánea*.
++
+Se crea una instantánea de la base de conocimientos.
+
+
+
+
+
+=== Restaure una copia Snapshot de un volumen de base de conocimientos
+
+Cualquier momento, puede restaurar una snapshot manual o programada de un volumen de base de conocimientos.
+
+
+NOTE: No puede restaurar una snapshot utilizando la interfaz de usuario de cargas de trabajo de IA generativas si la base de datos almacenada en el volumen está dañada o se ha eliminado. Como solución alternativa, puede restaurar la snapshot mediante https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-restore.html["CLI de ONTAP"^] en el clúster de ONTAP donde se aloja el volumen.
+
+.Pasos
+. En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea restaurar.
+. image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
++
+Esta página muestra el estado Publicado, el estado de incrustación de los orígenes de datos, el modo de incrustación, la lista de todos los orígenes de datos incrustados, etc.
+
+. Seleccione el menú *Acciones* y seleccione *Instantánea > Restaurar instantánea*.
++
+Aparece el cuadro de diálogo de selección de instantáneas, donde puede ver una lista de las instantáneas que se han creado para esta base de conocimientos.
+
+. (Opcional) Deseleccione la opción *Pausa en ejecución y escaneos programados después de restaurar la instantánea* si desea que los escaneos de origen de datos programados y actualmente en ejecución continúen después de restaurar la instantánea.
++
+Esta opción está activada de forma predeterminada para garantizar que no se realice un análisis mientras la base de conocimientos se encuentre en un estado parcialmente restaurado o que un análisis no actualice una base de conocimientos recién restaurada con datos más antiguos.
+
+. Seleccione la copia Snapshot que desea restaurar de la lista.
+. Seleccione *Restaurar*.
+
+
+
+
 == Agregue orígenes de datos adicionales a una base de conocimientos
 
 Puede incrustar orígenes de datos adicionales en su base de conocimientos para rellenarlos con datos adicionales de la organización.
@@ -95,9 +153,9 @@ La fuente de datos está integrada en su base de conocimientos.
 
 
 
-== Sincronice sus orígenes de datos con la base de conocimientos
+== Sincronice sus orígenes de datos con una base de conocimientos
 
-Las fuentes de datos se sincronizan automáticamente con la base de conocimientos una vez al día para que cualquier cambio en la fuente de datos se refleje en el chatbot. Si realiza cambios en cualquiera de sus orígenes de datos y desea sincronizar los datos de inmediato, puede realizar una sincronización a petición.
+Las fuentes de datos se sincronizan automáticamente con la base de conocimientos asociada una vez al día para que cualquier cambio en la fuente de datos se refleje en el chatbot. Si realiza cambios en cualquiera de sus orígenes de datos y desea sincronizar los datos de inmediato, puede realizar una sincronización a petición.
 
 La sincronización es incremental, por lo que Amazon Bedrock solo procesa los objetos de los orígenes de datos que se han agregado, modificado o eliminado desde la última sincronización.
 

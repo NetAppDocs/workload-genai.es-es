@@ -53,7 +53,7 @@ Obtenga más información sobre los modelos disponibles para ayudarle a seleccio
 Si activa los arrancadores de conversación, se selecciona el modo automático de forma predeterminada. El modo manual solo se puede activar después de agregar fuentes de datos a su base de conocimientos. link:manage-knowledgebase.html["Aprenda a modificar la configuración de la base de conocimientos"].
 
 .. *FSX para el sistema de archivos ONTAP*: Cuando definas una nueva base de conocimientos, Workload Factory crea un nuevo volumen de Amazon FSx para NetApp ONTAP para almacenarlo. Seleccione un nombre del sistema de archivos y SVM (también llamado máquina virtual de almacenamiento) donde se creará el volumen nuevo.
-.. *Política de instantáneas*: Elija una política de instantáneas de la lista de políticas existentes definidas en el inventario de almacenamiento de Workload Factory.
+.. *Política de instantáneas*: Elija una política de instantáneas de la lista de políticas existentes definidas en el inventario de almacenamiento de Workload Factory. Las instantáneas recurrentes de la base de conocimientos se crearán automáticamente con una frecuencia basada en la política de instantáneas que seleccione.
 +
 Si la política de Snapshot que necesita no existe, puede https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["crear una política de snapshot"] hacerlo en la máquina virtual de almacenamiento que contiene el volumen.
 
@@ -61,7 +61,10 @@ Si la política de Snapshot que necesita no existe, puede https://docs.netapp.co
 
 . Seleccione *Crear base de conocimiento* para agregar la base de conocimiento a GenAI.
 +
-En la siguiente página del asistente, tiene la opción de agregar un origen de datos a la nueva base de conocimientos o de finalizar el proceso aquí sin agregar un origen de datos. Le recomendamos que seleccione *Añadir fuente de datos* y agregue una o más fuentes de datos ahora.
+Aparece un indicador de progreso mientras se crea la base de conocimientos.
+
++
+Después de crear la base de conocimientos, tiene la opción de agregar un origen de datos a la nueva base de conocimientos o de finalizar el proceso sin agregar un origen de datos. Le recomendamos que seleccione *Añadir fuente de datos* y agregue una o más fuentes de datos ahora.
 
 
 
@@ -104,4 +107,4 @@ NOTE: La elección de un alto porcentaje de superposición puede aumentar en gra
 .Resultado
 El origen de datos comienza a integrarse en su base de conocimientos. El estado cambia de “Embedding” a “Embedded” cuando el origen de datos está completamente embebido.
 
-Después de agregar una única fuente de datos a la base de conocimientos, puede probarla localmente en la ventana del simulador de Chatbot y realizar los cambios necesarios antes de que el chatbot esté disponible para sus usuarios. También puede seguir los mismos pasos para agregar orígenes de datos adicionales a la base de conocimientos.
+Después de agregar una única fuente de datos a la base de conocimientos, puede probarla localmente en la ventana del simulador de chatbot y realizar los cambios necesarios antes de que el chatbot esté disponible para sus usuarios. También puede seguir los mismos pasos para agregar orígenes de datos adicionales a la base de conocimientos.

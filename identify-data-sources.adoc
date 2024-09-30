@@ -23,7 +23,9 @@ El número máximo de orígenes de datos admitidos es 10.
 
 == Ubicación de los orígenes de datos
 
-Los orígenes de datos pueden almacenarse en un único volumen o en una carpeta dentro de un volumen, en un recurso compartido de SMB o exportación NFS en un sistema de archivos Amazon FSx para NetApp ONTAP. No puede seleccionar documentos individuales dentro de un volumen o carpeta, por lo tanto, debe asegurarse de que cada volumen o carpeta que contenga orígenes de datos no contenga documentos extraños que no deberían integrarse con su base de conocimientos.
+Los orígenes de datos pueden almacenarse en un único volumen o en una carpeta dentro de un volumen, en un recurso compartido de SMB o exportación NFS en un sistema de archivos Amazon FSx para NetApp ONTAP. Los orígenes de datos también pueden almacenarse en Amazon FSx para volúmenes de NetApp ONTAP que se encuentran en una relación de protección de datos de NetApp SnapMirror.
+
+No puede seleccionar documentos individuales dentro de un volumen o carpeta, por lo tanto, debe asegurarse de que cada volumen o carpeta que contenga orígenes de datos no contenga documentos extraños que no deberían integrarse con su base de conocimientos.
 
 Puede añadir varias fuentes de datos a cada base de conocimientos, pero todos ellos tienen que residir en sistemas de archivos FSx para ONTAP a los que puede acceder desde su cuenta de AWS.
 
@@ -50,14 +52,17 @@ Actualmente se admiten los siguientes formatos de archivo de origen de datos.
 | Formato de archivo | Extensión 
 
 
+| Archivo de valores separados por comas | .csv 
+
+
+| Rebaja | .md 
+
+
+| Microsoft Word | .doc o .docx 
+
+
 | Texto sin formato | .txt 
 
 
-| Documento portátil | .pdf 
-
-
-| Microsoft Word | .docx 
-
-
-| Archivo de valores separados por comas | .csv 
+| Formato de documento portátil | .pdf 
 |===
