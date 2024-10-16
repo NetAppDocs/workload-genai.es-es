@@ -275,7 +275,6 @@
   <block id="f0c862596fc0a1dd30faa6b630a0d09b" category="section-title">Actualizar el contenido de un origen de datos existente</block>
   <block id="d811eb8aad6aebc071695232fb58c5a5" category="paragraph">Puede cambiar el contenido de un origen de datos en cualquier momento para agregar o actualizar los datos de su organización. Si este origen de datos se está utilizando activamente en una base de conocimientos, debe sincronizar el origen de datos para que se vuelva a indexar en la base de conocimientos. La sincronización es incremental, por lo que Amazon Bedrock solo procesa los objetos del volumen FSx para ONTAP que se han agregado, modificado o eliminado desde la última sincronización.</block>
   <block id="24f189799b33f2d3f465d0658dcc69e1" category="inline-link-macro">realice una sincronización bajo demanda</block>
-  <block id="424609f726117c0fe50e1034bb197bf7" category="paragraph">Las fuentes de datos se sincronizan automáticamente con la base de conocimientos una vez al día para que cualquier cambio en la fuente de datos se refleje en el chatbot. Si realiza cambios en un origen de datos y desea sincronizar los datos inmediatamente, puede <block ref="67b891ffaab1342f4fb267d7cc798f81" category="inline-link-macro-rx"></block>.</block>
   <block id="35198182831e3f9922e23822e3f2e2eb" category="section-title">Suprimir un origen de datos</block>
   <block id="19045c987301cc2ddb28f24761554946" category="paragraph">Si ya no necesita un origen de datos para formar parte de su base de conocimientos, puede eliminarlo.</block>
   <block id="7c25f02bbc30d711041ddd1cc4235dc3" category="list-text">En la página de inventario de la base de conocimientos, seleccione la base de conocimientos donde reside el origen de datos y, a continuación, <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> seleccione y seleccione *Gestionar base de conocimientos*.</block>
@@ -501,7 +500,6 @@
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Notas de la versión</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">Novedades</block>
   <block id="acbf2b120f060c765cc5fbfef7779840" category="sidebar">Identifique las fuentes de datos para su base de conocimientos</block>
-  <block id="2e800147de9688c09f27dae52c542680" category="sidebar">Utilice GenAI para crear bases de conocimiento</block>
   <block id="b032727d9e00be7e59aefec94a0972c2" category="sidebar">Active la autenticación</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conocimiento y apoyo</block>
   <block id="3163a16fc98aa29c5fea8b61c62bb459" category="paragraph">No hay coste por usar la capacidad GenAI de Workload Factory.</block>
@@ -644,4 +642,6 @@
   <block id="f951fa0f2608d186cd1f0bd8889ac232" category="paragraph"><block ref="f951fa0f2608d186cd1f0bd8889ac232" category="inline-link-rx"></block></block>
   <block id="8afd34c2a29e7b6286f3ed0bf9e20c22" category="paragraph"><block ref="8afd34c2a29e7b6286f3ed0bf9e20c22" category="inline-link-rx"></block></block>
   <block id="4936442e55cb8f837f9616ca6aaf1e92" category="doc">Compatibilidad con Snapshot y restauración para volúmenes de base de conocimientos</block>
+  <block id="ef3d62d3a83e208fec16cf94a1c9ef8b" category="paragraph">Las fuentes de datos se sincronizan automáticamente con la base de conocimientos una vez al día para que cualquier cambio en la fuente de datos se refleje en el chatbot. Si realiza cambios en un origen de datos y desea sincronizar los datos inmediatamente, puede <block ref="a5f82761b74f2896160929ccd4ead00e" category="inline-link-macro-rx"></block>.</block>
+  <block id="3bd082f2a7c2961a682116b6ed9f43fc" category="sidebar">Utilice GenAI para construir bases de conocimiento</block>
 </blocks>

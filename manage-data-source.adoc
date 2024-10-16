@@ -56,7 +56,7 @@ La configuración del origen de datos se actualiza y el sistema AI sincroniza el
 
 Puede cambiar el contenido de un origen de datos en cualquier momento para agregar o actualizar los datos de su organización. Si este origen de datos se está utilizando activamente en una base de conocimientos, debe sincronizar el origen de datos para que se vuelva a indexar en la base de conocimientos. La sincronización es incremental, por lo que Amazon Bedrock solo procesa los objetos del volumen FSx para ONTAP que se han agregado, modificado o eliminado desde la última sincronización.
 
-Las fuentes de datos se sincronizan automáticamente con la base de conocimientos una vez al día para que cualquier cambio en la fuente de datos se refleje en el chatbot. Si realiza cambios en un origen de datos y desea sincronizar los datos inmediatamente, puede link:manage-knowledgebase.html#synchronize-your-data-sources-with-the-knowledge-base["realice una sincronización bajo demanda"].
+Las fuentes de datos se sincronizan automáticamente con la base de conocimientos una vez al día para que cualquier cambio en la fuente de datos se refleje en el chatbot. Si realiza cambios en un origen de datos y desea sincronizar los datos inmediatamente, puede link:manage-knowledgebase.html#synchronize-your-data-sources-with-a-knowledge-base["realice una sincronización bajo demanda"].
 
 
 

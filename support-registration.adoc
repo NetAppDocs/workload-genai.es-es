@@ -7,7 +7,7 @@ summary: Para poder abrir un caso de soporte con el soporte técnico de NetApp, 
 = Regístrese para recibir soporte
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]

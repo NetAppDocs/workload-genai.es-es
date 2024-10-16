@@ -33,32 +33,30 @@ sidebar:
       url: "/deploy-infrastructure.html"
     - title: Utilice la aplicación de chatbot de ejemplo externo
       url: "/example-chatbot-application.html"
-  - title: Utilice GenAI para crear bases de conocimiento
+    - title: Componentes del motor NetApp GenAI
+      url: "/genai-engine-instance.html"
+  - title: Utilice GenAI para construir bases de conocimiento
     entries:
-    - title: Construir una base de conocimientos
-      entries:
-      - title: Crear una base de conocimientos
-        url: "/create-knowledgebase.html"
-      - title: Pruebe una base de conocimientos
-        url: "/test-knowledgebase.html"
-      - title: Active la autenticación
-        url: "/activate-authentication.html"
-      - title: Publicar una base de conocimientos
-        url: "/publish-knowledgebase.html"
-      - title: Cree una aplicación de IA basada en RAG
-        url: "/create-application.html"
-      - title: Lo que puede hacer a continuación
-        url: "/whats-next.html"
-    - title: Gestionar orígenes de datos
-      url: "/manage-data-source.html"
-    - title: Gestionar bases de conocimientos
-      url: "/manage-knowledgebase.html"
+    - title: Crear una base de conocimientos
+      url: "/create-knowledgebase.html"
+    - title: Pruebe una base de conocimientos
+      url: "/test-knowledgebase.html"
+    - title: Active la autenticación
+      url: "/activate-authentication.html"
+    - title: Publicar una base de conocimientos
+      url: "/publish-knowledgebase.html"
+    - title: Cree una aplicación de IA basada en RAG
+      url: "/create-application.html"
+    - title: Lo que puede hacer a continuación
+      url: "/whats-next.html"
   - title: Administrar GenAI
     entries:
     - title: Gestione la infraestructura de GenAI
       url: "/manage-infrastructure.html"
-    - title: Componentes del motor NetApp GenAI
-      url: "/genai-engine-instance.html"
+    - title: Gestionar bases de conocimientos
+      url: "/manage-knowledgebase.html"
+    - title: Gestionar orígenes de datos
+      url: "/manage-data-source.html"
   - title: Conocimiento y apoyo
     entries:
     - title: Regístrese para recibir soporte
