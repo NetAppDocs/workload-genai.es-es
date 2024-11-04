@@ -13,9 +13,22 @@ summary: Después de haber puesto en marcha la infraestructura de IA e identific
 [role="lead"]
 Después de haber puesto en marcha la infraestructura de IA e identificado las fuentes de datos que integrará en su base de conocimientos de los almacenes de datos de FSx para ONTAP, estará listo para construir la base de conocimientos mediante Workload Factory. Como parte de este paso, también definirá las características de la IA y creará temas para iniciar una conversación.
 
-Se puede utilizar una base de conocimientos sin integrar las fuentes de datos de su organización. En este caso, una aplicación integrada con la base de conocimientos solo proporcionará resultados de información disponible públicamente en Internet. Esto se conoce como integración _modo público_.
+.Acerca de esta tarea
+Las bases de conocimiento tienen dos modalidades de integración de datos: _Modo público_ y _modo empresarial_.
 
-En la mayoría de los casos, querrá integrar las fuentes de datos de su organización en la base de conocimientos. Esto se conoce como una integración _Enterprise mode_ porque proporciona conocimiento de su empresa.
+Modo público:: Se puede utilizar una base de conocimientos sin integrar las fuentes de datos de su organización. En este caso, una aplicación integrada con la base de conocimientos solo proporcionará resultados de información disponible públicamente en Internet. Esto se conoce como integración _modo público_.
+Modo empresarial:: En la mayoría de los casos, querrá integrar las fuentes de datos de su organización en la base de conocimientos. Esto se conoce como una integración _Enterprise mode_ porque proporciona conocimiento de su empresa.
++
+--
+Las fuentes de datos de su organización pueden contener Información de identidad privada (PII). Para proteger esta información confidencial, puede activar _data guardrails_ al crear y configurar bases de conocimiento. Las barandas de datos, impulsadas por la clasificación BlueXP , identifican y enmascaran la PII, haciéndola inaccesible e irrecuperable.
+
+link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Más información sobre la clasificación de BlueXP"^].
+
+
+NOTE: Las barreras de protección de datos se pueden activar o desactivar en cualquier momento. Si cambia la habilitación de barreras de datos, Workload Factory escanea toda la base de conocimientos desde cero, lo que supone un coste.
+
+--
+
 
 
 
@@ -47,6 +60,21 @@ https://aws.amazon.com/bedrock/titan/["Más información sobre Amazon Titan"^]
 .. *Modelo de chat*: Elija entre los modelos de chat Claude que están integrados en Amazon Bedrock. Tenga en cuenta que ya debe haber habilitado el modelo de chat de Amazon Bedrock.
 +
 Obtenga más información sobre los modelos disponibles para ayudarle a seleccionar: https://aws.amazon.com/bedrock/claude/["Claude de Antropic en Amazon Bedrock"^]
+
+.. * Data guardrails*: Elija si desea habilitar o deshabilitar las barandas de datos. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Obtenga más información sobre las barreras de datos que cuentan con la tecnología de clasificación de BlueXP "^].
++
+Deben completarse los siguientes requisitos previos para habilitar las barreras de datos.
+
++
+*** Se necesita una cuenta de servicio para comunicarse con la clasificación BlueXP . Debe tener el rol _Organization admin_ en su cuenta de arrendatario de BlueXP  para la creación de cuentas de servicio. Un miembro que tenga el rol de administrador de organización puede completar todas las acciones en BlueXP . link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Aprenda a agregar un rol a un miembro en BlueXP "^]
+*** Tendrá que hacer lo siguiente como se describe en link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html#quick-start["Documentación de clasificación de BlueXP"^]:
++
+.... Crea un conector BlueXP
+.... Asegúrese de que su entorno pueda cumplir con los requisitos previos
+.... Implementa la clasificación de BlueXP
+
+
+
 
 .. * Iniciadores de conversación *: Elija si desea proporcionar hasta cuatro mensajes de inicio de conversación que se muestran a los usuarios que interactúan con un chatbot que utiliza esta base de conocimientos. Le recomendamos que active esta configuración.
 +
