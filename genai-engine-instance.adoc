@@ -42,6 +42,8 @@ Puntos finales privados:: Si la VPC de destino aún no los tiene, Workload Facto
 * Registro de contenedores elásticos de Amazon (ECR)
 * Amazon S3
 * Administrador de sistemas AWS (SSM)
+* Amazon FSX para ONTAP de NetApp
+* Amazon CloudWatch
 
 
 --

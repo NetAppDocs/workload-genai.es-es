@@ -667,4 +667,8 @@
   <block id="b91895758c5a35a75fd3e87dc1fa0741" category="list-text">En la página Editar base de conocimientos, puede cambiar el nombre de la base de conocimientos, la descripción, el modelo de incrustación, el modelo de chat, la habilitación de barandillas de datos, elegir si los inicios de conversación se crean de forma automática o manual y la política de instantáneas utilizada para el volumen que contiene la base de conocimientos.</block>
   <block id="fde00ba8f64d2c57d64a163698fd6f03" category="admonition">Cada escaneo de la base de conocimientos, que incluye incrustación, costos. Si las barreras de protección de datos están activadas después de crear una base de conocimientos, la base de conocimientos se vuelve a analizar e incurre en costes.</block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">3 de noviembre de 2024</block>
+  <block id="5975f7e9036c78e6217b16f295f0ca75" category="inline-link-macro">Consola BlueXP</block>
+  <block id="402ae08ce46f82670c0313312e504ad7" category="list-text">El motor AI debe tener acceso al <block ref="046fd603b18837f482287e5ec741e5ed" category="inline-link-macro-rx"></block></block>
+  <block id="4d82a1ec1af02725042c8c785564ee7a" category="list-text">Amazon FSX para ONTAP de NetApp</block>
+  <block id="4b88d56bd65ef92611ac63064c38369f" category="list-text">Amazon CloudWatch</block>
 </blocks>
