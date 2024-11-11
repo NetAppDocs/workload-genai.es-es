@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-knowledgebase.html 
 keywords: ai, chatbot, creating, knowledge base 
-summary: Después de haber puesto en marcha la infraestructura de IA e identificado las fuentes de datos que integrará en su base de conocimientos de los almacenes de datos de FSx para ONTAP, estará listo para construir la base de conocimientos mediante Workload Factory. Como parte de este paso, también definirá las características de la IA y creará temas para iniciar una conversación. 
+summary: Después de haber puesto en marcha la infraestructura de IA e identificado las fuentes de datos que integrará en su base de conocimientos de los almacenes de datos de FSx para ONTAP, estará listo para construir la base de conocimientos mediante la fábrica de cargas de trabajo. Como parte de este paso, también definirá las características de la IA y creará temas para iniciar una conversación. 
 ---
 = Crear una base de conocimientos
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Después de haber puesto en marcha la infraestructura de IA e identific
 
 
 [role="lead"]
-Después de haber puesto en marcha la infraestructura de IA e identificado las fuentes de datos que integrará en su base de conocimientos de los almacenes de datos de FSx para ONTAP, estará listo para construir la base de conocimientos mediante Workload Factory. Como parte de este paso, también definirá las características de la IA y creará temas para iniciar una conversación.
+Después de haber puesto en marcha la infraestructura de IA e identificado las fuentes de datos que integrará en su base de conocimientos de los almacenes de datos de FSx para ONTAP, estará listo para construir la base de conocimientos mediante la fábrica de cargas de trabajo. Como parte de este paso, también definirá las características de la IA y creará temas para iniciar una conversación.
 
 .Acerca de esta tarea
 Las bases de conocimiento tienen dos modalidades de integración de datos: _Modo público_ y _modo empresarial_.
@@ -37,14 +37,14 @@ NOTE: Las barreras de protección de datos se pueden activar o desactivar en cua
 La base de conocimientos define características como los modelos de IA Bedrock y el formato de incrustación que desea utilizar para crear su base de conocimientos.
 
 .Pasos
-. Inicie sesión en Workload Factory.
+. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
 . En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la pestaña Bases de conocimiento, selecciona *Añadir base de conocimiento*.
 . En la página Definir base de conocimientos, configure los valores de la base de conocimientos:
 +
 .. *Nombre*: Introduzca el nombre que desea utilizar para la base de conocimientos.
 .. *Descripción*: Introduzca una descripción detallada de la base de conocimientos.
-.. *Modelo de incrustación*: El modelo de incrustación define cómo se convertirán sus datos en incrustaciones vectoriales para la base de conocimientos. Workload Factory admite los siguientes modelos:
+.. *Modelo de incrustación*: El modelo de incrustación define cómo se convertirán sus datos en incrustaciones vectoriales para la base de conocimientos. La fábrica de cargas de trabajo admite los siguientes modelos:
 +
 *** Titan Embeddings G1 - Texto
 *** Titan Embedding Text v2
@@ -82,7 +82,7 @@ Deben completarse los siguientes requisitos previos para habilitar las barreras 
 Si activa los arrancadores de conversación, se selecciona el modo automático de forma predeterminada. El modo manual solo se puede activar después de agregar fuentes de datos a su base de conocimientos. link:manage-knowledgebase.html["Aprenda a modificar la configuración de la base de conocimientos"].
 
 .. *FSX para el sistema de archivos ONTAP*: Cuando definas una nueva base de conocimientos, Workload Factory crea un nuevo volumen de Amazon FSx para NetApp ONTAP para almacenarlo. Seleccione un nombre del sistema de archivos y SVM (también llamado máquina virtual de almacenamiento) donde se creará el volumen nuevo.
-.. *Política de instantáneas*: Elija una política de instantáneas de la lista de políticas existentes definidas en el inventario de almacenamiento de Workload Factory. Las instantáneas recurrentes de la base de conocimientos se crearán automáticamente con una frecuencia basada en la política de instantáneas que seleccione.
+.. *Política de instantáneas*: Elija una política de instantáneas de la lista de políticas existentes definidas en el inventario de almacenamiento de la fábrica de carga de trabajo. Las instantáneas recurrentes de la base de conocimientos se crearán automáticamente con una frecuencia basada en la política de instantáneas que seleccione.
 +
 Si la política de Snapshot que necesita no existe, puede https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["crear una política de snapshot"] hacerlo en la máquina virtual de almacenamiento que contiene el volumen.
 

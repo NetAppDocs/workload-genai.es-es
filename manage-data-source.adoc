@@ -20,7 +20,8 @@ Después de crear una base de conocimientos utilizando orígenes de datos en su 
 Puede ver información sobre el contenido de un origen de datos y puede ver su estado de incrustación con la base de conocimientos. Dado que una fuente de datos forma parte de una base de conocimientos, primero deberá abrir la base de conocimientos para poder ver los detalles de la fuente de datos.
 
 .Pasos
-. En el menú de navegación, selecciona *AI*.
+. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. En el menú de navegación de fábrica de carga de trabajo, seleccione *AI*.
 . Seleccione la base de conocimientos donde reside el origen de datos y, a continuación, image:icon-action.png["el botón de opción"] seleccione * Administrar base de conocimientos *.
 +
 La parte inferior de la página muestra los orígenes de datos que forman parte de esta base de conocimientos.
@@ -38,6 +39,7 @@ También muestra la información de incrustación y si ese origen de datos está
 Puede editar información sobre un origen de datos que haya integrado en una base de conocimientos. La mayor parte de la información se corrige después de agregar un origen de datos a una base de conocimientos, pero puede realizar cambios en la definición y configuración de fragmentos y en la detección de permisos (cuando se utiliza el protocolo SMB en el volumen de origen de datos).
 
 .Pasos
+. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
 . En la página de inventario de bases de conocimiento, seleccione la base de conocimientos donde reside el origen de datos y, a continuación, image:icon-action.png["el botón de opción"] seleccione y seleccione *Gestionar base de conocimientos*.
 +
 La parte inferior de la página muestra los orígenes de datos que forman parte de esta base de conocimientos.
@@ -65,6 +67,7 @@ Las fuentes de datos se sincronizan automáticamente con la base de conocimiento
 Si ya no necesita un origen de datos para formar parte de su base de conocimientos, puede eliminarlo.
 
 .Pasos
+. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
 . En la página de inventario de la base de conocimientos, seleccione la base de conocimientos donde reside el origen de datos y, a continuación, image:icon-action.png["el botón de opción"] seleccione y seleccione *Gestionar base de conocimientos*.
 +
 La parte inferior de la página muestra los orígenes de datos que forman parte de esta base de conocimientos.

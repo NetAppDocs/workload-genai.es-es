@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
-summary: Descubra las novedades de la funcionalidad de cargas de trabajo de IA de Workload Factory. 
+summary: Descubra las novedades de la funcionalidad de las cargas de trabajo de IA de fábrica de cargas de trabajo. 
 ---
 = Lo nuevo
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Descubra las novedades de la funcionalidad de cargas de trabajo de IA d
 
 
 [role="lead"]
-Descubra las novedades de la funcionalidad de cargas de trabajo de IA generativas de Workload Factory.
+Descubra las novedades de la funcionalidad para cargas de trabajo de IA generativas de la fábrica de cargas de trabajo.
 
 
 
@@ -87,7 +87,7 @@ Las cargas de trabajo de IA generativas ahora están integradas con Amazon Cloud
 
 === Aplicación de chatbot de ejemplo
 
-La aplicación de muestra de GenAI de Fábrica de Carga de Trabajo de NetApp le permite probar la autenticación y la recuperación de su base de conocimientos publicada de Fábrica de Carga de Trabajo de NetApp al interactuar directamente con ella en una aplicación de chatbot basada en web.
+La aplicación de muestra GenAI de fábrica de cargas de trabajo de NetApp le permite probar la autenticación y la recuperación de su base de conocimientos de fábrica de cargas de trabajo de NetApp publicada al interactuar directamente con ella en una aplicación de chatbot basada en web.
 
 
 
@@ -95,6 +95,6 @@ La aplicación de muestra de GenAI de Fábrica de Carga de Trabajo de NetApp le 
 
 
 
-=== Lanzamiento inicial de Workload Factory para GenAI
+=== Lanzamiento inicial de la fábrica de cargas de trabajo para GenAI
 
 La versión inicial incluye la capacidad de desarrollar una base de conocimientos personalizada mediante la incorporación de los datos de la organización. La base de conocimientos puede ser accedida por una aplicación de chatbot para sus usuarios. Esta capacidad garantiza respuestas precisas y relevantes a preguntas específicas de la organización, mejorando la satisfacción y la productividad de todos sus usuarios.

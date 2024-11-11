@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: troubleshooting.html 
 keywords: support registration, register for support, support, nss account, add nss account, 
-summary: Para poder abrir un caso de soporte con el soporte técnico de NetApp, debe añadir una cuenta del sitio de soporte de NetApp a Workload Factory y, a continuación, registrarse para recibir soporte. 
+summary: Antes de poder abrir un caso de soporte con el soporte técnico de NetApp, debe añadir una cuenta del sitio de soporte de NetApp a la fábrica de carga de trabajo y, a continuación, registrarse para recibir soporte. 
 ---
 = Resolución de problemas
 :allow-uri-read: 
@@ -24,15 +24,15 @@ Si tiene uno de estos problemas, puede seguir los pasos de la columna Solución 
 | Zona | Problema | Causa | Solución alternativa 
 
 
-| Puesta en marcha | La implementación falla porque el volumen ya existe. | Workload Factory para GenAI necesita crear un nuevo volumen durante el proceso de implementación, pero ya existe un volumen con el nombre que especificó. | Especifique un nombre único que se utilizará para el nuevo volumen e intente implementar de nuevo. 
+| Puesta en marcha | La implementación falla porque el volumen ya existe. | La fábrica de cargas de trabajo para GenAI necesita crear un nuevo volumen durante el proceso de implementación, pero ya existe un volumen con el nombre que especificó. | Especifique un nombre único que se utilizará para el nuevo volumen e intente implementar de nuevo. 
 
 
-| Puesta en marcha | Se produce un error en la implementación porque Workload Factory para GenAI no puede montar el volumen. | Uno o más de los puertos de entrada necesarios para FSx para NetApp ONTAP están cerrados o filtrados.  a| 
+| Puesta en marcha | Se produce un error en la implementación porque la fábrica de la carga de trabajo de GenAI no puede montar el volumen. | Uno o más de los puertos de entrada necesarios para FSx para NetApp ONTAP están cerrados o filtrados.  a| 
 Abra los puertos enumerados en https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/reference-security-groups-fsx.html#inbound-rules["Reglas de grupo de seguridad para FSX para ONTAP"^].
 
 
 
-| Mantenimiento | No se pudo iniciar la instancia de Docker de backend utilizada por Workload Factory para GenAI. | Se ha suprimido el volumen y se ha reiniciado la instancia de EC2.  a| 
+| Mantenimiento | No se pudo iniciar la instancia de Docker de backend utilizada por la fábrica de carga de trabajo para GenAI. | Se ha suprimido el volumen y se ha reiniciado la instancia de EC2.  a| 
 Utilice los siguientes pasos de recuperación:
 
 .Pasos
@@ -68,5 +68,5 @@ volumes:
 
 
 
-| Mantenimiento | No se pudo iniciar la instancia de Docker de backend utilizada por Workload Factory para GenAI. | Se eliminó el volumen raíz. | Cree un volumen con un nombre y una ruta y, a continuación, reinicie la instancia de Docker back-end desde Amazon EC2. 
+| Mantenimiento | No se pudo iniciar la instancia de Docker de backend utilizada por la fábrica de carga de trabajo para GenAI. | Se eliminó el volumen raíz. | Cree un volumen con un nombre y una ruta y, a continuación, reinicie la instancia de Docker back-end desde Amazon EC2. 
 |===

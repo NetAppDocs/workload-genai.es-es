@@ -1,6 +1,6 @@
 ---
 indexpage:
-  title: Documentación de Workload Factory para GenAI
+  title: Fábrica de cargas de trabajo para documentación de GenAI
   summary: Integra datos de tus sistemas de archivos FSx para ONTAP con tus plataformas
     MLOps y modelos de base de GenAI para crear chatbots funcionales usando datos
     de la organización.
@@ -11,7 +11,7 @@ indexpage:
   tiles:
   - title: Manos a la obra
     links:
-    - title: Más información sobre Workload Factory para GenAI
+    - title: Obtén más información sobre la fábrica de cargas de trabajo para GenAI
       url: ai-workloads-overview.html
     - title: Inicio rápido
       url: quick-start.html

@@ -18,7 +18,7 @@ Prueba tu base de conocimientos para asegurarte de que funciona como esperas, y 
 
 Puede probar una base de conocimientos chateando con sus fuentes de datos incrustadas en el simulador de chatbot. Tenga en cuenta que ninguna de las interacciones o conocimientos se captura en la base de datos de vectores de GenAI al probar la base de conocimientos localmente.
 
-Realizará la mayor parte de las pruebas en Workload Factory antes de implementar la base de conocimientos en una aplicación para los usuarios. Si necesitas hacer cambios en tu fuente de datos o en la operación de chatbot, querrás hacerlo ahora antes de publicar tu base de conocimientos.
+Realizará la mayor parte de las pruebas dentro de la fábrica de cargas de trabajo antes de implementar la base de conocimientos en una aplicación para los usuarios. Si necesitas hacer cambios en tu fuente de datos o en la operación de chatbot, querrás hacerlo ahora antes de publicar tu base de conocimientos.
 
 Algunas de las tareas que querrás realizar para probar tu chatbot son:
 
