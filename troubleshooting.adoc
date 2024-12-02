@@ -24,15 +24,91 @@ Si tiene uno de estos problemas, puede seguir los pasos de la columna Solución 
 | Zona | Problema | Causa | Solución alternativa 
 
 
-| Puesta en marcha | La implementación falla porque el volumen ya existe. | La fábrica de cargas de trabajo para GenAI necesita crear un nuevo volumen durante el proceso de implementación, pero ya existe un volumen con el nombre que especificó. | Especifique un nombre único que se utilizará para el nuevo volumen e intente implementar de nuevo. 
+| Puesta en marcha | La implementación falla porque el volumen ya existe. | La fábrica de cargas de trabajo BlueXP  para GenAI necesita crear un nuevo volumen durante el proceso de implementación, pero ya existe un volumen con el nombre que especificó. | Especifique un nombre único que se utilizará para el nuevo volumen e intente implementar de nuevo. 
 
 
-| Puesta en marcha | Se produce un error en la implementación porque la fábrica de la carga de trabajo de GenAI no puede montar el volumen. | Uno o más de los puertos de entrada necesarios para FSx para NetApp ONTAP están cerrados o filtrados.  a| 
-Abra los puertos enumerados en https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/reference-security-groups-fsx.html#inbound-rules["Reglas de grupo de seguridad para FSX para ONTAP"^].
+| Puesta en marcha | Se produce un error en la implementación debido a que la fábrica de cargas de trabajo de BlueXP  para GenAI no puede montar el volumen. | Uno o más de los puertos de entrada necesarios para FSx para NetApp ONTAP están cerrados o filtrados.  a| 
+Abra los siguientes puertos de entrada:
+
+[cols="10,10,80"]
+|===
+| Protocolo | Puerto | Específico 
 
 
+| Todos los ICMP | Todo | Hacer ping a la instancia 
 
-| Mantenimiento | No se pudo iniciar la instancia de Docker de backend utilizada por la fábrica de carga de trabajo para GenAI. | Se ha suprimido el volumen y se ha reiniciado la instancia de EC2.  a| 
+
+| HTTPS | 443 | Acceso desde la LIF de gestión de Connector to fsxadmin para enviar llamadas API a FSX 
+
+
+| SSH | 22 | Acceso SSH a la dirección IP de administración del clúster LIF o una LIF de gestión de nodos 
+
+
+| TCP | 111 | Llamada a procedimiento remoto para NFS 
+
+
+| TCP | 139 | Sesión de servicio NetBIOS para CIFS 
+
+
+| TCP | 161-162 | Protocolo simple de gestión de red 
+
+
+| TCP | 445 | Microsoft SMB/CIFS sobre TCP con trama NetBIOS 
+
+
+| TCP | 635 | Montaje NFS 
+
+
+| TCP | 749 | Kerberos 
+
+
+| TCP | 2049 | Daemon del servidor NFS 
+
+
+| TCP | 3260 | Acceso iSCSI mediante la LIF de datos iSCSI 
+
+
+| TCP | 4045 | Daemon de bloqueo NFS 
+
+
+| TCP | 4046 | Supervisor de estado de red para NFS 
+
+
+| TCP | 10000 | Backup con NDMP 
+
+
+| TCP | 11104 | Gestión de sesiones de comunicación de interconexión de clústeres para SnapMirror 
+
+
+| TCP | 11105 | Transferencia de datos de SnapMirror mediante LIF de interconexión de clústeres 
+
+
+| UDP | 111 | Llamada a procedimiento remoto para NFS 
+
+
+| UDP | 161-162 | Protocolo simple de gestión de red 
+
+
+| UDP | 635 | Montaje NFS 
+
+
+| UDP | 2049 | Daemon del servidor NFS 
+
+
+| UDP | 4045 | Daemon de bloqueo NFS 
+
+
+| UDP | 4046 | Supervisor de estado de red para NFS 
+
+
+| UDP | 4049 | Protocolo rquotad NFS 
+|===
+
+
+| Mantenimiento | El motor AI no se inicia y aparece el error “Error de instancia del motor AI” en la página *Bases de conocimiento*. | La instancia del motor AI está dañada o no existe. | Seleccione el botón *Reconstruir*. La fábrica de cargas de trabajo BlueXP  para GenAI reconstruye la infraestructura y muestra el progreso de la recompilación. Una vez finalizada, las bases de conocimientos se vuelven a conectar a la infraestructura reconstruida y se muestra la lista de bases de conocimientos. 
+
+
+| Mantenimiento | No se pudo iniciar la instancia de Docker de backend utilizada por la fábrica de cargas de trabajo de BlueXP  para GenAI. | Se ha suprimido el volumen y se ha reiniciado la instancia de EC2.  a| 
 Utilice los siguientes pasos de recuperación:
 
 .Pasos
@@ -68,5 +144,8 @@ volumes:
 
 
 
-| Mantenimiento | No se pudo iniciar la instancia de Docker de backend utilizada por la fábrica de carga de trabajo para GenAI. | Se eliminó el volumen raíz. | Cree un volumen con un nombre y una ruta y, a continuación, reinicie la instancia de Docker back-end desde Amazon EC2. 
+| Mantenimiento | No se pudo iniciar la instancia de Docker de backend utilizada por la fábrica de cargas de trabajo de BlueXP  para GenAI. | Se eliminó el volumen raíz. | Cree un volumen con un nombre y una ruta y, a continuación, reinicie la instancia de Docker back-end desde Amazon EC2. 
+
+
+| Mantenimiento | No se pudo iniciar la instancia de Docker de backend utilizada por la fábrica de cargas de trabajo de BlueXP  para GenAI. | Se eliminó el volumen raíz. | Cree un volumen con un nombre y una ruta y, a continuación, reinicie la instancia de Docker back-end desde Amazon EC2. 
 |===

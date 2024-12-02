@@ -124,6 +124,34 @@ Esta opción está activada de forma predeterminada para garantizar que no se re
 
 
 
+=== Clonar una base de conocimientos
+
+Puede crear una nueva base de conocimientos a partir de una instantánea de la base de conocimientos. Esto es útil si la base de conocimientos original está dañada o perdida.
+
+.Pasos
+. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea restaurar.
+. image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
++
+Esta página muestra el estado Publicado, el estado de incrustación de los orígenes de datos, el modo de incrustación, la lista de todos los orígenes de datos incrustados, etc.
+
+. Seleccione el menú *Acciones* y seleccione *Instantánea > Clonar base de conocimientos*.
++
+Aparece el cuadro de diálogo del clon.
+
+. Opcionalmente, anule la selección de la opción *Pausa en ejecución y escaneos programados después de clonar la instantánea* si desea que los escaneos de origen de datos programados y actualmente en ejecución continúen después de clonar la instantánea.
++
+Esta opción está activada de forma predeterminada para garantizar que no se realice un análisis mientras la base de conocimientos se encuentre en un estado parcialmente restaurado o que un análisis no actualice una base de conocimientos recién restaurada con datos más antiguos.
+
+. Seleccione la copia de Snapshot que desea clonar de la lista.
+. Seleccione *continuar*.
+. Introduzca un nombre para la nueva base de conocimientos.
+. Seleccione una SVM del sistema de archivos y un nombre de volumen para la nueva base de conocimientos.
+. Seleccione *Clonar*.
+
+
+
+
 == Agregue orígenes de datos adicionales a una base de conocimientos
 
 Puede incrustar orígenes de datos adicionales en su base de conocimientos para rellenarlos con datos adicionales de la organización.

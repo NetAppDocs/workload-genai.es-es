@@ -11,7 +11,8 @@ indexpage:
   tiles:
   - title: Manos a la obra
     links:
-    - title: Obtén más información sobre la fábrica de cargas de trabajo para GenAI
+    - title: Obtén más información sobre el centro de cargas de trabajo de BlueXP 
+        para GenAI
       url: ai-workloads-overview.html
     - title: Inicio rápido
       url: quick-start.html

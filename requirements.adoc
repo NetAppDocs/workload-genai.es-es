@@ -29,7 +29,7 @@ https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aprenda
 Roca base de Amazon:: Amazon Bedrock le permite utilizar modelos de base y proporciona las funcionalidades necesarias para crear aplicaciones de IA generativas.
 +
 --
-Antes de empezar con la fábrica de cargas de trabajo para GenAI, debe configurar Amazon Bedrock. Su implementación de GenAI debe estar en una región de AWS que tenga habilitado Amazon Bedrock.
+Antes de empezar a utilizar la fábrica de cargas de trabajo de BlueXP  para GenAI, debes configurar Amazon Bedrock. Su implementación de GenAI debe estar en una región de AWS que tenga habilitado Amazon Bedrock.
 
 * https://docs.aws.amazon.com/bedrock/latest/userguide/setting-up.html["Documentación de AWS: Configure Amazon Bedrock"^]
 * https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Documentación de AWS: Regiones y modelos compatibles para las bases de conocimiento de Amazon Bedrock"^]

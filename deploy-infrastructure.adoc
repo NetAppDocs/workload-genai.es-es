@@ -50,7 +50,7 @@ image:diagram-chatbot-infrastructure.png["Un diagrama de los componentes de AI c
 
 == Ponga en marcha la infraestructura de GenAI
 
-Tendrá que introducir sus credenciales de AWS y seleccionar el sistema de archivos FSx para ONTAP para implementar la infraestructura RAG (Retrieval Augmentation Generation).
+Tendrás que introducir tus credenciales de AWS y seleccionar el sistema de archivos FSx para ONTAP para implementar la infraestructura de generación aumentada de recuperación (RAG).
 
 .Antes de empezar
 Asegúrese de que su entorno cumple link:requirements.html["los requisitos"] antes de iniciar este procedimiento.
@@ -75,6 +75,10 @@ La implementación de GenAI debe estar en una región de AWS que tenga habilitad
 
 
 . Seleccione *Desplegar* para comenzar la implementación.
++
+
+NOTE: Si la implementación falla con un error de credenciales, puede obtener más detalles del error seleccionando los hipervínculos en el mensaje de error. Puede ver una lista de permisos que faltan o están bloqueados, así como una lista de permisos que la carga de trabajo de GenAI necesita para que pueda implementar la infraestructura de GenAI.
+
 
 
 .Resultado
