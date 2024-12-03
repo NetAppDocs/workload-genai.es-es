@@ -4,7 +4,7 @@ permalink: create-knowledgebase.html
 keywords: ai, chatbot, creating, knowledge base 
 summary: Después de haber puesto en marcha la infraestructura de IA e identificado las fuentes de datos que integrará en su base de conocimientos de los almacenes de datos de FSx para ONTAP, estará listo para construir la base de conocimientos mediante la fábrica de cargas de trabajo. Como parte de este paso, también definirá las características de la IA y creará temas para iniciar una conversación. 
 ---
-= Crear una base de conocimientos
+= Cree una base de conocimientos de GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -67,7 +67,7 @@ Deben completarse los siguientes requisitos previos para habilitar las barreras 
 
 +
 *** Se necesita una cuenta de servicio para comunicarse con la clasificación BlueXP . Debe tener el rol _Organization admin_ en su cuenta de arrendatario de BlueXP  para la creación de cuentas de servicio. Un miembro que tenga el rol de administrador de organización puede completar todas las acciones en BlueXP . link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Aprenda a agregar un rol a un miembro en BlueXP "^]
-*** El motor AI debe tener acceso al link:https://console.bluexp.netapp.com/["Consola BlueXP"^]
+*** El motor de IA debe tener acceso al extremo de la API de BlueXP : \https://api.BlueXP .NetApp.com.
 *** Tendrá que hacer lo siguiente como se describe en link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html#quick-start["Documentación de clasificación de BlueXP"^]:
 +
 .... Crea un conector BlueXP

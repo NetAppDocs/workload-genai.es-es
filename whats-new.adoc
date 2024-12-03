@@ -4,7 +4,7 @@ permalink: whats-new.html
 keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
 summary: Descubra las novedades de la funcionalidad de las cargas de trabajo de IA de fábrica de cargas de trabajo. 
 ---
-= Lo nuevo
+= Novedades del centro de cargas de trabajo BlueXP  para GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

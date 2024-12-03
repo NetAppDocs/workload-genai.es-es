@@ -4,7 +4,7 @@ permalink: identify-data-sources.html
 keywords: data sources, chatbot, documents, knowledge base 
 summary: 'Identifica o crea los documentos (fuentes de datos) que residen en tu sistema de archivos FSx para ONTAP que integrarás en tu base de conocimientos. Estas fuentes de datos permiten a la base de conocimientos proporcionar respuestas precisas y personalizadas a las consultas de los usuarios basadas en datos relevantes para su organización.' 
 ---
-= Identifique las fuentes de datos que desea integrar en su base de conocimientos
+= Identifique las fuentes de datos que desea integrar en su base de conocimientos de GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

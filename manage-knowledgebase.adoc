@@ -4,7 +4,7 @@ permalink: manage-knowledgebase.html
 keywords: ai, chatbot, managing, knowledge base 
 summary: Después de crear una base de conocimientos, puede ver los detalles de la base de conocimientos, modificar la base de conocimientos, integrar orígenes de datos adicionales o suprimir la base de conocimientos. 
 ---
-= Gestionar bases de conocimientos
+= Gestione las bases de conocimientos de GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

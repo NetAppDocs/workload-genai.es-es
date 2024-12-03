@@ -4,7 +4,7 @@ permalink: manage-data-source.html
 keywords: ai, chatbot, creating, knowledge base, data source 
 summary: Después de crear una base de conocimientos utilizando orígenes de datos en su sistema de archivos FSx para ONTAP, puede ver los detalles de la fuente de datos, actualizar o cambiar el contenido de la fuente de datos, editar la configuración de la fuente de datos o eliminar la fuente de datos. 
 ---
-= Gestionar orígenes de datos
+= Gestionar orígenes de datos de GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

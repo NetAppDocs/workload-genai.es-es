@@ -4,7 +4,7 @@ permalink: example-chatbot-application.html
 keywords: ai, example, sample, chatbot, app, application, local 
 summary: Puede instalar y ejecutar una aplicación de chatbot de ejemplo para probar sus bases de conocimientos y aprender a usar la API de fábrica de cargas de trabajo para crear su propia aplicación de IA generativa. 
 ---
-= Utilice la aplicación de chatbot de ejemplo externo
+= Utilice la aplicación de chatbot de ejemplo externo de GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
