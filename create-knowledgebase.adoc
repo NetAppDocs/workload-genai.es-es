@@ -25,7 +25,10 @@ Las fuentes de datos de su organización pueden contener Información de identid
 link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Más información sobre la clasificación de BlueXP"^].
 
 
-NOTE: Las barreras de protección de datos se pueden activar o desactivar en cualquier momento. Si cambia la habilitación de barreras de datos, Workload Factory escanea toda la base de conocimientos desde cero, lo que supone un coste.
+NOTE: La fábrica de cargas de trabajo de BlueXP  para GenAI no enmascara la información personal confidencial (SPII). Consulte link:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-data["tipos de datos personales confidenciales"^]para obtener más información sobre este tipo de datos.
+
+
+NOTE: Las barreras de protección de datos se pueden activar o desactivar en cualquier momento. Si cambia la habilitación de barreras de datos, la fábrica de cargas de trabajo escanea toda la base de conocimientos desde cero, lo que supone un coste.
 
 --
 

@@ -108,6 +108,25 @@ Abra los siguientes puertos de entrada:
 | Mantenimiento | El motor AI no se inicia y aparece el error “Error de instancia del motor AI” en la página *Bases de conocimiento*. | La instancia del motor AI está dañada o no existe. | Seleccione el botón *Reconstruir*. La fábrica de cargas de trabajo BlueXP  para GenAI reconstruye la infraestructura y muestra el progreso de la recompilación. Una vez finalizada, las bases de conocimientos se vuelven a conectar a la infraestructura reconstruida y se muestra la lista de bases de conocimientos. 
 
 
+| Mantenimiento | El motor AI no se inicia y aparece el error que indica que la instancia del motor GenAI se ha detenido en la página de las bases de conocimiento *. | La instancia del motor AI no se está ejecutando. | Utilice la consola de administración de AWS o la CLI de AWS para iniciar la instancia del motor de AI. 
+
+
+| Mantenimiento | El motor AI no se inicia y aparece el error que indica que el servidor del motor GenAI no responde en la página de las bases de conocimiento *. | La instancia del motor AI no responde.  a| 
+Utilice los siguientes pasos de recuperación:
+
+.Pasos
+. Modifique el grupo de seguridad de la instancia del motor de GenAI para habilitar el acceso SSH a la instancia del motor de GenAI.
+. Inicie sesión en la instancia mediante SSH.
+. Ejecute el siguiente comando:
++
+[source, console]
+----
+docker-compose up
+----
+
+
+
+
 | Mantenimiento | No se pudo iniciar la instancia de Docker de backend utilizada por la fábrica de cargas de trabajo de BlueXP  para GenAI. | Se ha suprimido el volumen y se ha reiniciado la instancia de EC2.  a| 
 Utilice los siguientes pasos de recuperación:
 

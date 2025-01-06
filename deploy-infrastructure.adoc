@@ -70,8 +70,17 @@ La implementación de GenAI debe estar en una región de AWS que tenga habilitad
 
 . Complete los elementos en la sección *Configuración de infraestructura*:
 +
-.. *Etiquetas*: Introduzca cualquier par de clave/valor de etiqueta que desee aplicar a todos los recursos de AWS que forman parte de esta implementación.
+.. *Etiquetas*: Introduzca cualquier par de clave/valor de etiqueta que desee aplicar a todos los recursos de AWS que forman parte de esta implementación. Estas etiquetas están visibles en la consola de administración de AWS y en el área de información de la infraestructura dentro de la fábrica de cargas de trabajo, y pueden ayudarle a realizar un seguimiento de los recursos de fábrica de cargas de trabajo.
+
+
+. Complete la sección *Conectividad*:
++
 .. *Par claves*: Seleccione un par de claves que le permita conectarse de forma segura a la instancia del motor NetApp GenAI.
+
+
+. Completa la sección *AI ENGINE*:
++
+.. *Nombre de instancia*: Opcionalmente, seleccione *Definir nombre de instancia* e introduzca un nombre personalizado para la instancia del motor AI. El nombre de la instancia aparece en la consola de administración de AWS y en el área de información de la infraestructura dentro de la fábrica de cargas de trabajo, y puede ayudarle a realizar un seguimiento de los recursos de fábrica de cargas de trabajo.
 
 
 . Seleccione *Desplegar* para comenzar la implementación.

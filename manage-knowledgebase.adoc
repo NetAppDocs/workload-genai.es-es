@@ -89,6 +89,11 @@ Puede guardar el estado de una base de conocimientos mediante una instantánea m
 Esta página muestra el estado Publicado, el estado de incrustación de los orígenes de datos, el modo de incrustación, la lista de todos los orígenes de datos incrustados, etc.
 
 . Selecciona el menú *Acciones* y selecciona *Instantánea > Crear nueva instantánea*.
+. Opcionalmente, seleccione *Definir nombre de instantánea* e introduzca un nombre personalizado para la instantánea.
++
+Definir un nombre personalizado puede ayudarle a determinar mejor el contenido de una instantánea si necesita restaurarla en el futuro.
+
+. Seleccione *Crear*.
 +
 Se crea una instantánea de la base de conocimientos.
 
