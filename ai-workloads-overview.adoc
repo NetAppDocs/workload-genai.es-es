@@ -37,6 +37,7 @@ La fábrica de cargas de trabajo de BlueXP  para GenAI simplifica el proceso de
 * Acelere el desarrollo de aplicaciones de GenAI, como un chatbot de preguntas y respuestas, mediante marcos de código abierto como LangChain, utilizando la API de GenAI para aprovisionar y gestionar bases de conocimientos, chatear con una base de conocimientos y almacenar y recuperar el historial de chat.
 * Mejora la protección de datos y la política de disponibilidad mediante la puesta en marcha de la infraestructura de datos de IA generativa en sistemas de archivos FSx para NetApp ONTAP y el aprovechamiento de funciones de ONTAP, como la alta disponibilidad, los snapshots para la protección y recuperación de datos locales, SnapMirror para la recuperación ante desastres y SnapVault para hacer backups de tu infraestructura de datos.
 * Reduce los costes generales de almacenamiento para la infraestructura de datos de IA generativa aprovechando funciones de eficiencia de datos de ONTAP como deduplicación de datos, compresión y compactación, organización en niveles de los datos y thin provisioning.
+* Obtenga resultados de alta calidad de sus datos con las funciones de búsqueda híbrida y reclasificación proporcionadas por GenAI. La búsqueda híbrida combinada con la re-clasificación mejora en gran medida la relevancia de los resultados de búsqueda. Estas funciones están disponibles a través de Amazon AWS y dependen de la región.
 
 
 
@@ -80,6 +81,8 @@ Puede utilizar la fábrica de cargas de trabajo de BlueXP  con las siguientes h
 No hay coste para utilizar la capacidad GenAI de la fábrica de cargas de trabajo.
 
 Sin embargo, tendrá que pagar por los recursos de AWS que ponga en marcha para dar soporte a la infraestructura de IA generativa. Por ejemplo, pagará a AWS por el servicio de IA de Amazon Bedrock, el sistema de archivos y la capacidad de almacenamiento de FSx para ONTAP y la instancia EC2 del motor de GenAI.
+
+Algunas operaciones multimodales, como escanear imágenes para obtener información de texto, pueden utilizar más recursos y, por lo tanto, incurrir en un costo mayor. Algunas operaciones de configuración, como cambiar los ajustes de una base de conocimiento, pueden hacer que los orígenes de datos se vuelvan a analizar y los análisis de orígenes de datos también pueden suponer un coste mayor.
 
 
 
