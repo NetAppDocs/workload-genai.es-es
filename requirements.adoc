@@ -50,21 +50,34 @@ https://aws.amazon.com/bedrock/titan/["Más información sobre Amazon Titan"^]
 
 
 --
-Modelo de chat:: Debe activar el modelo de chat básico que planea utilizar antes de crear su base de conocimientos. Se admiten los siguientes modelos de chat de Claude:
+Modelo de chat:: Debe activar el modelo de chat básico que planea utilizar antes de crear su base de conocimientos. Dado que el soporte de modelos varía según la región de AWS, consulte https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html["La documentación de AWS"^] para verificar qué modelos puede utilizar en las regiones en las que planea implementar su base de conocimientos.
 +
 --
-* Claude 3,5 Soneto
-* Claude 3 Opus
-* Claude 3 Haiku
-* Claude 3 Soneto
-* Claude 2,1
-* Claude 2,0
-+
-Dado que el soporte de modelos varía según la región de AWS, consulte https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html["Esta página de documentación de AWS"^] para verificar qué modelos puede utilizar en las regiones en las que planea implementar su base de conocimientos.
+GenAI admite los siguientes modelos Anthropic Claude y Amazon Nova:
 
+* Claude Antropic:
 +
-Obtenga más información sobre los modelos disponibles para ayudarle a seleccionar: https://aws.amazon.com/bedrock/claude/["Claude de Antropic en Amazon Bedrock"^]
+** Claude 3,5 Soneto
+** Claude 3 Opus
+** Claude 3 Haiku
+** Claude 3 Soneto
+** Claude 2,1
+** Claude 2,0
 
+
+* Amazon Nova:
++
+** Micro Nova
+** Nova Lite (compatible con imágenes y texto)
+** Nova Pro (compatible con imágenes y texto)
+
+
+
+
+Obtenga más información sobre el uso de estos modelos con Amazon Bedrock:
+
+* https://aws.amazon.com/bedrock/claude/["Claude de Antropic en Amazon Bedrock"^]
+* https://docs.aws.amazon.com/nova/latest/userguide/getting-started-console.html["Introducción a Amazon Nova en la consola Amazon Bedrock"^]
 
 
 --
