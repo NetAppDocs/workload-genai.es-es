@@ -20,6 +20,9 @@ Puede probar una base de conocimientos chateando con sus fuentes de datos incrus
 
 Realizará la mayor parte de las pruebas dentro de la fábrica de cargas de trabajo antes de implementar la base de conocimientos en una aplicación para los usuarios. Si necesitas hacer cambios en tu fuente de datos o en la operación de chatbot, querrás hacerlo ahora antes de publicar tu base de conocimientos.
 
+
+TIP: Puede cambiar el tamaño y volver a abrir la ventana del simulador de chatbot, y copiar las preguntas y las respuestas en el portapapeles.
+
 Algunas de las tareas que querrás realizar para probar tu chatbot son:
 
 * Introduzca un gran número de preguntas relevantes para su organización para asegurarse de que las respuestas sean las esperadas.
@@ -33,5 +36,13 @@ Algunas de las tareas que querrás realizar para probar tu chatbot son:
 El simulador de chatbot aparece en el panel derecho. Si se define, también se muestran los iniciadores de conversación existentes.
 
 . En el campo de entrada de chatbot, ingrese una pregunta o petición de datos y seleccione image:button-run.png["el botón run"] para ver cómo responde su chatbot con su conocimiento organizativo.
++
+[TIP]
+====
+** Puede ver las fuentes utilizadas para producir la respuesta ampliando la lista *Sources* debajo de la respuesta. Esto proporciona una lista de archivos utilizados para generar la respuesta. Puede ver y copiar los fragmentos de datos utilizados en cada ruta de archivo y volumen a cada archivo pasando el cursor sobre el nombre del archivo.
+** Si las tablas se incluyen en la respuesta, puede ordenar los datos de cada columna y copiar cada tabla en el portapapeles.
+
+
+====
 . Si necesita actualizar alguna de sus fuentes de datos para que su base de conocimientos proporcione respuestas más centradas, realice esos cambios ahora y vuelva a probar la base de conocimientos.
 
