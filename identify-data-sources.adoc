@@ -52,16 +52,19 @@ Actualmente se admiten los siguientes formatos de archivo de origen de datos.
 | Formato de archivo | Extensión 
 
 
-| Parquet Apache | .parquet 
+| Apache Parquetfootnote:disclaimer[La función de barandillas de datos no es compatible cuando se ingieren archivos de datos estructurados.] | .parquet 
 
 
-| Archivo de valores separados por comas | .csv 
+| Valores separados por comas filefootnote:disclaimer[] | .csv 
 
 
 | Formato de intercambio de gráficos | .gif 
 
 
 | JPEG | .jpg or.jpeg 
+
+
+| JSON y JSONPfootnote:disclaimer[] | .json 
 
 
 | Rebaja | .md 

@@ -60,17 +60,22 @@ https://aws.amazon.com/bedrock/titan/["Más información sobre Amazon Titan"^]
 
 
 
-.. *Modelo de chat*: Elija entre los modelos de chat Claude que están integrados en Amazon Bedrock. Tenga en cuenta que ya debe haber habilitado el modelo de chat de Amazon Bedrock.
+.. *Modelo de chat*: Elija entre los modelos de chat Anthropic Claude o Amazon Nova que están integrados en Amazon Bedrock. Tenga en cuenta que ya debe haber habilitado el modelo de chat de Amazon Bedrock.
 +
-Obtenga más información sobre los modelos disponibles para ayudarle a seleccionar: https://aws.amazon.com/bedrock/claude/["Claude de Antropic en Amazon Bedrock"^]
+Obtenga más información sobre el uso de estos modelos con Amazon Bedrock:
+
++
+*** https://aws.amazon.com/bedrock/claude/["Claude de Antropic en Amazon Bedrock"^]
+*** https://docs.aws.amazon.com/nova/latest/userguide/getting-started-console.html["Introducción a Amazon Nova en la consola Amazon Bedrock"^]
+
 
 .. * Data guardrails*: Elija si desea habilitar o deshabilitar las barandas de datos. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Obtenga más información sobre las barreras de datos que cuentan con la tecnología de clasificación de BlueXP "^].
 +
-Deben completarse los siguientes requisitos previos para habilitar las barreras de datos.
+Se deben cumplir los siguientes requisitos previos para activar las barreras de datos.
 
 +
 *** Se necesita una cuenta de servicio para comunicarse con la clasificación BlueXP . Debe tener el rol _Organization admin_ en su cuenta de arrendatario de BlueXP  para la creación de cuentas de servicio. Un miembro que tenga el rol de administrador de organización puede completar todas las acciones en BlueXP . link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Aprenda a agregar un rol a un miembro en BlueXP "^]
-*** El motor de IA debe tener acceso al extremo de la API de BlueXP : \https://api.BlueXP .NetApp.com.
+*** El motor AI debe tener acceso a la link:https://api.bluexp.netapp.com["Extremo de la API de BlueXP "^].
 *** Tendrá que hacer lo siguiente como se describe en link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html#quick-start["Documentación de clasificación de BlueXP"^]:
 +
 .... Crea un conector BlueXP
@@ -80,6 +85,13 @@ Deben completarse los siguientes requisitos previos para habilitar las barreras 
 
 
 
+
+
++
+
+NOTE: La función de barandillas de datos no se admite al ingerir archivos de datos estructurados como CSV, JSON, JSONP o Parquet.
+
++
 .. * Iniciadores de conversación *: Elija si desea proporcionar hasta cuatro mensajes de inicio de conversación que se muestran a los usuarios que interactúan con un chatbot que utiliza esta base de conocimientos. Le recomendamos que active esta configuración.
 +
 Si activa los arrancadores de conversación, se selecciona el modo automático de forma predeterminada. El modo manual solo se puede activar después de agregar fuentes de datos a su base de conocimientos. link:manage-knowledgebase.html["Aprenda a modificar la configuración de la base de conocimientos"].
