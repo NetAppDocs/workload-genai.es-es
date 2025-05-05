@@ -1,0 +1,36 @@
+= 
+:allow-uri-read: 
+
+
+. *Seleccione un sistema de archivos*: Seleccione el sistema de archivos FSX for ONTAP donde residen sus archivos de origen de datos y seleccione *Siguiente*.
+. *Selecciona un volumen*: Selecciona el volumen en el que residen tus archivos de origen de datos y selecciona *Siguiente*.
++
+Al seleccionar los archivos almacenados mediante el protocolo SMB, deberá introducir la información de Active Directory, que incluye el dominio, la dirección IP, el nombre de usuario y la contraseña.
+
+. *Seleccione una fuente de datos*: Seleccione la ubicación de la fuente de datos en función de dónde haya guardado los archivos. Esto puede ser un volumen completo, o simplemente una carpeta o subcarpeta específica en el volumen, y seleccione *Siguiente*.
+. *Configuraciones*: Configure cómo la fuente de datos ingiere información de sus archivos y qué archivos incluye en los escaneos:
++
+** *Filtrado de archivos*: Configure qué archivos se incluyen en los escaneos:
++
+*** En la sección *File Types support*, elija incluir todos los tipos de archivos o seleccionar tipos de archivos individuales para incluirlos en los escaneos de fuentes de datos.
+*** En la sección *Filtro de tiempo de modificación de archivo*, elija habilitar o deshabilitar la inclusión de archivos en función de su tiempo de modificación. Si activa el filtrado de tiempo de modificación, seleccione un intervalo de fechas de la lista.
++
+
+NOTE: Si incluye archivos basados en un rango de fechas de modificación, en cuanto el rango de fechas no se cumpla (los archivos no se han modificado dentro del rango de fechas especificado), los archivos se excluirán de la exploración periódica y el origen de datos no incluirá estos archivos.
+
+
+
+
+
+. En la sección *Permission Aware*, que solo está disponible cuando el origen de datos que seleccionó está en un volumen que utiliza el protocolo SMB, puede habilitar o deshabilitar las respuestas con permiso:
++
+** *Activado*: Los usuarios del chatbot que accedan a este conector solo obtendrán respuestas a consultas de fuentes de datos a las que tengan acceso.
+** *Deshabilitado*: Los usuarios del chatbot recibirán respuestas usando contenido de todas las fuentes de datos integradas.
++
+
+NOTE: Los permisos de grupo de Active Directory no son compatibles con los orígenes de datos del conector de Amazon Q Business.
+
+
+
+. Selecciona *Añadir* para añadir esta fuente de datos al conector de Amazon Q Business.
+

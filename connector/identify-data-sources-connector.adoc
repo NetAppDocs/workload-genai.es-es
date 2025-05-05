@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: connector/identify-data-sources-connector.html 
+keywords: data sources, chatbot, documents, knowledge base, connector 
+summary: 'Identifica o crea los documentos (fuentes de datos) que residen en tu sistema de archivos FSx para ONTAP que integrarás en tu base de conocimientos. Estas fuentes de datos permiten a la base de conocimientos proporcionar respuestas precisas y personalizadas a las consultas de los usuarios basadas en datos relevantes para su organización.' 
+---
+= Identifique orígenes de datos para agregarlos a un conector
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Identifica o crea los documentos (fuentes de datos) que residen en tu sistema de archivos FSx para ONTAP que integrarás en tu conector. Estas fuentes de datos permiten que Amazon Q Business proporcione respuestas precisas y personalizadas a las consultas de los usuarios basadas en datos relevantes para su organización.
+
+
+
+== Número máximo de orígenes de datos
+
+El número máximo de orígenes de datos admitidos es 10.
+
+
+
+== Ubicación de los orígenes de datos
+
+Los orígenes de datos pueden almacenarse en un único volumen o en una carpeta dentro de un volumen, en un recurso compartido de SMB o exportación NFS en un sistema de archivos Amazon FSx para NetApp ONTAP. Los orígenes de datos también pueden almacenarse en Amazon FSx para volúmenes de NetApp ONTAP que se encuentran en una relación de protección de datos de NetApp SnapMirror.
+
+No puede seleccionar documentos individuales dentro de un volumen o carpeta, por lo tanto, debe asegurarse de que cada volumen o carpeta que contenga orígenes de datos no contenga documentos extraños que no deberían integrarse con su base de conocimientos.
+
+Puede agregar varias fuentes de datos a cada conector, pero todos ellos tienen que residir en los sistemas de archivos de FSx para ONTAP a los que se puede acceder desde su cuenta de AWS.
+
+El tamaño máximo de archivo para cada origen de datos es de 50 MB.
+
+
+
+== Protocolos compatibles
+
+Los conectores admiten datos de volúmenes que usan protocolos NFS o SMB/CIFS. Al seleccionar archivos almacenados con el protocolo SMB, debe introducir la información de Active Directory para que el conector pueda acceder a los archivos de esos volúmenes. Esto incluye el dominio de Active Directory, la dirección IP, el nombre de usuario y la contraseña.
+
+Al almacenar su fuente de datos en un recurso compartido (archivo o directorio) al que se accede a través de SMB, los usuarios o grupos de chatbot solo pueden acceder a los datos. Cuando se habilita esta “capacidad de detección de permisos”, el sistema AI comparará el correo electrónico del usuario en auth0 con los usuarios autorizados para ver o usar los archivos en el recurso compartido SMB. El chatbot proporcionará respuestas basadas en los permisos de usuario para los archivos incrustados.
+
+Por ejemplo, si ha integrado archivos 10 (fuentes de datos) en su conector, y 2 de los archivos son archivos de recursos humanos que contienen información restringida, solo los usuarios de chatbot que están autenticados para acceder a esos archivos 2 recibirán respuestas del chatbot que incluyen datos de esos archivos.
+
+
+NOTE: Al agregar orígenes de datos a un conector de Amazon Q Business, solo se aplican permisos de usuario a los archivos de origen de datos. No se aplican los permisos de grupo.
+
+
+NOTE: Si hay archivos en el origen de datos que no contienen texto, Amazon Q Business no indexará esos archivos y, en su lugar, registrará una entrada en los registros de Amazon CloudWatch que indique que los archivos no contienen texto que indexar.
+
+
+
+== Formatos de archivo de origen de datos compatibles
+
+Los siguientes formatos de archivo de origen de datos son compatibles actualmente con el conector NetApp ONTAP para Amazon Q.
+
+[cols="2*"]
+|===
+| Formato de archivo | Extensión 
+
+
+| Archivo de valores separados por comas | .csv 
+
+
+| JSON y JSONP | .json 
+
+
+| Rebaja | .md 
+
+
+| Microsoft Word | .docx 
+
+
+| Texto sin formato | .txt 
+
+
+| Formato de documento portátil | .pdf 
+
+
+| Microsoft PowerPoint | .ppt o .pptx 
+
+
+| Lenguaje de marcado de hipertexto | .html 
+
+
+| Lenguaje de marcado extensible | .xml 
+
+
+| XSLT | .xslt 
+
+
+| Microsoft Excel | .xls 
+
+
+| Formato de texto enriquecido | .rtf 
+|===

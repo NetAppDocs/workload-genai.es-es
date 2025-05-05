@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: troubleshooting.html 
+permalink: general/troubleshooting.html 
 keywords: support registration, register for support, support, nss account, add nss account, 
 summary: Antes de poder abrir un caso de soporte con el soporte técnico de NetApp, debe añadir una cuenta del sitio de soporte de NetApp a la fábrica de carga de trabajo y, a continuación, registrarse para recibir soporte. 
 ---
 = Solución de problemas de GenAI
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

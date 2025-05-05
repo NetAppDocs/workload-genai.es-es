@@ -1,0 +1,175 @@
+---
+sidebar: sidebar 
+permalink: connector/manage-connector.html 
+keywords: ai, chatbot, managing, knowledge base 
+summary: Después de crear una base de conocimientos, puede ver los detalles de la base de conocimientos, modificar la base de conocimientos, integrar orígenes de datos adicionales o suprimir la base de conocimientos. 
+---
+= Administre conectores de Amazon Q Business
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de crear un conector para Amazon Q Business, puede ver los detalles del conector, modificar el conector, integrar orígenes de datos adicionales o eliminar el conector.
+
+
+
+== Ver información sobre un conector
+
+Puede ver información sobre la configuración de un conector y los orígenes de datos integrados.
+
+.Pasos
+. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. En el menú de navegación de fábrica de carga de trabajo, seleccione *AI*.
+. Seleccione el conector que desea ver.
+. Para ver los detalles del conector, image:icon-action.png["el botón de opción"]seleccione y seleccione *Administrar conector*.
++
+Esta página muestra el estado Publicado, el estado de incrustación de los orígenes de datos, el modo de incrustación, la lista de todos los orígenes de datos incrustados, etc.
+
++
+El menú *Acciones* le permite administrar el conector si desea realizar cambios.
+
+
+
+
+
+== Edite un conector
+
+Puede actualizar un conector cambiando algunos ajustes o puede agregar o eliminar orígenes de datos.
+
+Cada vez que agrega, modifica o elimina fuentes de datos del conector, GenAI necesita enviar la información de origen de datos a Amazon Q Business para que se vuelva a indexar. La sincronización es incremental, por lo que Amazon Q Business solo procesa los objetos de tu volumen de FSx para ONTAP que se han agregado, modificado o eliminado desde la última sincronización.
+
+.Pasos
+. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. En la página de inventario de bases de conocimientos y conectores, seleccione el conector que desea actualizar.
+. image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar conector*.
++
+Esta página muestra el estado Publicado, el estado de incrustación de los orígenes de datos, el modo de incrustación, la lista de todos los orígenes de datos incrustados, etc.
+
+. Seleccione el menú *Acciones* y seleccione *Editar conector*.
+. En la página Editar conector, puede cambiar el nombre del conector, la descripción, el modelo de incrustación, la habilitación de barandillas de datos y la política de instantáneas utilizada para el volumen que contiene el conector.
++
+
+NOTE: Cada escaneo de la fuente de datos, que incluye la incrustación, incurre en un costo. Si habilita las barandillas de datos después de crear un conector, la fuente de datos se escanea de nuevo y conlleva costes.
+
+. Seleccione *Guardar* después de haber realizado los cambios.
+
+
+
+
+== Agregue orígenes de datos adicionales a un conector
+
+Puede incrustar orígenes de datos adicionales en el conector para rellenarlo con datos adicionales de la organización.
+
+.Pasos
+. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. En la página de inventario de Knowledge Bases & Connectors, seleccione el conector en el que desea agregar el origen de datos.
+. image:icon-action.png["el botón de opción"]Selecciona y selecciona *Añadir fuente de datos*.
+. *Seleccione un sistema de archivos*: Seleccione el sistema de archivos FSX for ONTAP donde residen sus archivos de origen de datos y seleccione *Siguiente*.
+. *Selecciona un volumen*: Selecciona el volumen en el que residen tus archivos de origen de datos y selecciona *Siguiente*.
++
+Al seleccionar los archivos almacenados mediante el protocolo SMB, deberá introducir la información de Active Directory, que incluye el dominio, la dirección IP, el nombre de usuario y la contraseña.
+
+. *Seleccione una fuente de datos*: Seleccione la ubicación de la fuente de datos en función de dónde haya guardado los archivos. Esto puede ser un volumen completo, o simplemente una carpeta o subcarpeta específica en el volumen, y seleccione *Siguiente*.
+. *Configuraciones*: Configure cómo la fuente de datos ingiere información de sus archivos y qué archivos incluye en los escaneos:
++
+** *Definir fuente de datos*: En la sección *Estrategia de Chunking*, defina cómo el motor GenAI divide el contenido de la fuente de datos en fragmentos cuando la fuente de datos se integra con una base de conocimientos. Puede elegir una de las siguientes estrategias:
++
+*** * Fragmentación de varias frases*: Organiza la información de su fuente de datos en fragmentos definidos por frases. Puedes elegir cuántas oraciones componen cada fragmento (hasta 100).
+*** * Fragmento basado en superposición *: Organiza la información de su fuente de datos en fragmentos definidos por caracteres que pueden superponerse a fragmentos vecinos. Puedes elegir el tamaño de cada fragmento en caracteres, y cuánto se superpone cada fragmento con fragmentos adyacentes. Puede configurar un tamaño de fragmento de entre 50 y 3000 caracteres, y un porcentaje de superposición de entre 1 y 99%.
++
+
+NOTE: La elección de un alto porcentaje de superposición puede aumentar en gran medida los requisitos de almacenamiento con solo pequeñas mejoras en la precisión de la recuperación.
+
+
+
+** *Filtrado de archivos*: Configure qué archivos se incluyen en los escaneos:
++
+*** En la sección *File Types support*, elija incluir todos los tipos de archivos o seleccionar tipos de archivos individuales para incluirlos en los escaneos de fuentes de datos.
++
+Si incluye imágenes o archivos PDF, la fábrica de carga de trabajo de BlueXP  para GenAI analiza el texto en las imágenes (incluidas las imágenes en documentos PDF), lo que supone un coste mayor.
+
++
+Al incluir datos de texto de imágenes, GenAI no puede enmascarar la información de identificación personal (PII) de la imagen a medida que los datos de texto escaneados se envían desde su entorno a AWS. Sin embargo, una vez almacenados los datos, todos los PII se enmascaran en la base de datos de GenAI.
+
++
+
+NOTE: Su elección para incluir archivos de imagen en los escaneos está relacionada con el modelo de chat de la base de conocimientos. Si incluye archivos de imagen en los escaneos, el modelo de chat debe admitir imágenes. Si se seleccionan aquí tipos de archivo de imagen, no puede cambiar la base de conocimientos a un modelo de chat que no admita archivos de imagen.
+
+*** En la sección *Filtro de tiempo de modificación de archivo*, elija habilitar o deshabilitar la inclusión de archivos en función de su tiempo de modificación. Si activa el filtrado de tiempo de modificación, seleccione un intervalo de fechas de la lista.
++
+
+NOTE: Si incluye archivos basados en un rango de fechas de modificación, en cuanto el rango de fechas no se cumpla (los archivos no se han modificado dentro del rango de fechas especificado), los archivos se excluirán de la exploración periódica y el origen de datos no incluirá estos archivos.
+
+
+
+
+
+. En la sección *Permission Aware*, que solo está disponible cuando el origen de datos que seleccionó está en un volumen que utiliza el protocolo SMB, puede habilitar o deshabilitar las respuestas con permiso:
++
+** *Activado*: Los usuarios del chatbot que accedan a esta base de conocimientos solo obtendrán respuestas a las consultas de las fuentes de datos a las que tengan acceso.
+** *Deshabilitado*: Los usuarios del chatbot recibirán respuestas usando contenido de todas las fuentes de datos integradas.
+
+
+. Seleccione *Agregar* para agregar esta fuente de datos a su base de conocimientos.
+
+
+.Resultado
+El origen de datos está integrado en el conector.
+
+
+
+== Sincronice sus orígenes de datos con un conector
+
+Las fuentes de datos se sincronizan automáticamente con el conector asociado una vez al día para que cualquier cambio en la fuente de datos se refleje en Amazon Q Business. Si realiza cambios en cualquiera de sus orígenes de datos y desea sincronizar (escanear) los datos inmediatamente, puede realizar una sincronización a petición.
+
+La sincronización es incremental, por lo que Amazon Q Business solo procesa los objetos de los orígenes de datos que se han agregado, modificado o eliminado desde la última sincronización.
+
+.Pasos
+. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. En la pestaña Bases de conocimiento y conectores, seleccione el conector que desea sincronizar.
+. image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar conector*.
+. Seleccione el menú *Acciones* y seleccione *Escanear ahora*.
++
+Verá un mensaje que indica que se están escaneando las fuentes de datos y un mensaje final cuando se complete el análisis.
+
+
+
+.Resultado
+El conector se sincroniza con las fuentes de datos adjuntas y Amazon Q Business comenzará a utilizar la información más reciente de sus fuentes de datos.
+
+
+
+=== Pausar o reanudar una sincronización programada
+
+Si desea pausar o reanudar la siguiente sincronización (escaneo) de los orígenes de datos, puede hacerlo en cualquier momento. Es posible que deba pausar la siguiente sincronización programada si va a realizar cambios en un origen de datos y no desea que la sincronización se produzca durante la ventana de cambio.
+
+.Pasos
+. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. En la página de inventario de conectores, seleccione el conector para el que desea pausar o reanudar las exploraciones.
+. image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar conector*.
+. Seleccione el menú *Acciones* y seleccione *Escanear > Pausar escaneo programado* o *Escanear > Reanudar escaneo programado*.
++
+Verá un mensaje que indica que el siguiente análisis programado se ha pausado o reanudado.
+
+
+
+
+
+== Eliminar un conector
+
+Si ya no necesita un conector, puede eliminarlo. Al eliminar un conector, se elimina de la fábrica de carga de trabajo y se elimina el volumen que contiene el conector. La eliminación de un conector no es reversible.
+
+Al suprimir un conector, también debe desasociar el conector de cualquier agente con el que esté asociado para suprimir completamente todos los recursos asociados al conector.
+
+.Pasos
+. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. En la página de inventario de bases de conocimientos y conectores, seleccione el conector que desea suprimir.
+. image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar conector*.
+. Seleccione el menú *Acciones* y seleccione *Borrar conector*.
+. En el cuadro de diálogo Eliminar conector, confirme que desea eliminarlo y seleccione *Eliminar*.
+
+
+.Resultado
+El conector se elimina de la fábrica de carga de trabajo y se elimina el volumen asociado.

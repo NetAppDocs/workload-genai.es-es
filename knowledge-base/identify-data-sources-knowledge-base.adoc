@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: identify-data-sources.html 
-keywords: data sources, chatbot, documents, knowledge base 
+permalink: knowledge-base/identify-data-sources-knowledge-base.html 
+keywords: data sources, chatbot, documents, knowledge base, connector 
 summary: 'Identifica o crea los documentos (fuentes de datos) que residen en tu sistema de archivos FSx para ONTAP que integrarás en tu base de conocimientos. Estas fuentes de datos permiten a la base de conocimientos proporcionar respuestas precisas y personalizadas a las consultas de los usuarios basadas en datos relevantes para su organización.' 
 ---
-= Identifique las fuentes de datos que desea integrar en su base de conocimientos de GenAI
+= Identifique orígenes de datos para agregarlos a una base de conocimientos o conector
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -35,7 +35,7 @@ El tamaño máximo de archivo para cada origen de datos es de 50 MB.
 
 == Protocolos compatibles
 
-La base de conocimientos admite datos de volúmenes que usan protocolos NFS o SMB/CIFS. Al seleccionar archivos almacenados con el protocolo SMB, debe introducir la información de Active Directory para que la base de conocimientos pueda acceder a los archivos de esos volúmenes. Esto incluye el dominio de Active Directory, la dirección IP, el nombre de usuario y la contraseña.
+Las bases de conocimientos admiten datos de volúmenes que usan protocolos NFS o SMB/CIFS. Al seleccionar archivos almacenados con el protocolo SMB, debe introducir la información de Active Directory para que la base de conocimientos pueda acceder a los archivos de esos volúmenes. Esto incluye el dominio de Active Directory, la dirección IP, el nombre de usuario y la contraseña.
 
 Al almacenar su fuente de datos en un recurso compartido (archivo o directorio) al que se accede a través de SMB, los usuarios o grupos de chatbot solo pueden acceder a los datos. Cuando se habilita esta “capacidad de detección de permisos”, el sistema AI comparará el correo electrónico del usuario en auth0 con los usuarios autorizados para ver o usar los archivos en el recurso compartido SMB. El chatbot proporcionará respuestas basadas en los permisos de usuario para los archivos incrustados.
 
@@ -45,14 +45,14 @@ Por ejemplo, si ha integrado 10 archivos (fuentes de datos) en su base de conoci
 
 == Formatos de archivo de origen de datos compatibles
 
-Actualmente se admiten los siguientes formatos de archivo de origen de datos.
+Los siguientes formatos de archivo de origen de datos se admiten actualmente con las bases de conocimiento GenAI de fábrica de cargas de trabajo.
 
 [cols="2*"]
 |===
 | Formato de archivo | Extensión 
 
 
-| Apache Parquetfootnote:disclaimer[La función de barandillas de datos no es compatible cuando se ingieren archivos de datos estructurados.] | .parquet 
+| Apache Parquetfootnote:disclaimer[La función de barandillas de datos no es compatible cuando se ingieren archivos de datos estructurados en bases de conocimiento.] | .parquet 
 
 
 | Valores separados por comas filefootnote:disclaimer[] | .csv 

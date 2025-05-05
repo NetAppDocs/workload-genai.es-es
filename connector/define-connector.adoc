@@ -1,0 +1,132 @@
+---
+sidebar: sidebar 
+permalink: connector/define-connector.html 
+keywords: ai, chatbot, connector, 
+summary: Después de implementar la infraestructura de IA e identificar las fuentes de datos que integrará con Amazon Q Business, puede definir un conector. 
+---
+= Cree un conector NetApp ONTAP para Amazon Q
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de poner en marcha la infraestructura de IA e identificar las fuentes de datos que utilizará de los almacenes de datos de FSx para ONTAP, estará listo para definir un conector NetApp ONTAP para Amazon Q.
+
+Asegúrese de que su entorno cumple con el link:requirements-connector.html["requisitos"] para Amazon Q Business antes de continuar.
+
+.Acerca de esta tarea
+Las fuentes de datos de su organización pueden contener Información de Identificación Personal (PII). Para proteger esta información confidencial, puede activar _data guardrails_ al definir un conector. Las barandas de datos, impulsadas por la clasificación BlueXP , identifican y enmascaran la PII, haciéndola inaccesible e irrecuperable.
+
+link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Más información sobre la clasificación de BlueXP"^].
+
+
+NOTE: La fábrica de cargas de trabajo de BlueXP  para GenAI no enmascara la información personal confidencial (SPII). Consulte link:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-data["tipos de datos personales confidenciales"^]para obtener más información sobre este tipo de datos.
+
+
+NOTE: Las barreras de protección de datos se pueden activar o desactivar en cualquier momento. Si cambia la habilitación de barreras de datos, la fábrica de cargas de trabajo escanea toda la fuente de datos desde cero, lo que puede suponer un coste.
+
+
+
+== Defina un conector
+
+Crear un conector NetApp ONTAP para Amazon Q. El conector permite la comunicación entre la API y la fuente de datos entre GenAI y Amazon Q Business.
+
+.Pasos
+. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
+. En la ficha Bases de conocimiento y conectores, seleccione el menú desplegable *Crear nuevo* y elija *Conector de negocio de Amazon Q*.
+. En la página Definir conector, configure los ajustes del conector:
++
+.. *Nombre*: Introduzca el nombre que desea utilizar para el conector.
+.. *Descripción*: Introduzca una descripción detallada del conector.
+.. *Amazon Q*: La región y el nombre de la aplicación para la instancia de Amazon Q Business que desea integrar.
+.. * Data guardrails*: Elija si desea habilitar o deshabilitar las barandas de datos. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Obtenga más información sobre las barreras de datos que cuentan con la tecnología de clasificación de BlueXP "^].
++
+Se deben cumplir los siguientes requisitos previos para activar las barreras de datos.
+
++
+*** Se necesita una cuenta de servicio para comunicarse con la clasificación BlueXP . Debe tener el rol _Organization admin_ en su cuenta de arrendatario de BlueXP  para la creación de cuentas de servicio. Un miembro que tenga el rol de administrador de organización puede completar todas las acciones en BlueXP . link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Aprenda a agregar un rol a un miembro en BlueXP "^]
+*** El motor AI debe tener acceso a la link:https://api.bluexp.netapp.com["Extremo de la API de BlueXP "^].
+*** Tendrá que hacer lo siguiente como se describe en link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html#quick-start["Documentación de clasificación de BlueXP"^]:
++
+.... Crea un conector BlueXP
+.... Asegúrese de que su entorno pueda cumplir con los requisitos previos
+.... Implementa la clasificación de BlueXP
+
+
+
+
+
+
++
+
+NOTE: Cuando habilita la función de barandas de datos, GenAI procesa archivos .txt, .md, .csv, .docx y .pdf ingiriendo solo texto sin formato (excluyendo imágenes incrustadas o texto multimedia) y enmascarando cualquier dato privado o confidencial. Todos los demás tipos de archivos se procesan normalmente sin enmascarar datos privados o confidenciales.
+
++
+.. *FSX para el sistema de archivos ONTAP*: Cuando definas un nuevo conector NetApp ONTAP para Amazon Q, la fábrica de cargas de trabajo crea un nuevo volumen de Amazon FSx para NetApp ONTAP para almacenar la información del conector. Seleccione un sistema de archivos existente y SVM (también llamado máquina virtual de almacenamiento) donde se creará el nuevo volumen.
+.. *Política de instantáneas*: Elija una política de instantáneas de la lista de políticas existentes definidas en el inventario de almacenamiento de la fábrica de carga de trabajo. GenAI crea automáticamente instantáneas recurrentes del volumen que almacena la información del conector a una frecuencia basada en la política de instantáneas que seleccione.
++
+Si la política de Snapshot que necesita no existe, puede https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["crear una política de snapshot"^] hacerlo en la máquina virtual de almacenamiento que contiene el volumen.
+
+
+
+. Selecciona *Crear conector* para integrar Amazon Q Business con GenAI.
++
+Aparece un indicador de progreso mientras se crea el conector.
+
++
+Después de crear el conector, tiene la opción de agregar un origen de datos al conector para que Amazon Q Business ingiera sus datos y los agregue a su índice. Le recomendamos que seleccione *Añadir fuente de datos* y agregue una o más fuentes de datos ahora.
+
+
+
+
+
+== Agregue orígenes de datos al conector
+
+Puede agregar uno o más orígenes de datos para rellenar el índice de Amazon Q Business con los datos de su organización.
+
+.Acerca de esta tarea
+* El número máximo de orígenes de datos admitidos es 10.
+* Consulte el https://docs.aws.amazon.com/kendra/latest/dg/quotas.html["Documentación de Amazon Q Business"^] para obtener información sobre las restricciones de servicio específicas del índice de Amazon Q Business.
+
+
+.Pasos
+. Después de seleccionar *Agregar fuente de datos*, se muestra la página *Seleccionar un sistema de archivos*.
+. *Seleccione un sistema de archivos*: Seleccione el sistema de archivos FSX for ONTAP donde residen sus archivos de origen de datos y seleccione *Siguiente*.
+. *Selecciona un volumen*: Selecciona el volumen en el que residen tus archivos de origen de datos y selecciona *Siguiente*.
++
+Al seleccionar los archivos almacenados mediante el protocolo SMB, deberá introducir la información de Active Directory, que incluye el dominio, la dirección IP, el nombre de usuario y la contraseña.
+
+. *Seleccione una fuente de datos*: Seleccione la ubicación de la fuente de datos en función de dónde haya guardado los archivos. Esto puede ser un volumen completo, o simplemente una carpeta o subcarpeta específica en el volumen, y seleccione *Siguiente*.
+. *Configuraciones*: Configure cómo la fuente de datos ingiere información de sus archivos y qué archivos incluye en los escaneos:
++
+** *Filtrado de archivos*: Configure qué archivos se incluyen en los escaneos:
++
+*** En la sección *File Types support*, elija incluir todos los tipos de archivos o seleccionar tipos de archivos individuales para incluirlos en los escaneos de fuentes de datos.
+*** En la sección *Filtro de tiempo de modificación de archivo*, elija habilitar o deshabilitar la inclusión de archivos en función de su tiempo de modificación. Si activa el filtrado de tiempo de modificación, seleccione un intervalo de fechas de la lista.
++
+
+NOTE: Si incluye archivos basados en un rango de fechas de modificación, en cuanto el rango de fechas no se cumpla (los archivos no se han modificado dentro del rango de fechas especificado), los archivos se excluirán de la exploración periódica y el origen de datos no incluirá estos archivos.
+
+
+
+
+
+. En la sección *Permission Aware*, que solo está disponible cuando el origen de datos que seleccionó está en un volumen que utiliza el protocolo SMB, puede habilitar o deshabilitar las respuestas con permiso:
++
+** *Activado*: Los usuarios del chatbot que accedan a este conector solo obtendrán respuestas a consultas de fuentes de datos a las que tengan acceso.
+** *Deshabilitado*: Los usuarios del chatbot recibirán respuestas usando contenido de todas las fuentes de datos integradas.
++
+
+NOTE: Los permisos de grupo de Active Directory no son compatibles con los orígenes de datos del conector de Amazon Q Business.
+
+
+
+. Selecciona *Añadir* para añadir esta fuente de datos al conector de Amazon Q Business.
+
+
+.Resultado
+El origen de datos está incrustado en el índice de Amazon Q Business. El estado cambia de “Embedding” a “Embedded” cuando el origen de datos está completamente embebido.
+
+Después de agregar una única fuente de datos al conector, puede probarlo en el entorno de chatbot de Amazon Q Business y realizar los cambios necesarios antes de poner el servicio a disposición de los usuarios. También puede seguir los mismos pasos para agregar orígenes de datos adicionales al conector.

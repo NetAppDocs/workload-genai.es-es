@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: publish-knowledgebase.html 
+permalink: knowledge-base/publish-knowledgebase.html 
 keywords: ai, chatbot, publishing, knowledge base 
 summary: Después de crear y probar su base de conocimientos localmente, puede publicar la base de conocimientos para que pueda integrarse con la aplicación chatbot que permitirá a sus usuarios consultar la base de conocimientos. 
 ---
 = Publique una base de conocimientos de GenAI y vea el punto final único
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

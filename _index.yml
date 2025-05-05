@@ -13,25 +13,33 @@ indexpage:
     links:
     - title: Obtén más información sobre el centro de cargas de trabajo de BlueXP 
         para GenAI
-      url: ai-workloads-overview.html
-    - title: Inicio rápido
-      url: quick-start.html
-    - title: Requisitos de GenAI
-      url: requirements.html
+      url: general/ai-workloads-overview.html
     - title: Ponga en marcha la infraestructura de la base de conocimientos
-      url: deploy-infrastructure.html
-  - title: Construir una base de conocimientos
+      url: knowledge-base/deploy-infrastructure.html
+  - title: Construir una base de conocimiento para Amazon Bedrock
     links:
+    - title: Inicio rápido para bases de conocimientos
+      url: knowledge-base/quick-start-knowledge-base.html
     - title: Crear una base de conocimientos
-      url: create-knowledgebase.html
+      url: knowledge-base/create-knowledgebase.html
     - title: Pruebe una base de conocimientos
-      url: test-knowledgebase.html
+      url: knowledge-base/test-knowledgebase.html
     - title: Publicar una base de conocimientos
-      url: publish-knowledgebase.html
+      url: knowledge-base/publish-knowledgebase.html
+  - title: Cree un conector para Amazon Q Business
+    links:
+    - title: Inicio rápido para conectores
+      url: connector/quick-start-connector.html
+    - title: Cree un conector para Amazon Q Business
+      url: connector/define-connector.html
   - title: Administrar GenAI
     links:
-    - title: Gestionar la infraestructura de la base de conocimientos
-      url: manage-infrastructure.html
+    - title: Gestione la infraestructura de GenAI
+      url: general/manage-infrastructure.html
+    - title: Gestionar bases de conocimientos
+      url: knowledge-base/manage-knowledgebase.html
+    - title: Administrar conectores
+      url: connector/manage-connector.html
   - title: Blogs y comunidad
     links:
     - title: Comunidad de NetApp

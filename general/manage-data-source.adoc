@@ -1,34 +1,34 @@
 ---
 sidebar: sidebar 
-permalink: manage-data-source.html 
+permalink: general/manage-data-source.html 
 keywords: ai, chatbot, creating, knowledge base, data source 
 summary: Después de crear una base de conocimientos utilizando orígenes de datos en su sistema de archivos FSx para ONTAP, puede ver los detalles de la fuente de datos, actualizar o cambiar el contenido de la fuente de datos, editar la configuración de la fuente de datos o eliminar la fuente de datos. 
 ---
 = Gestionar orígenes de datos de GenAI
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
-Después de crear una base de conocimientos utilizando orígenes de datos en su sistema de archivos FSx para ONTAP, puede ver los detalles de la fuente de datos, actualizar o cambiar el contenido de la fuente de datos, editar la configuración de la fuente de datos o eliminar la fuente de datos.
+Después de crear una base de conocimientos o un conector utilizando orígenes de datos en el sistema de archivos FSx para ONTAP, puede ver los detalles de la fuente de datos, actualizar o cambiar el contenido de la fuente de datos, editar la configuración de la fuente de datos o eliminar la fuente de datos.
 
 
 
 == Ver información sobre un origen de datos
 
-Puede ver información sobre el contenido de un origen de datos y puede ver su estado de incrustación con la base de conocimientos. Dado que una fuente de datos forma parte de una base de conocimientos, primero deberá abrir la base de conocimientos para poder ver los detalles de la fuente de datos.
+Puede ver información sobre el contenido de un origen de datos y puede ver su estado de incrustación con la base de conocimientos o el conector. Dado que las fuentes de datos están asociadas a una base de conocimientos o conector, primero tendrá que elegir la base de conocimientos o el conector para poder ver los detalles de la fuente de datos.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
 . En el menú de navegación de fábrica de carga de trabajo, seleccione *AI*.
-. Seleccione la base de conocimientos donde reside el origen de datos y, a continuación, image:icon-action.png["el botón de opción"] seleccione * Administrar base de conocimientos *.
+. Seleccione la base de conocimientos o el conector donde reside la fuente de datos y, a continuación, image:icon-action.png["el botón de opción"]seleccione * Administrar base de conocimientos * o * Administrar conector *.
 +
-La parte inferior de la página muestra los orígenes de datos que forman parte de esta base de conocimientos.
+La parte inferior de la página muestra los orígenes de datos asociados.
 
 . Expanda cada fila seleccionando la image:button-down-caret.png["el botón de flecha abajo"] para ver información detallada sobre cada origen de datos, como el sistema de archivos FSx para ONTAP, el volumen y la ruta donde reside el origen de datos.
 +
-También muestra la información de incrustación y si ese origen de datos está incrustado actualmente en la base de conocimientos.
+También muestra la información de incrustación y si ese origen de datos está actualmente incrustado en la base de conocimientos o en el conector.
 
 
 
@@ -36,7 +36,7 @@ También muestra la información de incrustación y si ese origen de datos está
 
 == Editar la configuración del origen de datos
 
-Puede editar información sobre un origen de datos que haya integrado en una base de conocimientos. La mayor parte de la información se corrige después de agregar un origen de datos a una base de conocimientos, pero puede realizar cambios en la definición y configuración de fragmentos y en la detección de permisos (cuando se utiliza el protocolo SMB en el volumen de origen de datos).
+Puede editar información sobre un origen de datos que haya integrado con una base de conocimientos o conector. La mayor parte de la información se corrige después de agregar un origen de datos, pero puede realizar cambios en alguna de la configuración (como la definición de fragmentación o el reconocimiento de permisos).
 
 .Pasos
 . Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
@@ -58,7 +58,7 @@ La configuración del origen de datos se actualiza y el sistema AI sincroniza el
 
 Puede cambiar el contenido de un origen de datos en cualquier momento para agregar o actualizar los datos de su organización. Si este origen de datos se está utilizando activamente en una base de conocimientos, debe sincronizar el origen de datos para que se vuelva a indexar en la base de conocimientos. La sincronización es incremental, por lo que Amazon Bedrock solo procesa los objetos del volumen FSx para ONTAP que se han agregado, modificado o eliminado desde la última sincronización.
 
-Las fuentes de datos se sincronizan automáticamente con la base de conocimientos una vez al día para que cualquier cambio en la fuente de datos se refleje en el chatbot. Si realiza cambios en un origen de datos y desea sincronizar los datos inmediatamente, puede link:manage-knowledgebase.html#synchronize-your-data-sources-with-a-knowledge-base["realice una sincronización bajo demanda"].
+Las fuentes de datos se sincronizan automáticamente con la base de conocimientos una vez al día para que cualquier cambio en la fuente de datos se refleje en el chatbot. Si realiza cambios en un origen de datos y desea sincronizar los datos inmediatamente, puede link:../knowledge-base/manage-knowledgebase.html#synchronize-your-data-sources-with-a-knowledge-base["realice una sincronización bajo demanda"].
 
 
 

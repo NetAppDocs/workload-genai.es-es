@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: whats-next.html 
+permalink: knowledge-base/whats-next.html 
 keywords: what you can do, knowledge base 
 summary: Ahora que ha creado una base de conocimientos que utiliza sus datos empresariales y los ha puesto en marcha para sus usuarios, puede gestionar la base de conocimientos, las fuentes de datos y la infraestructura RAG, incluidos los sistemas de archivos FSx para ONTAP. 
 ---
 = Qué puede hacer después con GenAI
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: connector/requirements-connector.html 
+keywords: ai, chatbot, prerequisites, bedrock, fsx for ontap, prerequisites, requirements 
+summary: Asegúrese de que la fábrica de cargas de trabajo y AWS están configurados correctamente antes de crear su base de conocimientos. Esto incluye tener sus credenciales de inicio de sesión de AWS, un sistema de archivos FSx para ONTAP implementado que contiene las fuentes de datos que desea integrar en su base de conocimientos, acceso al servicio de IA de Amazon Bedrock y más. 
+---
+= Requisitos del conector GenAI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Asegúrese de que la fábrica de cargas de trabajo y AWS están configurados correctamente antes de crear un conector NetApp ONTAP para Amazon Q.
+
+
+
+== Requisitos básicos de GenAI
+
+GenAI tiene requisitos generales que su entorno necesita cumplir antes de empezar.
+
+Inicio de sesión y cuenta de fábrica de carga de trabajo:: Deberá https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["configure una cuenta con fábrica de cargas de trabajo"^] iniciar sesión con uno de los https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+Credenciales y permisos de AWS:: Necesita agregar credenciales de AWS a la fábrica de cargas de trabajo con permisos de lectura/escritura, lo que significa que utilizará la fábrica de cargas de trabajo en el modo _Read/Write_ para GenAI.
++
+--
+Los permisos de modo _Basic_ y modo _Read-Only_ no se admiten en este momento.
+
+Al configurar sus credenciales, al seleccionar los permisos que se muestran a continuación, tendrá acceso completo para administrar los sistemas de archivos de FSx para ONTAP y para implementar y administrar la instancia de GenAI EC2 y otros recursos de AWS necesarios para su base de conocimientos y chatbot.
+
+https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aprenda a añadir credenciales de AWS a la fábrica de cargas de trabajo"^]
+
+--
+
+
+
+
+== Requisitos para el conector NetApp ONTAP para Amazon Q
+
+Asegúrese de que su entorno cumple los siguientes requisitos específicos para los conectores de Amazon Q Business.
+
+Aplicación Amazon Q Business:: Debe crear una aplicación de Amazon Q Business o utilizar una existente.
++
+--
+* Asegúrese de que la aplicación existe en una de sus regiones de AWS.
+* Asegúrese de que https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/select-retriever.html["se ha creado un índice"^] tiene para la aplicación.
+* Asegúrese de que la aplicación no está en un estado fallido.
+
+
+--
+FSX para sistema de archivos ONTAP:: Necesita un mínimo de un sistema de archivos FSx para ONTAP:
++
+--
+* El motor NetApp GenAI utilizará (o creará, si no existe) un sistema de archivos para almacenar información sobre el conector.
++
+Este sistema de archivos FSx para ONTAP debe utilizar volúmenes de FlexVol. No se admiten los volúmenes de FlexGroup.
+
+* Uno o más sistemas de archivos contendrán las fuentes de datos que agregará al conector.
++
+Un sistema de archivos FSx para ONTAP se puede utilizar con ambos fines o puede utilizar varios sistemas de archivos FSx para ONTAP.
+
+* Necesitará conocer la región, la VPC y la subred de AWS donde reside el sistema de archivos AWS FSx para ONTAP.
+* Tendrá que considerar los pares clave/valor de etiqueta que desea aplicar a los recursos de AWS que forman parte de esta implementación (opcional).
+* Necesitará conocer la información del par de claves que le permite conectarse de forma segura a la instancia del motor de NetApp AI.
+
+
+https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["Descubre cómo implementar y gestionar sistemas de archivos FSx para ONTAP"^]
+
+--
+

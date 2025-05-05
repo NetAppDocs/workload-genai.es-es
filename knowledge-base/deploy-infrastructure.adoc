@@ -1,19 +1,19 @@
 ---
 sidebar: sidebar 
-permalink: deploy-infrastructure.html 
+permalink: knowledge-base/deploy-infrastructure.html 
 keywords: ai, chatbot, infrastructure, bedrock, fsx for ontap 
 summary: Es necesario poner en marcha la infraestructura para el marco RAG en su entorno antes de desarrollar bases de conocimientos y aplicaciones de FSx para ONTAP para su organización. Los principales componentes de la infraestructura son el servicio de IA de Amazon Bedrock, una instancia de máquina virtual para el motor GenAI de NetApp y un sistema de archivos FSx para ONTAP. 
 ---
 = Ponga en marcha la infraestructura de GenAI
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
-Es necesario implementar la infraestructura de GenAI para el marco RAG en su entorno antes de desarrollar las bases de conocimientos y aplicaciones de FSx para ONTAP para su organización. Los principales componentes de la infraestructura son el servicio Bedrock de Amazon, una instancia de máquina virtual para el motor GenAI de NetApp y un sistema de archivos FSx para ONTAP.
+Necesita implementar la infraestructura de GenAI para el marco RAG en su entorno antes de crear bases de conocimientos, conectores y aplicaciones de FSx para ONTAP para su organización. Los principales componentes de la infraestructura son el servicio Bedrock de Amazon, una instancia de máquina virtual para el motor GenAI de NetApp y un sistema de archivos FSx para ONTAP.
 
-La infraestructura implementada puede admitir múltiples bases de conocimientos y bots de chat, por lo que normalmente solo tendrá que realizar esta tarea una vez.
+La infraestructura implementada puede admitir varias bases de conocimientos, bots conversacionales y conectores, por lo que, por lo general, solo tendrá que realizar esta tarea una vez.
 
 
 
@@ -21,12 +21,18 @@ La infraestructura implementada puede admitir múltiples bases de conocimientos 
 
 Su implementación de GenAI debe estar en una región de AWS que tenga habilitado Amazon Bedrock. https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Vea la lista de regiones admitidas"^]
 
-La implementación consta de los siguientes componentes.
+La infraestructura consta de los siguientes componentes.
 
 Servicio de Amazon Bedrock:: Amazon Bedrock es un servicio totalmente gestionado que te permite usar modelos de base (FMS) de las principales empresas de IA a través de una única API. También proporciona las funcionalidades que necesita para crear aplicaciones de IA generativas seguras.
 +
 --
 https://aws.amazon.com/bedrock/["Más información sobre Amazon Bedrock"^]
+
+--
+Amazon Q Business:: Amazon Q se basa en Amazon Bedrock para proporcionar un asistente de IA generativa totalmente administrado que puede utilizar para responder preguntas y generar contenido basado en la información de sus fuentes de datos.
++
+--
+https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html["Obtenga más información sobre Amazon Q Business"^]
 
 --
 Máquina virtual para el motor NetApp GenAI:: El motor NetApp GenAI se pone en marcha durante este proceso. Proporciona la potencia de procesamiento para ingerir los datos de sus orígenes de datos y luego escribir esos datos en la base de datos vectorial.
@@ -44,7 +50,7 @@ El motor GenAI de NetApp supervisa e interactúa con ambos volúmenes.
 
 La siguiente imagen muestra la infraestructura de GenAI. Durante este procedimiento, se implementan los componentes numerados 1, 2 y 3. Los demás elementos deben estar en su lugar antes de iniciar la puesta en marcha.
 
-image:diagram-chatbot-infrastructure.png["Un diagrama de los componentes de AI chatbot."]
+image:genai-infrastructure-diagram-numbered.png["Un diagrama de los componentes de infraestructura de GenAI."]
 
 
 
@@ -53,7 +59,11 @@ image:diagram-chatbot-infrastructure.png["Un diagrama de los componentes de AI c
 Tendrás que introducir tus credenciales de AWS y seleccionar el sistema de archivos FSx para ONTAP para implementar la infraestructura de generación aumentada de recuperación (RAG).
 
 .Antes de empezar
-Asegúrese de que su entorno cumple link:requirements.html["los requisitos"] antes de iniciar este procedimiento.
+Asegúrese de que su entorno cumple con los requisitos de las bases de conocimientos o conectores, dependiendo de cuál elija, antes de iniciar este procedimiento.
+
+* link:../knowledge-base/requirements-knowledge-base.html["Requisitos de la base de conocimientos"]
+* link:../connector/requirements-connector.html["Requisitos del conector"]
+
 
 .Pasos
 . Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].

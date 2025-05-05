@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: manage-knowledgebase.html 
+permalink: knowledge-base/manage-knowledgebase.html 
 keywords: ai, chatbot, managing, knowledge base 
 summary: Después de crear una base de conocimientos, puede ver los detalles de la base de conocimientos, modificar la base de conocimientos, integrar orígenes de datos adicionales o suprimir la base de conocimientos. 
 ---
 = Gestione las bases de conocimientos de GenAI
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -237,6 +237,22 @@ Verá un mensaje que indica que se están escaneando las fuentes de datos y un m
 
 .Resultado
 La base de conocimientos se sincroniza con las fuentes de datos adjuntas y cualquier chatbot activo comenzará a utilizar la información más reciente de sus fuentes de datos.
+
+
+
+=== Pausar o reanudar una sincronización programada
+
+Si desea pausar o reanudar la siguiente sincronización (escaneo) de los orígenes de datos, puede hacerlo en cualquier momento. Es posible que deba pausar la siguiente sincronización programada si va a realizar cambios en un origen de datos y no desea que la sincronización se produzca durante la ventana de cambio.
+
+.Pasos
+. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. En la ficha Bases de conocimiento y conectores, seleccione la base de conocimientos para la que desea pausar o reanudar las exploraciones.
+. image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
+. Seleccione el menú *Acciones* y seleccione *Escanear > Pausar escaneo programado* o *Escanear > Reanudar escaneo programado*.
++
+Verá un mensaje que indica que el siguiente análisis programado se ha pausado o reanudado.
+
+
 
 
 

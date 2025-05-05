@@ -1,0 +1,105 @@
+= Detalles de la infraestructura
+:allow-uri-read: 
+
+
+[role="lead"]
+Necesita implementar la infraestructura de GenAI para el marco RAG en su entorno antes de crear bases de conocimientos, conectores y aplicaciones de FSx para ONTAP para su organización. Los principales componentes de la infraestructura son el servicio Bedrock de Amazon, una instancia de máquina virtual para el motor GenAI de NetApp y un sistema de archivos FSx para ONTAP.
+
+La infraestructura implementada puede admitir varias bases de conocimientos, bots conversacionales y conectores, por lo que, por lo general, solo tendrá que realizar esta tarea una vez.
+
+
+
+== Detalles de la infraestructura
+
+Su implementación de GenAI debe estar en una región de AWS que tenga habilitado Amazon Bedrock. https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Vea la lista de regiones admitidas"^]
+
+La infraestructura consta de los siguientes componentes.
+
+Servicio de Amazon Bedrock:: Amazon Bedrock es un servicio totalmente gestionado que te permite usar modelos de base (FMS) de las principales empresas de IA a través de una única API. También proporciona las funcionalidades que necesita para crear aplicaciones de IA generativas seguras.
++
+--
+https://aws.amazon.com/bedrock/["Más información sobre Amazon Bedrock"^]
+
+--
+Amazon Q Business:: Amazon Q se basa en Amazon Bedrock para proporcionar un asistente de IA generativa totalmente administrado que puede utilizar para responder preguntas y generar contenido basado en la información de sus fuentes de datos.
++
+--
+https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html["Obtenga más información sobre Amazon Q Business"^]
+
+--
+Máquina virtual para el motor NetApp GenAI:: El motor NetApp GenAI se pone en marcha durante este proceso. Proporciona la potencia de procesamiento para ingerir los datos de sus orígenes de datos y luego escribir esos datos en la base de datos vectorial.
+FSX para sistema de archivos ONTAP:: El sistema de archivos FSx para ONTAP proporciona el almacenamiento para su sistema GenAI.
++
+--
+Se implementa un único volumen que contendrá la base de datos vectorial que almacena los datos que ha generado el modelo base basado en sus orígenes de datos.
+
+Las fuentes de datos que integrarás en tu base de conocimientos pueden residir en el mismo sistema de archivos FSx for ONTAP o en un sistema diferente.
+
+El motor GenAI de NetApp supervisa e interactúa con ambos volúmenes.
+
+--
+
+
+La siguiente imagen muestra la infraestructura de GenAI. Durante este procedimiento, se implementan los componentes numerados 1, 2 y 3. Los demás elementos deben estar en su lugar antes de iniciar la puesta en marcha.
+
+image:genai-infrastructure-diagram-numbered.png["Un diagrama de los componentes de infraestructura de GenAI."]
+
+
+
+== Ponga en marcha la infraestructura de GenAI
+
+Tendrás que introducir tus credenciales de AWS y seleccionar el sistema de archivos FSx para ONTAP para implementar la infraestructura de generación aumentada de recuperación (RAG).
+
+.Antes de empezar
+Asegúrese de que su entorno cumple con los requisitos de las bases de conocimientos o conectores, dependiendo de cuál elija, antes de iniciar este procedimiento.
+
+* link:../knowledge-base/requirements-knowledge-base.html["Requisitos de la base de conocimientos"]
+* link:../connector/requirements-connector.html["Requisitos del conector"]
+
+
+.Pasos
+. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
+. Revise el diagrama de infraestructura y seleccione *Siguiente*.
+. Complete los elementos en la sección *AWS settings*:
++
+.. *Credenciales de AWS*: Seleccione o agregue las credenciales de AWS que proporcionan permisos para implementar los recursos de AWS.
+.. *Ubicación*: Seleccione una región, VPC y subred de AWS.
++
+La implementación de GenAI debe estar en una región de AWS que tenga habilitado Amazon Bedrock. https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Vea la lista de regiones admitidas"^]
+
+
+
+. Complete los elementos en la sección *Configuración de infraestructura*:
++
+.. *Etiquetas*: Introduzca cualquier par de clave/valor de etiqueta que desee aplicar a todos los recursos de AWS que forman parte de esta implementación. Estas etiquetas están visibles en la consola de administración de AWS y en el área de información de la infraestructura dentro de la fábrica de cargas de trabajo, y pueden ayudarle a realizar un seguimiento de los recursos de fábrica de cargas de trabajo.
+
+
+. Complete la sección *Conectividad*:
++
+.. *Par claves*: Seleccione un par de claves que le permita conectarse de forma segura a la instancia del motor NetApp GenAI.
+
+
+. Completa la sección *AI ENGINE*:
++
+.. *Nombre de instancia*: Opcionalmente, seleccione *Definir nombre de instancia* e introduzca un nombre personalizado para la instancia del motor AI. El nombre de la instancia aparece en la consola de administración de AWS y en el área de información de la infraestructura dentro de la fábrica de cargas de trabajo, y puede ayudarle a realizar un seguimiento de los recursos de fábrica de cargas de trabajo.
+
+
+. Seleccione *Desplegar* para comenzar la implementación.
++
+
+NOTE: Si la implementación falla con un error de credenciales, puede obtener más detalles del error seleccionando los hipervínculos en el mensaje de error. Puede ver una lista de permisos que faltan o están bloqueados, así como una lista de permisos que la carga de trabajo de GenAI necesita para que pueda implementar la infraestructura de GenAI.
+
+
+
+.Resultado
+La fábrica de cargas de trabajo comienza a implementar la infraestructura de chatbot. Este proceso puede tardar hasta 10 minutos.
+
+Durante el proceso de despliegue, se configuran los siguientes elementos:
+
+* La red se configura junto con los extremos privados.
+* Se crean el rol de IAM, el perfil de instancia y el grupo de seguridad.
+* Se despliega la instancia de máquina virtual para el motor GenAI.
+* Amazon Bedrock está configurado para enviar registros a Amazon CloudWatch Logs, utilizando un grupo de registros con el prefijo `/aws/bedrock/`.
+* El motor GenAI está configurado para enviar registros a Amazon CloudWatch Logs, utilizando un grupo de registros con el nombre `/netapp/wlmai/<tenancyAccountId>/randomId`, donde `<tenancyAccountID>` es el https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-account-identifier["ID de cuenta de BlueXP"^] para el usuario actual.
+

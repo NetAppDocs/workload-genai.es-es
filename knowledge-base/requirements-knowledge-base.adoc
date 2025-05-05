@@ -1,31 +1,43 @@
 ---
 sidebar: sidebar 
-permalink: requirements.html 
+permalink: knowledge-base/requirements-knowledge-base.html 
 keywords: ai, chatbot, prerequisites, bedrock, fsx for ontap, prerequisites, requirements 
 summary: Asegúrese de que la fábrica de cargas de trabajo y AWS están configurados correctamente antes de crear su base de conocimientos. Esto incluye tener sus credenciales de inicio de sesión de AWS, un sistema de archivos FSx para ONTAP implementado que contiene las fuentes de datos que desea integrar en su base de conocimientos, acceso al servicio de IA de Amazon Bedrock y más. 
 ---
-= Requisitos de GenAI
+= Requisitos de la base de conocimientos de GenAI
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
 Asegúrese de que la fábrica de cargas de trabajo y AWS están configurados correctamente antes de crear su base de conocimientos. Esto incluye tener sus credenciales de inicio de sesión de AWS, un sistema de archivos FSx para ONTAP implementado que contiene las fuentes de datos que desea integrar en su base de conocimientos, acceso al servicio de IA de Amazon Bedrock y más.
 
+
+
+== Requisitos básicos de GenAI
+
+GenAI tiene requisitos generales que su entorno necesita cumplir antes de empezar.
+
 Inicio de sesión y cuenta de fábrica de carga de trabajo:: Deberá https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["configure una cuenta con fábrica de cargas de trabajo"^] iniciar sesión con uno de los https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
-Credenciales y permisos de AWS:: Necesita agregar credenciales de AWS a la fábrica de cargas de trabajo con permisos Automate, lo que significa que utilizará la fábrica de cargas de trabajo en el modo _Automate_ para GenAI.
+Credenciales y permisos de AWS:: Necesita agregar credenciales de AWS a la fábrica de cargas de trabajo con permisos de lectura/escritura, lo que significa que utilizará la fábrica de cargas de trabajo en el modo _Read/Write_ para GenAI.
 +
 --
-Los permisos de modo _Basic_ y modo _Read_ no se admiten en este momento.
+Los permisos de modo _Basic_ y modo _Read-Only_ no se admiten en este momento.
 
 Al configurar sus credenciales, al seleccionar los permisos que se muestran a continuación, tendrá acceso completo para administrar los sistemas de archivos de FSx para ONTAP y para implementar y administrar la instancia de GenAI EC2 y otros recursos de AWS necesarios para su base de conocimientos y chatbot.
-
-image:screenshot-ai-permissions.png["Una captura de pantalla que muestra la configuración de permisos para la gestión completa de los recursos de IA."]
 
 https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aprenda a añadir credenciales de AWS a la fábrica de cargas de trabajo"^]
 
 --
+
+
+
+
+== Requisitos de la base de conocimientos de GenAI
+
+Si planea trabajar con bases de conocimientos, asegúrese de que su entorno cumpla con los siguientes requisitos.
+
 Roca base de Amazon:: Amazon Bedrock le permite utilizar modelos de base y proporciona las funcionalidades necesarias para crear aplicaciones de IA generativas.
 +
 --
@@ -44,6 +56,8 @@ Modelo de incrustación:: Debe activar el modelo de incrustación que planea uti
 * Titan Embeddings G1 - Texto
 * Titan Embedding Text v2
 * Titán incrustaciones multimodales G1
+* Insertar inglés
+* Incrustar multilingüe
 +
 https://aws.amazon.com/bedrock/titan/["Más información sobre Amazon Titan"^]
 
@@ -53,38 +67,24 @@ https://aws.amazon.com/bedrock/titan/["Más información sobre Amazon Titan"^]
 Modelo de chat:: Debe activar el modelo de chat básico que planea utilizar antes de crear su base de conocimientos. Dado que el soporte de modelos varía según la región de AWS, consulte https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html["La documentación de AWS"^] para verificar qué modelos puede utilizar en las regiones en las que planea implementar su base de conocimientos.
 +
 --
-GenAI admite los siguientes modelos Anthropic Claude y Amazon Nova:
+GenAI soporta varios modelos de Anthropic, Amazon, Mistral AI, Meta, Jamba y cohere.
 
-* Claude Antropic:
-+
-** Claude 3,5 Soneto
-** Claude 3 Opus
-** Claude 3 Haiku
-** Claude 3 Soneto
-** Claude 2,1
-** Claude 2,0
-
-
-* Amazon Nova:
-+
-** Micro Nova
-** Nova Lite (compatible con imágenes y texto)
-** Nova Pro (compatible con imágenes y texto)
-
-
-
-
-Obtenga más información sobre el uso de estos modelos con Amazon Bedrock:
+Obtenga más información sobre el uso de estos modelos en Amazon Bedrock:
 
 * https://aws.amazon.com/bedrock/claude/["Claude de Antropic en Amazon Bedrock"^]
 * https://docs.aws.amazon.com/nova/latest/userguide/getting-started-console.html["Introducción a Amazon Nova en la consola Amazon Bedrock"^]
+* https://aws.amazon.com/bedrock/mistral/["Modelos de IA Mistral"^]
+* https://docs.aws.amazon.com/bedrock/latest/userguide/titan-text-models.html["Modelos de texto de Amazon Titan"^]
+* https://aws.amazon.com/bedrock/llama/["Modelos de Meta Llama"^]
+* https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-jamba.html["Modelos Jamba"^]
+* https://aws.amazon.com/bedrock/cohere/["Modelos de comando Cohere"^]
 
 
 --
 FSX para sistema de archivos ONTAP:: Necesita un mínimo de un sistema de archivos FSx para ONTAP:
 +
 --
-* El motor GenAI de NetApp utilizará un sistema de archivos para almacenar la base de datos vectorial utilizada por la base de datos de conocimientos.
+* El motor GenAI de NetApp utilizará (o creará, si no existe) un sistema de archivos para almacenar la base de datos vectorial utilizada por la base de datos de conocimientos.
 +
 Este sistema de archivos FSx para ONTAP debe utilizar volúmenes de FlexVol. No se admiten los volúmenes de FlexGroup.
 
