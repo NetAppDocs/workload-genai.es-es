@@ -20,7 +20,7 @@ Asegúrese de que la fábrica de cargas de trabajo y AWS están configurados cor
 GenAI tiene requisitos generales que su entorno necesita cumplir antes de empezar.
 
 Inicio de sesión y cuenta de fábrica de carga de trabajo:: Deberá https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["configure una cuenta con fábrica de cargas de trabajo"^] iniciar sesión con uno de los https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
-Credenciales y permisos de AWS:: Necesita agregar credenciales de AWS a la fábrica de cargas de trabajo con permisos de lectura/escritura, lo que significa que utilizará la fábrica de cargas de trabajo en el modo _Read/Write_ para GenAI.
+Credenciales y permisos de AWS:: Debe agregar credenciales de AWS a la fábrica de carga de trabajo con permisos de lectura y escritura, lo que significa que utilizará la fábrica de carga de trabajo en modo de lectura y escritura para GenAI.
 +
 --
 Los permisos de modo _Basic_ y modo _Read-Only_ no se admiten en este momento.

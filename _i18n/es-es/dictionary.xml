@@ -836,7 +836,6 @@
   <block id="dbc68fe7976455ff2b6f2e5143dfd308" category="inline-link-macro">Modelos de base admitidos en Amazon Bedrock</block>
   <block id="b198f4cca9409499187762bec5420672" category="paragraph">GenAI admite los modelos de cada proveedor compatible con Amazon Bedrock: <block ref="9f10081366e85554159ed4dc640b95c7" category="inline-link-macro-rx"></block></block>
   <block id="514f1fc0ac0ff6e4200d3637146367f1" category="section-title">Terminología de permisos actualizada</block>
-  <block id="a7b97ab7d88b015e92ed51ef4bee9c25" category="paragraph">La documentación y la interfaz de usuario de fábrica de cargas de trabajo ahora utilizan «de solo lectura» para hacer referencia a los permisos de lectura y «de lectura-escritura» para referirse a los permisos de automatización.</block>
   <block id="da1f9b1e0d45e28b599d8f40c855f668" category="summary">Después de implementar la infraestructura de IA e identificar las fuentes de datos que integrará con Amazon Q Business, puede definir un conector.</block>
   <block id="b4851e92b19af0c5c82447fc0937709d" category="inline-link-macro">requisitos</block>
   <block id="c544ac4406a53e3d89f1f777f49bd9ab" category="paragraph">Asegúrese de que su entorno cumple con el <block ref="e9a731368b15c5c87437cf87756c4dd9" category="inline-link-macro-rx"></block> para Amazon Q Business antes de continuar.</block>
@@ -933,7 +932,6 @@
   <block id="69c3ca978f076b54fa2030f25d3332fc" category="doc">Requisitos del conector GenAI</block>
   <block id="a6390dd71ac213c8926f4e003361b1c7" category="section-title">Requisitos básicos de GenAI</block>
   <block id="d94f906cc0b4e822ea4cc6f7282c6f3f" category="paragraph">GenAI tiene requisitos generales que su entorno necesita cumplir antes de empezar.</block>
-  <block id="5d077bd2e14c4e2191fcc692704a074c" category="list-text">Necesita agregar credenciales de AWS a la fábrica de cargas de trabajo con permisos de lectura/escritura, lo que significa que utilizará la fábrica de cargas de trabajo en el modo _Read/Write_ para GenAI.</block>
   <block id="92b8944386b41a864c3b42d0a5f178da" category="paragraph">Los permisos de modo _Basic_ y modo _Read-Only_ no se admiten en este momento.</block>
   <block id="dc24ca2a4507b8d4ffa56cd2f4ff7a5c" category="paragraph">Asegúrese de que su entorno cumple los siguientes requisitos específicos para los conectores de Amazon Q Business.</block>
   <block id="50a0042a7df9c6588a808141018da878" category="list-text">Aplicación Amazon Q Business</block>
@@ -1076,4 +1074,7 @@
   <block id="65a16de587f6ba26884202bf406c26fe" category="section-title">Requisitos para el conector NetApp para Amazon Q Business</block>
   <block id="56daa392224e0cdcc6a69457c4094aa8" category="inline-link-macro">definir un conector NetApp para Amazon Q Business</block>
   <block id="7e8def5c748db55cfe2ebcc2c26543fd" category="paragraph">Si <block ref="a1707f04689d949f85e4cb6db99b5c64" category="inline-link-macro-rx"></block>GenAI ingiere datos de sus orígenes de datos, almacena los resultados vectorizados en una base de datos y le proporciona un control total sobre cómo utilizar los datos ingeridos para responder a las consultas. Este enfoque requiere más configuración inicial, pero le permite elegir diferentes modelos de chat para diferentes resultados. Si usted <block ref="fbe77fd827b80e33ddc74f945f323ccb" category="inline-link-macro-rx"></block>, los datos de sus orígenes de datos los consume Amazon Q Business y los almacena en un índice. Este enfoque requiere menos configuración inicial, pero le da menos control sobre los resultados.</block>
+  <block id="4ead5e435cb4f2c7cf627b1d1e84c333" category="paragraph">La interfaz de usuario y la documentación de la fábrica de carga de trabajo ahora usan "solo lectura" para referirse a los permisos de lectura y "lectura/escritura" para referirse a los permisos de automatización.</block>
+  <block id="2285d955a18bdde3d5780d04f48d58cd" category="list-text">Debe agregar credenciales de AWS a la fábrica de carga de trabajo con permisos de lectura y escritura, lo que significa que utilizará la fábrica de carga de trabajo en modo de lectura y escritura para GenAI.</block>
+  <block id="c45d86a4185cef0bc3cadb7e6e9b46f4" category="paragraph">Los permisos de modo _básico_ y de modo _solo lectura_ no son compatibles en este momento.</block>
 </blocks>
