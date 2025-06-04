@@ -51,7 +51,7 @@ NOTE: Si un archivo de su fuente de datos carece de texto (por ejemplo, una imag
 
 == Formatos de archivo de origen de datos compatibles
 
-Los siguientes formatos de archivo de origen de datos son compatibles actualmente con el conector NetApp ONTAP para Amazon Q.
+Los siguientes formatos de archivos de origen de datos son actualmente compatibles con NetApp Connector para Amazon Q Business.
 
 [cols="2*"]
 |===
