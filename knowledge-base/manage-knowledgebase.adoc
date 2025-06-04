@@ -51,7 +51,7 @@ Cada vez que agregue, modifique o elimine orígenes de datos de la base de conoc
 Esta página muestra el estado Publicado, el estado de incrustación de los orígenes de datos, el modo de incrustación, la lista de todos los orígenes de datos incrustados, etc.
 
 . Selecciona el menú *Acciones* y selecciona *Editar base de conocimientos*.
-. En la página Editar base de conocimientos, puede cambiar el nombre de la base de conocimientos, la descripción, el modelo de incrustación, el modelo de chat, la habilitación de barandillas de datos, elegir si los inicios de conversación se crean de forma automática o manual y la política de instantáneas utilizada para el volumen que contiene la base de conocimientos.
+. En la página Editar base de conocimiento, puede cambiar el nombre de la base de conocimiento, la descripción, el modelo de inserción, el modelo de chat, la habilitación de funciones, elegir si los iniciadores de conversación se crean de manera automática o manual y la política de instantáneas utilizada para el volumen que contiene la base de conocimiento.
 +
 Si utiliza el modo Manual para iniciar una conversación, también puede cambiar los temas de inicio de la conversación aquí.
 

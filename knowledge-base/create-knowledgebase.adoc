@@ -65,6 +65,7 @@ https://aws.amazon.com/bedrock/titan/["Más información sobre Amazon Titan"^]
 
 
 .. *Modelo de chat*: Elija entre varios modelos de chat que están integrados en Amazon Bedrock. Tenga en cuenta que ya debe haber habilitado el modelo de chat de Amazon Bedrock.
+.. *Reranking*: Habilite o deshabilite el reranking, lo que puede mejorar la relevancia y la calidad de los resultados de la consulta. Elija un modelo de chat estándar o un modelo de reranker especializado para el reranking. Las opciones del modelo de reranker solo se muestran si están disponibles en su región.
 .. * Data guardrails*: Elija si desea habilitar o deshabilitar las barandas de datos. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Obtenga más información sobre las barreras de datos que cuentan con la tecnología de clasificación de BlueXP "^].
 +
 Se deben cumplir los siguientes requisitos previos para activar las barreras de datos.
