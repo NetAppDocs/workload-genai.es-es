@@ -92,7 +92,7 @@ Puede agregar uno o más orígenes de datos para rellenar el índice de Amazon Q
 
 
 .Pasos
-. Después de seleccionar *Agregar fuente de datos*, se muestra la página *Seleccionar un sistema de archivos*.
+. Después de seleccionar *Agregar fuente de datos*, aparece la página *Seleccionar un sistema de archivos*.
 . *Seleccione un sistema de archivos*: Seleccione el sistema de archivos FSX for ONTAP donde residen sus archivos de origen de datos y seleccione *Siguiente*.
 . *Selecciona un volumen*: Selecciona el volumen en el que residen tus archivos de origen de datos y selecciona *Siguiente*.
 +

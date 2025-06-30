@@ -2,6 +2,10 @@
 :allow-uri-read: 
 
 
+[role="tabbed-block"]
+====
+.Agregar un sistema de archivos FSx para ONTAP
+--
 . *Seleccione un sistema de archivos*: Seleccione el sistema de archivos FSX for ONTAP donde residen sus archivos de origen de datos y seleccione *Siguiente*.
 . *Selecciona un volumen*: Selecciona el volumen en el que residen tus archivos de origen de datos y selecciona *Siguiente*.
 +
@@ -50,3 +54,111 @@ NOTE: Si incluye archivos basados en un rango de fechas de modificación, en cua
 
 . Seleccione *Agregar* para agregar esta fuente de datos a su base de conocimientos.
 
+
+--
+.Agregar un sistema de archivos NFS genérico
+--
+. *Seleccionar un sistema de archivos*: Ingrese la dirección IP o FQDN para el host del sistema de archivos donde residen los archivos de origen de datos, elija el protocolo NFS para el recurso compartido de red y seleccione *Siguiente*.
+. *Seleccione una fuente de datos*: Seleccione la ubicación de la fuente de datos en función de dónde haya guardado los archivos. Esto puede ser un volumen completo, o simplemente una carpeta o subcarpeta específica en el volumen, y seleccione *Siguiente*.
++
+
+NOTE: En algunos casos, podría ser necesario introducir manualmente el nombre de la exportación NFS y seleccionar *Recuperar directorios* para ver los directorios disponibles. Puede seleccionar la exportación completa o solo carpetas específicas.
+
+. *Configuraciones*: Configure cómo la fuente de datos ingiere información de sus archivos y qué archivos incluye en los escaneos:
++
+** *Definir fuente de datos*: En la sección *Estrategia de Chunking*, defina cómo el motor GenAI divide el contenido de la fuente de datos en fragmentos cuando la fuente de datos se integra con una base de conocimientos. Puede elegir una de las siguientes estrategias:
++
+*** * Fragmentación de varias frases*: Organiza la información de su fuente de datos en fragmentos definidos por frases. Puedes elegir cuántas oraciones componen cada fragmento (hasta 100).
+*** * Fragmento basado en superposición *: Organiza la información de su fuente de datos en fragmentos definidos por caracteres que pueden superponerse a fragmentos vecinos. Puedes elegir el tamaño de cada fragmento en caracteres, y cuánto se superpone cada fragmento con fragmentos adyacentes. Puede configurar un tamaño de fragmento de entre 50 y 3000 caracteres, y un porcentaje de superposición de entre 1 y 99%.
++
+
+NOTE: La elección de un alto porcentaje de superposición puede aumentar en gran medida los requisitos de almacenamiento con solo pequeñas mejoras en la precisión de la recuperación.
+
+
+
+** *Filtrado de archivos*: Configure qué archivos se incluyen en los escaneos:
++
+*** En la sección *File Types support*, elija incluir todos los tipos de archivos o seleccionar tipos de archivos individuales para incluirlos en los escaneos de fuentes de datos.
++
+Si incluye imágenes o archivos PDF, la fábrica de carga de trabajo de BlueXP  para GenAI analiza el texto en las imágenes (incluidas las imágenes en documentos PDF), lo que supone un coste mayor.
+
++
+Al incluir datos de texto de imágenes, GenAI no puede enmascarar la información de identificación personal (PII) de la imagen a medida que los datos de texto escaneados se envían desde su entorno a AWS. Sin embargo, una vez almacenados los datos, todos los PII se enmascaran en la base de datos de GenAI.
+
++
+
+NOTE: Su elección para incluir archivos de imagen en los escaneos está relacionada con el modelo de chat de la base de conocimientos. Si incluye archivos de imagen en los escaneos, el modelo de chat debe admitir imágenes. Si se seleccionan aquí tipos de archivo de imagen, no puede cambiar la base de conocimientos a un modelo de chat que no admita archivos de imagen.
+
+*** En la sección *Filtro de tiempo de modificación de archivo*, elija habilitar o deshabilitar la inclusión de archivos en función de su tiempo de modificación. Si activa el filtrado de tiempo de modificación, seleccione un intervalo de fechas de la lista.
++
+
+NOTE: Si incluye archivos basados en un rango de fechas de modificación, en cuanto el rango de fechas no se cumpla (los archivos no se han modificado dentro del rango de fechas especificado), los archivos se excluirán de la exploración periódica y el origen de datos no incluirá estos archivos.
+
+
+
+
+
+. Seleccione *Agregar fuente de datos* para agregar esta fuente de datos a su base de conocimientos.
+
+
+--
+.Agregar un sistema de archivos SMB genérico
+--
+. *Seleccionar sistema de archivos*:
++
+.. Ingrese la dirección IP o FQDN del host del sistema de archivos donde residen los archivos de origen de datos.
+.. Seleccione el protocolo SMB para el recurso compartido de red.
+.. Ingrese la información de Active Directory, que incluye el dominio, la dirección IP, el nombre de usuario y la contraseña.
+.. Seleccione *Siguiente*.
+
+
+. *Seleccione una fuente de datos*: Seleccione la ubicación de la fuente de datos en función de dónde haya guardado los archivos. Esto puede ser un volumen completo, o simplemente una carpeta o subcarpeta específica en el volumen, y seleccione *Siguiente*.
++
+
+NOTE: En algunos casos, podría ser necesario introducir manualmente el nombre del recurso compartido SMB y seleccionar *Recuperar directorios* para ver los directorios disponibles. Puede seleccionar todo el recurso compartido o solo algunas carpetas.
+
+. *Configuraciones*: Configure cómo la fuente de datos ingiere información de sus archivos y qué archivos incluye en los escaneos:
++
+** *Definir fuente de datos*: En la sección *Estrategia de Chunking*, defina cómo el motor GenAI divide el contenido de la fuente de datos en fragmentos cuando la fuente de datos se integra con una base de conocimientos. Puede elegir una de las siguientes estrategias:
++
+*** * Fragmentación de varias frases*: Organiza la información de su fuente de datos en fragmentos definidos por frases. Puedes elegir cuántas oraciones componen cada fragmento (hasta 100).
+*** * Fragmento basado en superposición *: Organiza la información de su fuente de datos en fragmentos definidos por caracteres que pueden superponerse a fragmentos vecinos. Puedes elegir el tamaño de cada fragmento en caracteres, y cuánto se superpone cada fragmento con fragmentos adyacentes. Puede configurar un tamaño de fragmento de entre 50 y 3000 caracteres, y un porcentaje de superposición de entre 1 y 99%.
++
+
+NOTE: La elección de un alto porcentaje de superposición puede aumentar en gran medida los requisitos de almacenamiento con solo pequeñas mejoras en la precisión de la recuperación.
+
+
+
+** *Consciente de permisos*: habilitar o deshabilitar respuestas que tengan en cuenta los permisos:
++
+*** *Activado*: Los usuarios del chatbot que accedan a esta base de conocimientos solo obtendrán respuestas a las consultas de las fuentes de datos a las que tengan acceso.
+*** *Deshabilitado*: Los usuarios del chatbot recibirán respuestas usando contenido de todas las fuentes de datos integradas.
+
+
+** *Filtrado de archivos*: Configure qué archivos se incluyen en los escaneos:
++
+*** En la sección *File Types support*, elija incluir todos los tipos de archivos o seleccionar tipos de archivos individuales para incluirlos en los escaneos de fuentes de datos.
++
+Si incluye imágenes o archivos PDF, la fábrica de carga de trabajo de BlueXP  para GenAI analiza el texto en las imágenes (incluidas las imágenes en documentos PDF), lo que supone un coste mayor.
+
++
+Al incluir datos de texto de imágenes, GenAI no puede enmascarar la información de identificación personal (PII) de la imagen a medida que los datos de texto escaneados se envían desde su entorno a AWS. Sin embargo, una vez almacenados los datos, todos los PII se enmascaran en la base de datos de GenAI.
+
++
+
+NOTE: Su elección para incluir archivos de imagen en los escaneos está relacionada con el modelo de chat de la base de conocimientos. Si incluye archivos de imagen en los escaneos, el modelo de chat debe admitir imágenes. Si se seleccionan aquí tipos de archivo de imagen, no puede cambiar la base de conocimientos a un modelo de chat que no admita archivos de imagen.
+
+*** En la sección *Filtro de tiempo de modificación de archivo*, elija habilitar o deshabilitar la inclusión de archivos en función de su tiempo de modificación. Si activa el filtrado de tiempo de modificación, seleccione un intervalo de fechas de la lista.
++
+
+NOTE: Si incluye archivos basados en un rango de fechas de modificación, en cuanto el rango de fechas no se cumpla (los archivos no se han modificado dentro del rango de fechas especificado), los archivos se excluirán de la exploración periódica y el origen de datos no incluirá estos archivos.
+
+
+
+
+
+. Seleccione *Agregar fuente de datos* para agregar esta fuente de datos a su base de conocimientos.
+
+
+--
+====
