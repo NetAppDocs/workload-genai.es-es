@@ -40,7 +40,8 @@ El simulador de chatbot aparece en el panel derecho. Si se define, también se m
 [TIP]
 ====
 ** Puede ver las fuentes utilizadas para producir la respuesta ampliando la lista *Sources* debajo de la respuesta. Esto proporciona una lista de archivos utilizados para generar la respuesta. Puede ver y copiar los fragmentos de datos utilizados en cada ruta de archivo y volumen a cada archivo pasando el cursor sobre el nombre del archivo.
-** Si las tablas se incluyen en la respuesta, puede ordenar los datos de cada columna y copiar cada tabla en el portapapeles.
+** Si se incluyen tablas en la respuesta, puede ordenar los datos en cada columna y copiar cada tabla al portapapeles.
+** Si los resultados de la respuesta contienen datos estructurados y la función *S3 Bucket* está habilitada para la base de conocimiento, GenAI almacena los resultados en un S3 Bucket.  Puedes descargar los resultados del bucket usando el enlace *Descargar resultados* dentro de la sesión de chat.
 
 
 ====

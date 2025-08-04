@@ -88,13 +88,15 @@ Se deben cumplir los siguientes requisitos previos para activar las barreras de 
 
 NOTE: La función de barandillas de datos no se admite al ingerir archivos de datos estructurados como CSV, JSON, JSONP o Parquet.
 
-+
-.. * Iniciadores de conversación *: Elija si desea proporcionar hasta cuatro mensajes de inicio de conversación que se muestran a los usuarios que interactúan con un chatbot que utiliza esta base de conocimientos. Le recomendamos que active esta configuración.
+
+
+. * Iniciadores de conversación *: Elija si desea proporcionar hasta cuatro mensajes de inicio de conversación que se muestran a los usuarios que interactúan con un chatbot que utiliza esta base de conocimientos. Le recomendamos que active esta configuración.
 +
 Si activa los arrancadores de conversación, se selecciona el modo automático de forma predeterminada. El modo manual solo se puede activar después de agregar fuentes de datos a su base de conocimientos. link:manage-knowledgebase.html["Aprenda a modificar la configuración de la base de conocimientos"].
 
-.. *FSX para el sistema de archivos ONTAP*: Cuando definas una nueva base de conocimientos, Workload Factory crea un nuevo volumen de Amazon FSx para NetApp ONTAP para almacenarlo. Seleccione un nombre del sistema de archivos y SVM (también llamado máquina virtual de almacenamiento) donde se creará el volumen nuevo.
-.. *Política de instantáneas*: Elija una política de instantáneas de la lista de políticas existentes definidas en el inventario de almacenamiento de la fábrica de carga de trabajo. Las instantáneas recurrentes de la base de conocimientos se crearán automáticamente con una frecuencia basada en la política de instantáneas que seleccione.
+. *FSX para el sistema de archivos ONTAP*: Cuando definas una nueva base de conocimientos, Workload Factory crea un nuevo volumen de Amazon FSx para NetApp ONTAP para almacenarlo. Seleccione un nombre del sistema de archivos y SVM (también llamado máquina virtual de almacenamiento) donde se creará el volumen nuevo.
+. *Política de instantáneas*: Elija una política de instantáneas de la lista de políticas existentes definidas en el inventario de almacenamiento de la fábrica de carga de trabajo. Las instantáneas recurrentes de la base de conocimientos se crearán automáticamente con una frecuencia basada en la política de instantáneas que seleccione.
+. *S3 Bucket*: si los resultados de la consulta del chatbot contienen datos estructurados, GenAI puede almacenar los resultados en un bucket S3.  Para utilizar esta función, habilite la configuración *Activar depósito S3* y elija un depósito S3 asociado con su cuenta de la lista.  Cuando estos resultados se almacenan en un bucket S3, puedes descargarlos utilizando el enlace de descarga dentro de la sesión de chat.
 +
 Si la política de Snapshot que necesita no existe, puede https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["crear una política de snapshot"] hacerlo en la máquina virtual de almacenamiento que contiene el volumen.
 

@@ -15,6 +15,26 @@ Descubra las novedades de la funcionalidad para cargas de trabajo de IA generati
 
 
 
+== 03 de agosto de 2025
+
+
+
+=== Almacenamiento seguro para resultados de datos estructurados
+
+Si los resultados de la consulta del chatbot contienen datos estructurados, GenAI puede almacenar los resultados en un bucket de Amazon S3.  Cuando estos resultados se almacenan en un bucket S3, puedes descargarlos utilizando el enlace de descarga dentro de la sesión de chat.
+
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Cree una base de conocimientos de GenAI"]
+
+
+
+=== Disponibilidad del servidor MCP
+
+NetApp ahora proporciona un servidor de Protocolo de contexto de modelo (MCP) con una BlueXP workload factory para GenAI.  Puede instalar el servidor localmente para permitir que los clientes MCP externos descubran y recuperen resultados de consultas de una base de conocimiento GenAI.
+
+link:https://github.com/NetApp/mcp/tree/main/NetApp-KnowledgeBase-MCP-server["Servidor GenAI MCP de la fábrica de carga de trabajo de NetApp"^]
+
+
+
 == 29 de junio de 2025
 
 
@@ -81,7 +101,11 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledg
 
 === Terminología de permisos actualizada
 
-La interfaz de usuario y la documentación de la fábrica de carga de trabajo ahora usan "solo lectura" para referirse a los permisos de lectura y "lectura/escritura" para referirse a los permisos de automatización. == 02 de marzo de 2025
+La interfaz de usuario y la documentación de la fábrica de carga de trabajo ahora usan "solo lectura" para referirse a los permisos de lectura y "lectura/escritura" para referirse a los permisos de automatización.
+
+
+
+== 02 de marzo de 2025
 
 
 
