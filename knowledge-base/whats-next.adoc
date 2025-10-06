@@ -22,4 +22,4 @@ Algunas de las tareas que puede realizar para administrar los componentes de la 
 * Realice backups y proteja los datos importantes en su sistema de archivos FSx para ONTAP para asegurarse de que sus datos de base de conocimientos y otros componentes de la infraestructura estén siempre disponibles.
 
 
-Para obtener información sobre la gestión de su sistema de archivos FSx para ONTAP, vaya a https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Centro de cargas de trabajo para documentación de Amazon FSx para NetApp ONTAP"^] para ver las funcionalidades de backup y protección que puede utilizar.
+Para obtener información sobre cómo administrar su sistema de archivos FSx para ONTAP , vaya a https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Documentación de Workload Factory para Amazon FSx for NetApp ONTAP"^] para ver las capacidades de respaldo y protección que puede utilizar.

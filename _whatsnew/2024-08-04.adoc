@@ -12,4 +12,4 @@ Las cargas de trabajo de IA generativas ahora están integradas con Amazon Cloud
 
 === Aplicación de chatbot de ejemplo
 
-La aplicación de muestra GenAI de fábrica de cargas de trabajo de NetApp le permite probar la autenticación y la recuperación de su base de conocimientos de fábrica de cargas de trabajo de NetApp publicada al interactuar directamente con ella en una aplicación de chatbot basada en web.
+La aplicación de muestra NetApp Workload Factory GenAI le permite probar la autenticación y la recuperación de su base de conocimiento publicada de NetApp Workload Factory interactuando directamente con ella en una aplicación de chatbot basada en la web.

@@ -13,9 +13,9 @@ summary: Empieza a crear un conector con los datos de tu organización que exist
 [role="lead"]
 Comience a crear un conector de NetApp para Amazon Q Business utilizando los datos de su organización que existen en Amazon FSx para los sistemas de archivos de NetApp ONTAP. Después de crear un conector, los usuarios finales pueden acceder al asistente de Amazon Q Business para obtener respuestas centradas en la organización a sus preguntas.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Una"] Inicie sesión en la fábrica de cargas de trabajo
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Una"]Iniciar sesión en Workload Factory
 [role="quick-margin-para"]
-Deberá https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["configure una cuenta con fábrica de cargas de trabajo"^] iniciar sesión con uno de los https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+Necesitarás https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Configurar una cuenta con Workload Factory"^] e inicie sesión usando uno de los https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"] Configure su entorno para cumplir los requisitos de GenAI
 [role="quick-margin-para"]

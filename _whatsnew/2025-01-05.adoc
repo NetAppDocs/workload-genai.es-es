@@ -22,6 +22,6 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/deploy-infrastr
 
 === Reconstruir la infraestructura de GenAI dañada o faltante
 
-Si su instancia de motor de IA se daña o se elimina de alguna manera, puede dejar que la fábrica de cargas de trabajo la reconstruya por usted. La fábrica de cargas de trabajo vuelve a conectar automáticamente sus bases de conocimientos a la infraestructura una vez finalizada la reconstrucción, de modo que estén listas para su uso.
+Si su instancia de motor de IA se daña o se elimina de alguna manera, puede dejar que Workload Factory la reconstruya por usted.  La fábrica de carga de trabajo vuelve a conectar automáticamente sus bases de conocimiento a la infraestructura una vez finalizada la reconstrucción, de modo que estén listas para usar.
 
 link:https://docs.netapp.com/us-en/workload-genai/general/troubleshooting.html["Resolución de problemas"]

@@ -14,12 +14,13 @@ summary: Después de crear y probar su base de conocimientos localmente, puede p
 Después de crear y probar su base de conocimientos localmente, puede publicar la base de conocimientos para que pueda integrarse con una aplicación de chatbot que permita a sus usuarios consultar la base de conocimientos.
 
 .Acerca de esta tarea
-La publicación de la base de conocimientos le permite utilizarla en aplicaciones de chat. La acción de publicación activa la API de fábrica de cargas de trabajo para generar y publicar puntos finales únicos. Después de la publicación, la base de conocimientos se vuelve accesible para las aplicaciones de chat y los puntos finales de la API están listos para la integración.
+La publicación de la base de conocimientos le permitirá utilizarla en aplicaciones de chat.  La acción de publicación activa la API de Workload Factory para generar y publicar puntos finales únicos.  Después de la publicación, la base de conocimientos se vuelve accesible para las aplicaciones de chat y los puntos finales de la API están listos para la integración.
 
 Cada base de conocimientos que publique tiene puntos finales únicos.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea publicar.
 . image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
 +
@@ -27,14 +28,14 @@ Esta página muestra el estado Publicado, el estado de incrustación de los orí
 
 . Selecciona el menú *Acciones* y selecciona *Publicar*.
 +
-La fábrica de cargas de trabajo publica la base de conocimientos. En la página de detalles de la base de conocimientos, el estado cambia de *No publicado* a *Publicado*
+Workload Factory publica la base de conocimientos.  En la página de detalles de la base de conocimientos, el estado cambia de *No publicado* a *Publicado.*
 
 +
 Ahora puede obtener detalles sobre el extremo único de la base de conocimientos.
 
 . Junto al estado publicado, selecciona *Ver*.
 +
-Se muestra la información sobre cómo acceder a la base de conocimientos con la API de fábrica de cargas de trabajo.
+Se muestran detalles sobre cómo acceder a la base de conocimientos mediante la API de Workload Factory.
 
 . En el cuadro de diálogo *Ver información publicada*, copie los puntos finales de la API que puede utilizar para integrar la base de conocimientos con una aplicación.
 +

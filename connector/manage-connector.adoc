@@ -20,9 +20,9 @@ Después de crear un conector para Amazon Q Business, puede ver los detalles del
 Puede ver información sobre la configuración de un conector y los orígenes de datos integrados.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
-. En el menú de navegación de fábrica de carga de trabajo, seleccione *AI*.
-. Seleccione el conector que desea ver.
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
+. Desde la página de inventario de Bases de conocimiento y conectores, seleccione el conector que desea ver.
 . Para ver los detalles del conector, image:icon-action.png["el botón de opción"]seleccione y seleccione *Administrar conector*.
 +
 Esta página muestra el estado Publicado, el estado de incrustación de los orígenes de datos, el modo de incrustación, la lista de todos los orígenes de datos incrustados, etc.
@@ -41,7 +41,8 @@ Puede actualizar un conector cambiando algunos ajustes o puede agregar o elimina
 Cada vez que agrega, modifica o elimina fuentes de datos del conector, GenAI necesita enviar la información de origen de datos a Amazon Q Business para que se vuelva a indexar. La sincronización es incremental, por lo que Amazon Q Business solo procesa los objetos de tu volumen de FSx para ONTAP que se han agregado, modificado o eliminado desde la última sincronización.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la página de inventario de bases de conocimientos y conectores, seleccione el conector que desea actualizar.
 . image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar conector*.
 +
@@ -63,7 +64,8 @@ NOTE: Cada escaneo de la fuente de datos, que incluye la incrustación, incurre 
 Puede incrustar orígenes de datos adicionales en el conector para rellenarlo con datos adicionales de la organización.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la página de inventario de Knowledge Bases & Connectors, seleccione el conector en el que desea agregar el origen de datos.
 . image:icon-action.png["el botón de opción"]Selecciona y selecciona *Añadir fuente de datos*.
 . Seleccione el tipo de fuente de datos que desea agregar:
@@ -100,7 +102,7 @@ NOTE: La elección de un alto porcentaje de superposición puede aumentar en gra
 +
 *** En la sección *File Types support*, elija incluir todos los tipos de archivos o seleccionar tipos de archivos individuales para incluirlos en los escaneos de fuentes de datos.
 +
-Si incluye imágenes o archivos PDF, la fábrica de carga de trabajo de BlueXP  para GenAI analiza el texto en las imágenes (incluidas las imágenes en documentos PDF), lo que supone un coste mayor.
+Si incluye imágenes o archivos PDF, NetApp Workload Factory for GenAI analiza el texto de las imágenes (incluidas las imágenes en documentos PDF), y esto implica un costo mayor.
 
 +
 Al incluir datos de texto de imágenes, GenAI no puede enmascarar la información de identificación personal (PII) de la imagen a medida que los datos de texto escaneados se envían desde su entorno a AWS. Sin embargo, una vez almacenados los datos, todos los PII se enmascaran en la base de datos de GenAI.
@@ -152,7 +154,7 @@ NOTE: La elección de un alto porcentaje de superposición puede aumentar en gra
 +
 *** En la sección *File Types support*, elija incluir todos los tipos de archivos o seleccionar tipos de archivos individuales para incluirlos en los escaneos de fuentes de datos.
 +
-Si incluye imágenes o archivos PDF, la fábrica de carga de trabajo de BlueXP  para GenAI analiza el texto en las imágenes (incluidas las imágenes en documentos PDF), lo que supone un coste mayor.
+Si incluye imágenes o archivos PDF, NetApp Workload Factory for GenAI analiza el texto de las imágenes (incluidas las imágenes en documentos PDF), y esto implica un costo mayor.
 
 +
 Al incluir datos de texto de imágenes, GenAI no puede enmascarar la información de identificación personal (PII) de la imagen a medida que los datos de texto escaneados se envían desde su entorno a AWS. Sin embargo, una vez almacenados los datos, todos los PII se enmascaran en la base de datos de GenAI.
@@ -211,7 +213,7 @@ NOTE: La elección de un alto porcentaje de superposición puede aumentar en gra
 +
 *** En la sección *File Types support*, elija incluir todos los tipos de archivos o seleccionar tipos de archivos individuales para incluirlos en los escaneos de fuentes de datos.
 +
-Si incluye imágenes o archivos PDF, la fábrica de carga de trabajo de BlueXP  para GenAI analiza el texto en las imágenes (incluidas las imágenes en documentos PDF), lo que supone un coste mayor.
+Si incluye imágenes o archivos PDF, NetApp Workload Factory for GenAI analiza el texto de las imágenes (incluidas las imágenes en documentos PDF), y esto implica un costo mayor.
 
 +
 Al incluir datos de texto de imágenes, GenAI no puede enmascarar la información de identificación personal (PII) de la imagen a medida que los datos de texto escaneados se envían desde su entorno a AWS. Sin embargo, una vez almacenados los datos, todos los PII se enmascaran en la base de datos de GenAI.
@@ -246,8 +248,9 @@ Las fuentes de datos se sincronizan automáticamente con el conector asociado un
 La sincronización es incremental, por lo que Amazon Q Business solo procesa los objetos de los orígenes de datos que se han agregado, modificado o eliminado desde la última sincronización.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
-. En la pestaña Bases de conocimiento y conectores, seleccione el conector que desea sincronizar.
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
+. Desde el menú Bases de conocimiento y conectores, seleccione el conector que desea sincronizar.
 . image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar conector*.
 . Seleccione el menú *Acciones* y seleccione *Escanear ahora*.
 +
@@ -265,7 +268,8 @@ El conector se sincroniza con las fuentes de datos adjuntas y Amazon Q Business 
 Si desea pausar o reanudar la siguiente sincronización (escaneo) de los orígenes de datos, puede hacerlo en cualquier momento. Es posible que deba pausar la siguiente sincronización programada si va a realizar cambios en un origen de datos y no desea que la sincronización se produzca durante la ventana de cambio.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la página de inventario de conectores, seleccione el conector para el que desea pausar o reanudar las exploraciones.
 . image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar conector*.
 . Seleccione el menú *Acciones* y seleccione *Escanear > Pausar escaneo programado* o *Escanear > Reanudar escaneo programado*.
@@ -278,12 +282,13 @@ Verá un mensaje que indica que el siguiente análisis programado se ha pausado 
 
 == Eliminar un conector
 
-Si ya no necesita un conector, puede eliminarlo. Al eliminar un conector, se elimina de la fábrica de carga de trabajo y se elimina el volumen que contiene el conector. La eliminación de un conector no es reversible.
+Si ya no necesita un conector, puede eliminarlo.  Cuando se elimina un conector, se elimina de Workload Factory y se elimina el volumen que contiene el conector.  La eliminación de un conector no es reversible.
 
 Al suprimir un conector, también debe desasociar el conector de cualquier agente con el que esté asociado para suprimir completamente todos los recursos asociados al conector.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la página de inventario de bases de conocimientos y conectores, seleccione el conector que desea suprimir.
 . image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar conector*.
 . Seleccione el menú *Acciones* y seleccione *Borrar conector*.
@@ -291,4 +296,4 @@ Al suprimir un conector, también debe desasociar el conector de cualquier agent
 
 
 .Resultado
-El conector se elimina de la fábrica de carga de trabajo y se elimina el volumen asociado.
+Se elimina el conector de Workload Factory y se elimina su volumen asociado.

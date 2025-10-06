@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: knowledge-base/requirements-knowledge-base.html 
 keywords: ai, chatbot, prerequisites, bedrock, fsx for ontap, prerequisites, requirements 
-summary: Asegúrese de que la fábrica de cargas de trabajo y AWS están configurados correctamente antes de crear su base de conocimientos. Esto incluye tener sus credenciales de inicio de sesión de AWS, un sistema de archivos FSx para ONTAP implementado que contiene las fuentes de datos que desea integrar en su base de conocimientos, acceso al servicio de IA de Amazon Bedrock y más. 
+summary: Asegúrese de que Workload Factory y AWS estén configurados correctamente antes de crear su base de conocimientos.  Esto incluye tener sus credenciales de inicio de sesión de AWS, un sistema de archivos FSx para ONTAP implementado que contenga las fuentes de datos que desea integrar en su base de conocimiento, acceso al servicio Amazon Bedrock AI y más. 
 ---
 = Requisitos de la base de conocimientos de GenAI
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Asegúrese de que la fábrica de cargas de trabajo y AWS están configu
 
 
 [role="lead"]
-Asegúrese de que la fábrica de cargas de trabajo y AWS están configurados correctamente antes de crear su base de conocimientos. Esto incluye tener sus credenciales de inicio de sesión de AWS, un sistema de archivos FSx para ONTAP implementado que contiene las fuentes de datos que desea integrar en su base de conocimientos, acceso al servicio de IA de Amazon Bedrock y más.
+Asegúrese de que Workload Factory y AWS estén configurados correctamente antes de crear su base de conocimientos.  Esto incluye tener sus credenciales de inicio de sesión de AWS, un sistema de archivos FSx para ONTAP implementado que contenga las fuentes de datos que desea integrar en su base de conocimiento, acceso al servicio Amazon Bedrock AI y más.
 
 
 
@@ -19,15 +19,15 @@ Asegúrese de que la fábrica de cargas de trabajo y AWS están configurados cor
 
 GenAI tiene requisitos generales que su entorno necesita cumplir antes de empezar.
 
-Inicio de sesión y cuenta de fábrica de carga de trabajo:: Deberá https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["configure una cuenta con fábrica de cargas de trabajo"^] iniciar sesión con uno de los https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
-Credenciales y permisos de AWS:: Debe agregar credenciales de AWS a la fábrica de carga de trabajo con permisos de lectura y escritura, lo que significa que utilizará la fábrica de carga de trabajo en modo de lectura y escritura para GenAI.
+Inicio de sesión y cuenta de Workload Factory:: Necesitarás https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Configurar una cuenta con Workload Factory"^] e inicie sesión usando uno de los https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+Credenciales y permisos de AWS:: Debe agregar credenciales de AWS a Workload Factory con permisos de lectura y escritura, lo que significa que utilizará Workload Factory en modo de lectura y escritura para GenAI.
 +
 --
 Los permisos de modo _Basic_ y modo _Read-Only_ no se admiten en este momento.
 
 Al configurar sus credenciales, al seleccionar los permisos que se muestran a continuación, tendrá acceso completo para administrar los sistemas de archivos de FSx para ONTAP y para implementar y administrar la instancia de GenAI EC2 y otros recursos de AWS necesarios para su base de conocimientos y chatbot.
 
-https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aprenda a añadir credenciales de AWS a la fábrica de cargas de trabajo"^]
+https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aprenda a agregar credenciales de AWS a Workload Factory"^]
 
 --
 
@@ -41,7 +41,7 @@ Si planea trabajar con bases de conocimientos, asegúrese de que su entorno cump
 Roca base de Amazon:: Amazon Bedrock le permite utilizar modelos de base y proporciona las funcionalidades necesarias para crear aplicaciones de IA generativas.
 +
 --
-Antes de empezar a utilizar la fábrica de cargas de trabajo de BlueXP  para GenAI, debes configurar Amazon Bedrock. Su implementación de GenAI debe estar en una región de AWS que tenga habilitado Amazon Bedrock.
+Antes de comenzar a utilizar NetApp Workload Factory para GenAI, debe configurar Amazon Bedrock.  Su implementación de GenAI debe estar en una región de AWS que tenga Amazon Bedrock habilitado.
 
 * https://docs.aws.amazon.com/bedrock/latest/userguide/setting-up.html["Documentación de AWS: Configure Amazon Bedrock"^]
 * https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Documentación de AWS: Regiones y modelos compatibles para las bases de conocimiento de Amazon Bedrock"^]

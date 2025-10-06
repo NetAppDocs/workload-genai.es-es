@@ -6,7 +6,7 @@
 
 === Clone una base de conocimientos desde una copia de Snapshot
 
-La fábrica de cargas de trabajo de BlueXP  para GenAI ahora admite la clonación de una base de conocimientos a partir de una copia Snapshot. Esto permite una rápida recuperación de las bases de conocimiento y la creación de nuevas bases de conocimiento con las fuentes de datos existentes, y ayuda con la recuperación y el desarrollo de datos.
+NetApp Workload Factory para GenAI ahora admite la clonación de una base de conocimiento a partir de una instantánea.  Esto permite la recuperación rápida de bases de conocimiento y la creación de nuevas bases de conocimiento con fuentes de datos existentes, y ayuda con la recuperación y el desarrollo de datos.
 
 link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html#clone-a-knowledge-base["Clonar una base de conocimientos"]
 
@@ -14,6 +14,6 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledg
 
 === Detección y replicación de clústeres de ONTAP en las instalaciones
 
-Detecta y replica los datos de los clústeres de ONTAP on-premises en un sistema de archivos FSx para ONTAP para que se puedan utilizar para enriquecer las bases de conocimientos de IA. Todos los flujos de trabajo de descubrimiento y replicación en las instalaciones son posibles desde la nueva pestaña *ONTAP local* en el inventario de almacenamiento.
+Descubra y replique datos del clúster ONTAP local en un sistema de archivos FSx para ONTAP para que puedan usarse para enriquecer las bases de conocimiento de IA.  Todos los flujos de trabajo de descubrimiento y replicación locales son posibles desde el nuevo menú *On-Premises ONTAP* en el inventario de almacenamiento.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/use-onprem-data.html["Detectar un clúster de ONTAP en las instalaciones"]

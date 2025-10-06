@@ -20,9 +20,9 @@ Puede ver los detalles sobre su infraestructura RAG de GenAI implementada o elim
 Puede ver información sobre la infraestructura de chatbot.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
-. En el menú de navegación de fábrica de carga de trabajo, seleccione *AI*.
-. Seleccione la pestaña *Infraestructura*.
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
+. Seleccione el menú *Infraestructura*.
 . Vea información sobre la infraestructura, que incluye detalles sobre los siguientes componentes:
 +
 ** Configuración de AWS
@@ -37,12 +37,12 @@ Puede ver información sobre la infraestructura de chatbot.
 
 == Elimine la infraestructura
 
-Si ya no necesita la infraestructura de chatbot que implementó para uno o más chatbots, puede eliminarla de la fábrica de cargas de trabajo.
+Si ya no necesita la infraestructura de chatbot que implementó para uno o más chatbots, puede eliminarla de Workload Factory.
 
 
 NOTE: Todos los chatbots que se han implementado en esta infraestructura se deshabilitarán y se eliminará todo el historial de chat.
 
-Esta operación solo elimina los vínculos a la infraestructura AI de la fábrica de cargas de trabajo; no quita todos los componentes de AWS. Deberá eliminar manualmente los siguientes componentes de la infraestructura de AWS:
+Esta operación solo elimina los vínculos a la infraestructura de IA de Workload Factory; no elimina todos los componentes de AWS.  Necesitará eliminar manualmente los siguientes componentes de infraestructura de AWS:
 
 * La instancia de VM
 * Puntos finales privados
@@ -53,12 +53,12 @@ Esta operación solo elimina los vínculos a la infraestructura AI de la fábric
 
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
-. En el menú de navegación de fábrica de carga de trabajo, seleccione *AI*.
-. Seleccione la pestaña *Infraestructura*.
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
+. Seleccione el menú *Infraestructura*.
 . image:icon-action.png["el botón de opción"]Seleccione y seleccione *Eliminar infraestructura de chatbot*.
 . Confirme que desea eliminar la infraestructura y seleccione *Eliminar*.
 
 
 .Resultado
-Los componentes de la infraestructura de chatbot se eliminan de la fábrica de cargas de trabajo.
+Los componentes de infraestructura del chatbot se eliminan de Workload Factory.

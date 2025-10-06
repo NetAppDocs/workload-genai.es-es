@@ -45,7 +45,7 @@ Por ejemplo, si ha integrado 10 archivos (fuentes de datos) en su base de conoci
 
 == Formatos de archivo de origen de datos compatibles
 
-Los siguientes formatos de archivo de origen de datos se admiten actualmente con las bases de conocimiento GenAI de fábrica de cargas de trabajo.
+Los siguientes formatos de archivos de fuentes de datos actualmente son compatibles con las bases de conocimiento GenAI de Workload Factory.
 
 [cols="2*"]
 |===

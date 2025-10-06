@@ -20,8 +20,8 @@ Después de crear una base de conocimientos o un conector utilizando orígenes d
 Puede ver información sobre el contenido de un origen de datos y puede ver su estado de incrustación con la base de conocimientos o el conector. Dado que las fuentes de datos están asociadas a una base de conocimientos o conector, primero tendrá que elegir la base de conocimientos o el conector para poder ver los detalles de la fuente de datos.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
-. En el menú de navegación de fábrica de carga de trabajo, seleccione *AI*.
+. Inicie sesión en Workload Factory utilizando uno de los https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . Seleccione la base de conocimientos o el conector donde reside la fuente de datos y, a continuación, image:icon-action.png["el botón de opción"]seleccione * Administrar base de conocimientos * o * Administrar conector *.
 +
 La parte inferior de la página muestra los orígenes de datos asociados.
@@ -39,7 +39,8 @@ También muestra la información de incrustación y si ese origen de datos está
 Puede editar información sobre un origen de datos que haya integrado con una base de conocimientos o conector. La mayor parte de la información se corrige después de agregar un origen de datos, pero puede realizar cambios en alguna de la configuración (como la definición de fragmentación o el reconocimiento de permisos).
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la página de inventario de bases de conocimiento, seleccione la base de conocimientos donde reside el origen de datos y, a continuación, image:icon-action.png["el botón de opción"] seleccione y seleccione *Gestionar base de conocimientos*.
 +
 La parte inferior de la página muestra los orígenes de datos que forman parte de esta base de conocimientos.
@@ -67,7 +68,8 @@ Las fuentes de datos se sincronizan automáticamente con la base de conocimiento
 Si ya no necesita un origen de datos para formar parte de su base de conocimientos, puede eliminarlo.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la página de inventario de la base de conocimientos, seleccione la base de conocimientos donde reside el origen de datos y, a continuación, image:icon-action.png["el botón de opción"] seleccione y seleccione *Gestionar base de conocimientos*.
 +
 La parte inferior de la página muestra los orígenes de datos que forman parte de esta base de conocimientos.

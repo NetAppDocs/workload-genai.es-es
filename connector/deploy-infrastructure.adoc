@@ -66,7 +66,7 @@ Asegúrese de que su entorno cumple con los requisitos de las bases de conocimie
 
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
 . En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . Revise el diagrama de infraestructura y seleccione *Siguiente*.
 . Complete los elementos en la sección *AWS settings*:
@@ -80,7 +80,7 @@ La implementación de GenAI debe estar en una región de AWS que tenga habilitad
 
 . Complete los elementos en la sección *Configuración de infraestructura*:
 +
-.. *Etiquetas*: Introduzca cualquier par de clave/valor de etiqueta que desee aplicar a todos los recursos de AWS que forman parte de esta implementación. Estas etiquetas están visibles en la consola de administración de AWS y en el área de información de la infraestructura dentro de la fábrica de cargas de trabajo, y pueden ayudarle a realizar un seguimiento de los recursos de fábrica de cargas de trabajo.
+.. *Etiquetas*: Ingrese cualquier par clave/valor de etiqueta que desee aplicar a todos los recursos de AWS que forman parte de esta implementación.  Estas etiquetas son visibles en la Consola de administración de AWS y en el área de información de infraestructura dentro de Workload Factory, y pueden ayudarlo a realizar un seguimiento de los recursos de Workload Factory.
 
 
 . Complete la sección *Conectividad*:
@@ -90,7 +90,7 @@ La implementación de GenAI debe estar en una región de AWS que tenga habilitad
 
 . Completa la sección *AI ENGINE*:
 +
-.. *Nombre de instancia*: Opcionalmente, seleccione *Definir nombre de instancia* e introduzca un nombre personalizado para la instancia del motor AI. El nombre de la instancia aparece en la consola de administración de AWS y en el área de información de la infraestructura dentro de la fábrica de cargas de trabajo, y puede ayudarle a realizar un seguimiento de los recursos de fábrica de cargas de trabajo.
+.. *Nombre de instancia*: opcionalmente, seleccione *Definir nombre de instancia* e ingrese un nombre personalizado para la instancia del motor de IA.  El nombre de la instancia aparece en la Consola de administración de AWS y en el área de información de infraestructura dentro de Workload Factory, y puede ayudarlo a realizar un seguimiento de los recursos de Workload Factory.
 
 
 . Seleccione *Desplegar* para comenzar la implementación.
@@ -101,7 +101,7 @@ NOTE: Si la implementación falla con un error de credenciales, puede obtener m�
 
 
 .Resultado
-La fábrica de cargas de trabajo comienza a implementar la infraestructura de chatbot. Este proceso puede tardar hasta 10 minutos.
+Workload Factory comienza a implementar la infraestructura del chatbot. Este proceso puede tardar hasta 10 minutos.
 
 Durante el proceso de despliegue, se configuran los siguientes elementos:
 
@@ -109,5 +109,5 @@ Durante el proceso de despliegue, se configuran los siguientes elementos:
 * Se crean el rol de IAM, el perfil de instancia y el grupo de seguridad.
 * Se despliega la instancia de máquina virtual para el motor GenAI.
 * Amazon Bedrock está configurado para enviar registros a Amazon CloudWatch Logs, utilizando un grupo de registros con el prefijo `/aws/bedrock/`.
-* El motor GenAI está configurado para enviar registros a Amazon CloudWatch Logs, utilizando un grupo de registros con el nombre `/netapp/wlmai/<tenancyAccountId>/randomId`, donde `<tenancyAccountID>` es el https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-account-identifier["ID de cuenta de BlueXP"^] para el usuario actual.
+* El motor GenAI está configurado para enviar registros a Amazon CloudWatch Logs, utilizando un grupo de registros con el nombre `/netapp/wlmai/<tenancyAccountId>/randomId` , dónde `<tenancyAccountID>` es el https://docs.netapp.com/us-en/console-automation/platform/get_identifiers.html#get-the-account-identifier["ID de cuenta de la consola de NetApp"^] para el usuario actual.
 

@@ -20,8 +20,8 @@ Después de crear una base de conocimientos, puede ver los detalles de la base d
 Puede ver información sobre la configuración de una base de conocimientos y el origen de datos que están integrados.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
-. En el menú de navegación de fábrica de carga de trabajo, seleccione *AI*.
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . Seleccione la base de conocimientos que desea ver.
 +
 Si se define, los inicios de conversación que se están utilizando se muestran en el panel derecho.
@@ -44,7 +44,8 @@ Puede actualizar una base de conocimientos cambiando algunas configuraciones o p
 Cada vez que agregue, modifique o elimine orígenes de datos de la base de conocimientos, debe sincronizar el origen de datos para que se vuelva a indexar en la base de conocimientos. La sincronización es incremental, por lo que Amazon Bedrock solo procesa los objetos del volumen FSx para ONTAP que se han agregado, modificado o eliminado desde la última sincronización.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea actualizar.
 . image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
 +
@@ -82,7 +83,8 @@ Las copias Snapshot pueden ser más rápidas y eficientes en cuanto al almacenam
 Puede guardar el estado de una base de conocimientos mediante una instantánea manual del volumen de la base de conocimientos.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea proteger.
 . image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
 +
@@ -109,7 +111,8 @@ Cualquier momento, puede restaurar una snapshot manual o programada de un volume
 NOTE: No puede restaurar una snapshot utilizando la interfaz de usuario de cargas de trabajo de IA generativas si la base de datos almacenada en el volumen está dañada o se ha eliminado. Como solución alternativa, puede restaurar la snapshot mediante https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-restore.html["CLI de ONTAP"^] en el clúster de ONTAP donde se aloja el volumen.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea restaurar.
 . image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
 +
@@ -134,7 +137,8 @@ Esta opción está activada de forma predeterminada para garantizar que no se re
 Puede crear una nueva base de conocimientos a partir de una instantánea de la base de conocimientos. Esto es útil si la base de conocimientos original está dañada o perdida.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea restaurar.
 . image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
 +
@@ -162,7 +166,8 @@ Esta opción está activada de forma predeterminada para garantizar que no se re
 Puede incrustar orígenes de datos adicionales en su base de conocimientos para rellenarlos con datos adicionales de la organización.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la página de inventario de bases de conocimiento, seleccione la base de conocimientos donde desea agregar el origen de datos.
 . image:icon-action.png["el botón de opción"]Selecciona y selecciona *Añadir fuente de datos*.
 . Seleccione el tipo de fuente de datos que desea agregar:
@@ -199,7 +204,7 @@ NOTE: La elección de un alto porcentaje de superposición puede aumentar en gra
 +
 *** En la sección *File Types support*, elija incluir todos los tipos de archivos o seleccionar tipos de archivos individuales para incluirlos en los escaneos de fuentes de datos.
 +
-Si incluye imágenes o archivos PDF, la fábrica de carga de trabajo de BlueXP  para GenAI analiza el texto en las imágenes (incluidas las imágenes en documentos PDF), lo que supone un coste mayor.
+Si incluye imágenes o archivos PDF, NetApp Workload Factory for GenAI analiza el texto de las imágenes (incluidas las imágenes en documentos PDF), y esto implica un costo mayor.
 
 +
 Al incluir datos de texto de imágenes, GenAI no puede enmascarar la información de identificación personal (PII) de la imagen a medida que los datos de texto escaneados se envían desde su entorno a AWS. Sin embargo, una vez almacenados los datos, todos los PII se enmascaran en la base de datos de GenAI.
@@ -251,7 +256,7 @@ NOTE: La elección de un alto porcentaje de superposición puede aumentar en gra
 +
 *** En la sección *File Types support*, elija incluir todos los tipos de archivos o seleccionar tipos de archivos individuales para incluirlos en los escaneos de fuentes de datos.
 +
-Si incluye imágenes o archivos PDF, la fábrica de carga de trabajo de BlueXP  para GenAI analiza el texto en las imágenes (incluidas las imágenes en documentos PDF), lo que supone un coste mayor.
+Si incluye imágenes o archivos PDF, NetApp Workload Factory for GenAI analiza el texto de las imágenes (incluidas las imágenes en documentos PDF), y esto implica un costo mayor.
 
 +
 Al incluir datos de texto de imágenes, GenAI no puede enmascarar la información de identificación personal (PII) de la imagen a medida que los datos de texto escaneados se envían desde su entorno a AWS. Sin embargo, una vez almacenados los datos, todos los PII se enmascaran en la base de datos de GenAI.
@@ -310,7 +315,7 @@ NOTE: La elección de un alto porcentaje de superposición puede aumentar en gra
 +
 *** En la sección *File Types support*, elija incluir todos los tipos de archivos o seleccionar tipos de archivos individuales para incluirlos en los escaneos de fuentes de datos.
 +
-Si incluye imágenes o archivos PDF, la fábrica de carga de trabajo de BlueXP  para GenAI analiza el texto en las imágenes (incluidas las imágenes en documentos PDF), lo que supone un coste mayor.
+Si incluye imágenes o archivos PDF, NetApp Workload Factory for GenAI analiza el texto de las imágenes (incluidas las imágenes en documentos PDF), y esto implica un costo mayor.
 
 +
 Al incluir datos de texto de imágenes, GenAI no puede enmascarar la información de identificación personal (PII) de la imagen a medida que los datos de texto escaneados se envían desde su entorno a AWS. Sin embargo, una vez almacenados los datos, todos los PII se enmascaran en la base de datos de GenAI.
@@ -345,7 +350,8 @@ Las fuentes de datos se sincronizan automáticamente con la base de conocimiento
 La sincronización es incremental, por lo que Amazon Bedrock solo procesa los objetos de los orígenes de datos que se han agregado, modificado o eliminado desde la última sincronización.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea sincronizar.
 . image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
 . Seleccione el menú *Acciones* y seleccione *Escanear ahora*.
@@ -364,8 +370,9 @@ La base de conocimientos se sincroniza con las fuentes de datos adjuntas y cualq
 Si desea pausar o reanudar la siguiente sincronización (escaneo) de los orígenes de datos, puede hacerlo en cualquier momento. Es posible que deba pausar la siguiente sincronización programada si va a realizar cambios en un origen de datos y no desea que la sincronización se produzca durante la ventana de cambio.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
-. En la ficha Bases de conocimiento y conectores, seleccione la base de conocimientos para la que desea pausar o reanudar las exploraciones.
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
+. En el menú Bases de conocimiento y conectores, seleccione la base de conocimiento cuyos análisis desea pausar o reanudar.
 . image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
 . Seleccione el menú *Acciones* y seleccione *Escanear > Pausar escaneo programado* o *Escanear > Reanudar escaneo programado*.
 +
@@ -383,7 +390,8 @@ Puede evaluar los modelos de chat básicos disponibles antes de crear una base d
 NOTE: Esta funcionalidad sólo está disponible cuando no se han creado bases de conocimiento, cuando no existen bases de conocimiento en la página de inventario de bases de conocimiento.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la página de inventario de Bases de Conocimientos, verás la opción de seleccionar el modelo de chat en el lado derecho de la página para el Chatbot.
 . Seleccione el modelo de chat de la lista e introduzca un conjunto de preguntas en el área de mensajes para ver cómo responde el chatbot.
 . Pruebe varios modelos para ver qué modelo es el mejor para su implementación.
@@ -401,7 +409,8 @@ Una vez que hayas publicado tu base de conocimientos para que pueda integrarse c
 La anulación de la publicación de la base de conocimientos impide que las aplicaciones de chat funcionen. El punto final de API único en el que se puede acceder a la base de conocimientos está desactivado.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea anular la publicación.
 . image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
 +
@@ -417,12 +426,13 @@ La base de conocimientos está desactivada y ya no es accesible por una aplicaci
 
 == Suprimir una base de conocimientos
 
-Si ya no necesita una base de conocimientos, puede eliminarla. Cuando se elimina una base de conocimientos, se elimina de la fábrica de carga de trabajo y el volumen que contiene la base de conocimientos se elimina. Cualquier aplicación o chatbots que estén utilizando la base de conocimientos dejará de funcionar. La supresión de una base de conocimientos no es reversible.
+Si ya no necesita una base de conocimientos, puede eliminarla.  Cuando se elimina una base de conocimientos, ésta se elimina de Workload Factory y se elimina el volumen que contiene la base de conocimientos.  Cualquier aplicación o chatbot que utilice la base de conocimientos dejará de funcionar.  La eliminación de una base de conocimientos no es reversible.
 
 Al suprimir una base de conocimientos, también debe desasociar la base de conocimientos de los agentes a los que está asociada para suprimir por completo todos los recursos asociados a la base de conocimientos.
 
 .Pasos
-. Inicie sesión en la fábrica de carga de trabajo mediante una de las opciones link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^].
+. Inicie sesión en Workload Factory utilizando uno de loslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^] .
+. En el icono Cargas de trabajo de IA, seleccione *Implementar y gestionar*.
 . En la página de inventario de bases de conocimientos, seleccione la base de conocimientos que desea suprimir.
 . image:icon-action.png["el botón de opción"]Selecciona y selecciona *Administrar base de conocimientos*.
 . Selecciona el menú *Acciones* y selecciona *Eliminar base de conocimientos*.
@@ -430,4 +440,4 @@ Al suprimir una base de conocimientos, también debe desasociar la base de conoc
 
 
 .Resultado
-La base de conocimientos se elimina de la fábrica de carga de trabajo y el volumen asociado se elimina.
+La base de conocimientos se elimina de Workload Factory y se elimina su volumen asociado.

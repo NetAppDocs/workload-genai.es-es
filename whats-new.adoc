@@ -2,16 +2,52 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, genai' 
-summary: Descubra las novedades de la funcionalidad de las cargas de trabajo de IA de fábrica de cargas de trabajo. 
+summary: Conozca las novedades sobre la capacidad de cargas de trabajo de IA de Workload Factory. 
 ---
-= Novedades del centro de cargas de trabajo BlueXP  para GenAI
+= Novedades de NetApp Workload Factory para GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Descubra las novedades de la funcionalidad para cargas de trabajo de IA generativas de la fábrica de cargas de trabajo.
+Conozca las novedades sobre la capacidad de cargas de trabajo de IA generativa de Workload Factory.
+
+
+
+== 5 de octubre de 2025
+
+
+
+=== BlueXP workload factory ahora Fábrica de cargas de trabajo de NetApp
+
+BlueXP ha sido renombrado y rediseñado para reflejar mejor el papel que desempeña en la gestión de su infraestructura de datos. Como resultado, la BlueXP workload factory pasó a llamarse Fábrica de carga de trabajo de NetApp .
+
+
+
+=== Compatibilidad para agregar orígenes de datos NFS/SMB genéricos en conectores de NetApp para Amazon Q Business
+
+Con la API de Workload Factory, ahora puede agregar una fuente de datos desde un recurso compartido NFSv3, NFSv4 o SMB genérico a un conector de NetApp para Amazon Q Business.  Esto le permite incluir archivos almacenados en volúmenes alojados por sistemas de archivos distintos de Amazon FSx for NetApp ONTAP.
+
+link:https://docs.netapp.com/us-en/workload-genai/connector/define-connector.html["Cree un conector de NetApp para Amazon Q Business"]
+
+link:https://docs.netapp.com/us-en/workload-genai/connector/define-connector.html#add-data-sources-to-the-connector["Agregar fuentes de datos a un conector"]
+
+
+
+=== Configuración avanzada de chat para bases de conocimiento
+
+Ahora puede configurar ajustes de chat avanzados que se aplican al modelo de chat para la base de conocimiento, como la duración de la respuesta, la temperatura, la configuración de razonamiento y más.  Algunas de estas configuraciones, como las configuraciones de actualidad y hora de modificación, las configuraciones de recuperación avanzada y el mensaje del sistema, solo están disponibles mediante la API de Workload Factory.
+
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Cree una base de conocimientos de GenAI"]
+
+
+
+=== La selección del tipo de inferencia ahora es compatible con modelos de incrustación, chat y reclasificación.
+
+Si el modelo de incrustación, chat o reclasificación que eligió tiene configuraciones de inferencia, ahora puede seleccionar un tipo de inferencia.  Esto le permite ajustar mejor el rendimiento del chatbot y los requisitos de recursos a sus necesidades.
+
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Cree una base de conocimientos de GenAI"]
 
 
 
@@ -29,9 +65,9 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledg
 
 === Disponibilidad del servidor MCP
 
-NetApp ahora proporciona un servidor de Protocolo de contexto de modelo (MCP) con una BlueXP workload factory para GenAI.  Puede instalar el servidor localmente para permitir que los clientes MCP externos descubran y recuperen resultados de consultas de una base de conocimiento GenAI.
+NetApp ahora proporciona un servidor de Protocolo de contexto de modelo (MCP) con NetApp Workload Factory para GenAI. Puede instalar el servidor localmente para permitir que los clientes MCP externos descubran y recuperen resultados de consultas de una base de conocimiento GenAI.
 
-link:https://github.com/NetApp/mcp/tree/main/NetApp-KnowledgeBase-MCP-server["Servidor GenAI MCP de la fábrica de carga de trabajo de NetApp"^]
+link:https://github.com/NetApp/mcp/tree/main/NetApp-KnowledgeBase-MCP-server["Servidor MCP GenAI de NetApp Workload Factory"^]
 
 
 
@@ -57,7 +93,7 @@ https://docs.netapp.com/us-en/workload-genai/connector/define-connector.html#add
 
 La función de monitoreo de Tracker ya está disponible en GenAI. Puede usar Tracker para monitorear y dar seguimiento al progreso y estado de operaciones pendientes, en curso y completadas, revisar los detalles de las tareas y subtareas de la operación, diagnosticar problemas o fallos, editar parámetros de operaciones fallidas y reintentar operaciones fallidas.
 
-link:https://docs.netapp.com/us-en/workload-genai/general/monitor-operations.html["Supervise las operaciones de carga de trabajo con Tracker en la fábrica de carga de trabajo de BlueXP"]
+link:https://docs.netapp.com/us-en/workload-genai/general/monitor-operations.html["Supervise las operaciones de carga de trabajo con Tracker en NetApp Workload Factory"]
 
 
 
@@ -101,7 +137,7 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledg
 
 === Terminología de permisos actualizada
 
-La interfaz de usuario y la documentación de la fábrica de carga de trabajo ahora usan "solo lectura" para referirse a los permisos de lectura y "lectura/escritura" para referirse a los permisos de automatización.
+La interfaz de usuario y la documentación de Workload Factory ahora usan "solo lectura" para referirse a los permisos de lectura y "lectura/escritura" para referirse a los permisos automatizados.
 
 
 
@@ -178,7 +214,7 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledg
 
 Ahora GenAI puede mejorar significativamente la relevancia y precisión de los resultados de búsqueda mediante la búsqueda híbrida y la re-clasificación de los resultados. La búsqueda híbrida combina los puntos fuertes de la búsqueda tradicional basada en palabras clave con técnicas avanzadas de búsqueda semántica densas basadas en vectores. Los resultados de búsqueda de palabras clave estándar se aumentan con coincidencias cercanas y matices lingüísticos, lo que mejora la relevancia. Luego, GenAI refina aún más estos resultados mediante el uso de modelos avanzados de re-clasificación, como Cohere Rerank y Amazon Rerank, y devuelve los resultados más relevantes. Esta capacidad está disponible para las bases de conocimiento recién creadas.
 
-link:https://docs.netapp.com/us-en/workload-genai/general/ai-workloads-overview.html#benefits-of-using-genai-to-create-generative-ai-applications["Obtén más información sobre el centro de cargas de trabajo de BlueXP  para GenAI"]
+link:https://docs.netapp.com/us-en/workload-genai/general/ai-workloads-overview.html#benefits-of-using-genai-to-create-generative-ai-applications["Obtenga más información sobre NetApp Workload Factory para GenAI"]
 
 
 
@@ -204,7 +240,7 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/deploy-infrastr
 
 === Reconstruir la infraestructura de GenAI dañada o faltante
 
-Si su instancia de motor de IA se daña o se elimina de alguna manera, puede dejar que la fábrica de cargas de trabajo la reconstruya por usted. La fábrica de cargas de trabajo vuelve a conectar automáticamente sus bases de conocimientos a la infraestructura una vez finalizada la reconstrucción, de modo que estén listas para su uso.
+Si su instancia de motor de IA se daña o se elimina de alguna manera, puede dejar que Workload Factory la reconstruya por usted.  La fábrica de carga de trabajo vuelve a conectar automáticamente sus bases de conocimiento a la infraestructura una vez finalizada la reconstrucción, de modo que estén listas para usar.
 
 link:https://docs.netapp.com/us-en/workload-genai/general/troubleshooting.html["Resolución de problemas"]
 
@@ -216,7 +252,7 @@ link:https://docs.netapp.com/us-en/workload-genai/general/troubleshooting.html["
 
 === Clone una base de conocimientos desde una copia de Snapshot
 
-La fábrica de cargas de trabajo de BlueXP  para GenAI ahora admite la clonación de una base de conocimientos a partir de una copia Snapshot. Esto permite una rápida recuperación de las bases de conocimiento y la creación de nuevas bases de conocimiento con las fuentes de datos existentes, y ayuda con la recuperación y el desarrollo de datos.
+NetApp Workload Factory para GenAI ahora admite la clonación de una base de conocimiento a partir de una instantánea.  Esto permite la recuperación rápida de bases de conocimiento y la creación de nuevas bases de conocimiento con fuentes de datos existentes, y ayuda con la recuperación y el desarrollo de datos.
 
 link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html#clone-a-knowledge-base["Clonar una base de conocimientos"]
 
@@ -224,7 +260,7 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledg
 
 === Detección y replicación de clústeres de ONTAP en las instalaciones
 
-Detecta y replica los datos de los clústeres de ONTAP on-premises en un sistema de archivos FSx para ONTAP para que se puedan utilizar para enriquecer las bases de conocimientos de IA. Todos los flujos de trabajo de descubrimiento y replicación en las instalaciones son posibles desde la nueva pestaña *ONTAP local* en el inventario de almacenamiento.
+Descubra y replique datos del clúster ONTAP local en un sistema de archivos FSx para ONTAP para que puedan usarse para enriquecer las bases de conocimiento de IA.  Todos los flujos de trabajo de descubrimiento y replicación locales son posibles desde el nuevo menú *On-Premises ONTAP* en el inventario de almacenamiento.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/use-onprem-data.html["Detectar un clúster de ONTAP en las instalaciones"]
 
@@ -236,11 +272,11 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/use-onprem-data.html["Dete
 
 === Enmascarar la información de identificación personal con barreras de datos
 
-La carga de trabajo de IA generativa presenta la función de barreras de datos impulsada por la clasificación de BlueXP . La función de barandas de datos identifica y enmascara la información personal identificable (PII), lo que le ayuda a mantener el cumplimiento y reforzar la seguridad de los datos confidenciales de su organización.
+La carga de trabajo de IA generativa presenta la función de protección de datos, impulsada por la clasificación de la consola de NetApp .  La función de protección de datos identifica y enmascara la información de identificación personal (PII), lo que le ayuda a mantener el cumplimiento y fortalecer la seguridad de los datos confidenciales de su organización.
 
 link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Cree una base de conocimientos de GenAI"]
 
-link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Más información sobre la clasificación de BlueXP"^]
+link:https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Obtenga más información sobre la clasificación de la consola de NetApp"^]
 
 
 
@@ -302,7 +338,7 @@ Las cargas de trabajo de IA generativas ahora están integradas con Amazon Cloud
 
 === Aplicación de chatbot de ejemplo
 
-La aplicación de muestra GenAI de fábrica de cargas de trabajo de NetApp le permite probar la autenticación y la recuperación de su base de conocimientos de fábrica de cargas de trabajo de NetApp publicada al interactuar directamente con ella en una aplicación de chatbot basada en web.
+La aplicación de muestra NetApp Workload Factory GenAI le permite probar la autenticación y la recuperación de su base de conocimiento publicada de NetApp Workload Factory interactuando directamente con ella en una aplicación de chatbot basada en la web.
 
 
 
@@ -310,6 +346,6 @@ La aplicación de muestra GenAI de fábrica de cargas de trabajo de NetApp le pe
 
 
 
-=== Lanzamiento inicial de la fábrica de cargas de trabajo para GenAI
+=== Lanzamiento inicial de Workload Factory para GenAI
 
 La versión inicial incluye la capacidad de desarrollar una base de conocimientos personalizada mediante la incorporación de los datos de la organización. La base de conocimientos puede ser accedida por una aplicación de chatbot para sus usuarios. Esta capacidad garantiza respuestas precisas y relevantes a preguntas específicas de la organización, mejorando la satisfacción y la productividad de todos sus usuarios.
